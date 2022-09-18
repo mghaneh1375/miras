@@ -46,6 +46,9 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
 
     Route::post('uploadImg', [HomeController::class, 'uploadImg'])->name('uploadImg');
 
+    Route::get('/panel', function () {
+        return view('admin.home');
+    })->name('panel');
 });
 
 Route::get('category/list', [CategoryController::class, 'list'])->name('category.list');
@@ -65,5 +68,7 @@ Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::view('login', 'admin.login')->name('loginPage');
 
 Route::get('/', function () {
-    return view('admin.home');
+    return view('welcome');
 })->name('home');
+
+Route::view('alaki', 'alaki');

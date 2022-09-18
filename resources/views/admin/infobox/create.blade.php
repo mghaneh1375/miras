@@ -6,26 +6,28 @@
 
 @section('form')
 
-    <div style="display: flex; flex-direction: row; gap: 20px; margin-right: 40px; margin-left: 40px;">
-        <div>
-            <p>تصویر فعلی سایز بزرگ</p>
-            <img src="{{$item['img_large']}}" alt="{{ $item['alt'] }}" style="width:150px;">
+    @if(isset($item))
+        <div style="display: flex; flex-direction: row; gap: 20px; margin-right: 40px; margin-left: 40px;">
+            <div>
+                <p>تصویر فعلی سایز بزرگ</p>
+                <img src="{{$item['img_large']}}" alt="{{ $item['alt'] }}" style="width:150px;">
+            </div>
+            
+            <div>
+                @if($item['img_mid'] != null)
+                    <p>تصویر فعلی سایز متوسط</p>
+                    <img src="{{$item['img_mid']}}" alt="{{ $item['alt'] }}" style="width:150px">
+                @endif
+            </div>
+            
+            <div>
+                @if($item['img_small'] != null)
+                    <p>تصویر فعلی سایز کوچک</p>
+                    <img src="{{$item['img_small']}}" alt="{{ $item['alt'] }}" style="width:150px">
+                @endif
+            </div>    
         </div>
-        
-        <div>
-            @if($item['img_mid'] != null)
-                <p>تصویر فعلی سایز متوسط</p>
-                <img src="{{$item['img_mid']}}" alt="{{ $item['alt'] }}" style="width:150px">
-            @endif
-        </div>
-        
-        <div>
-            @if($item['img_small'] != null)
-                <p>تصویر فعلی سایز کوچک</p>
-                <img src="{{$item['img_small']}}" alt="{{ $item['alt'] }}" style="width:150px">
-            @endif
-        </div>
-    </div>
+    @endif
 
     <form id="myForm" action="{{ isset($item) ? route('infobox.update', ['infobox' => $item['id']]) : route('infobox.store')}}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
