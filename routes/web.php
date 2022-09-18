@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ConfigController;
@@ -32,9 +33,18 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
 
     Route::view('brand/create', 'admin.brand.create');
 
+
+
     Route::resource('infobox', InfoBoxController::class)->except(['show', 'update']);
     
     Route::post('infobox/{infobox}', [InfoBoxController::class, 'update'])->name('infobox.update');
+
+    
+    Route::resource('banner', BannerController::class)->except(['show', 'update']);
+    
+    Route::post('banner/{banner}', [BannerController::class, 'update'])->name('banner.update');
+
+
 
     Route::resource('faq', FAQController::class)->except(['show', 'update']);
 

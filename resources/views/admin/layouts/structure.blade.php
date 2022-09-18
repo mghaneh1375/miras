@@ -367,6 +367,7 @@
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
                                 <a href="{{route('category.list')}}" class="dropdown-item">مدیریت دسته ها</a>
                                 <a href="{{route('infobox.index')}}" class="dropdown-item">مدیریت بنر اطلاعات</a>
+                                <a href="{{route('banner.index')}}" class="dropdown-item">مدیریت بنر های تبلیغاتی</a>
                                 <a href="{{route('config.index')}}" class="dropdown-item">پیکربندی</a>
                             </div>
                         </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\InfoBoxResource;
 use App\Models\InfoBox;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Rule;
@@ -16,9 +17,7 @@ class InfoBoxController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        
-        
+    {    
         if($request->user() != null && 
             (
                 $request->user()->level == User::$ADMIN_LEVEL ||
@@ -29,8 +28,7 @@ class InfoBoxController extends Controller
             return view('admin.infobox.list', compact('items'));
         }
 
-        return InfoBoxResource::make(InfoBox::first())->additional(['status' => 'ok']);
-        
+        return InfoBoxResource::make(InfoBox::first())->additional(['status' => 'ok']);   
     }
 
     /**
