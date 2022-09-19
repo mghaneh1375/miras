@@ -67,3 +67,9 @@ Route::view('login', 'admin.login')->name('loginPage');
 Route::get('/', function () {
     return view('admin.home');
 })->name('home');
+
+
+
+Route::view('/home', 'home');
+
+Route::view('/alborz/{age}', 'product.a');
