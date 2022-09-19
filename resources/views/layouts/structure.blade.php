@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2962ff">
-    <meta name="msapplication-navbutton-color" content="#2962ff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#2962ff">
-    <title>YektaKala | home v1</title>
+    <meta name="theme-color" content="#C59358">
+    <meta name="msapplication-navbutton-color" content="#C59358">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#C59358">
+    <title>ویزیت ایران | خانه</title>
     <link rel="stylesheet" href="./theme-assets/css/dependencies.css">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
     <link rel="stylesheet" href="./theme-assets/css/custom.css">
@@ -23,95 +23,25 @@
         <header class="page-header d-md-block d-none">
             <!-- start banner -->
             <div class="alert banner-container alert-dismissible fade show" role="alert">
-                <a href="#" id="infobox" class="banner-placement rounded-0"
+                <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
                     style="height: 60px;"></a>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <!-- end banner -->
-            <!-- start of page-header-top -->
-            <div class="page-header--top">
-                <div class="container">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="page-header--top-right">
-                            <div class="notification-container notification-light">
-                                <div class="swiper notification-swiper-slider mb-5">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <div class="notification-item">
-                                                <span class="notification-item--text creamColor"> ویزیت ایران </span>
-                                                <span class="notification-item--text fontSize12"> سامانه فروش صنایع دستی و هنرهای تزئینی </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="page-header--top-left">
-                            <ul class="nav nav-light justify-content-end">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">وبلاگ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">پرسش های متداول</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">درباره ما</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end of page-header-top -->
-            <!-- start of page-header-middle -->
+                        <!-- start of page-header-middle -->
             <div class="page-header--middle">
-                <div class="container">
+                <div class="container heightHeader">
                     <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center flex-grow-1 pe-3">
-                            <div class="logo-container logo-box me-3">
-                                
+                        <div class="d-flex align-items-center flex-grow-1 pe-3 zIndex3 ">
+                            <div class="logo-container logo-box me-3 positionAbsolute topImg">
                                     <img src="./theme-assets/images/menuImage.png" width="120" alt="">
                             </div>
-                            <div class="search-container">
-                                <form action="#" class="search-form">
-                                    <input type="text" class="form-control search-field" placeholder="جستجو کنید..">
-                                    <button class="btn btn-primary btn-search btn-action">
-                                        <i class="ri-search-2-line"></i>
-                                    </button>
-                                    <button class="btn btn-primary btn-close-search-result btn-action d-none">
-                                        <i class="ri-close-line"></i>
-                                    </button>
-                                </form>
-                                <div class="search-result-container">
-                                    <div class="search-result-tags-container">
-                                        <div class="search-result-tags-label"><i class="ri-fire-line"></i> بیشترین
-                                            جستجوهای اخیر
-                                        </div>
-                                        <ul class="search-result-tags">
-                                            <li><a href="#" class="search-result-tag">گوشی موبایل</a></li>
-                                            <li><a href="#" class="search-result-tag">لوازم خانگی برقی</a></li>
-                                            <li><a href="#" class="search-result-tag">لپ تاپ</a></li>
-                                            <li><a href="#" class="search-result-tag">کنسول بازی</a></li>
-                                            <li><a href="#" class="search-result-tag">دوچرخه</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="border-bottom my-3"></div>
-                                    <ul class="search-result-items">
-                                        <li><a href="#">گوشی موبایل</a></li>
-                                        <li><a href="#">گوشی موبایل شیائومی</a></li>
-                                        <li><a href="#">گوشی موبایل سامسونگ</a></li>
-                                        <li><a href="#">قاب گوشی موبایل</a></li>
-                                        <li><a href="#">گوشی موبایل اپل</a></li>
-                                    </ul>
-                                </div>
+                            <div class="marginFromRightHeader">
+                                <div class="notification-item--text creamColor bold"> ویزیت ایران </div>
+                                <div class="notification-item--text fontSize12 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
                             </div>
                         </div>
-                        <div class="user-options">
+                        <div class="user-options heightHeader">
                             <div class="user-option user-option--account">
                                 <a href="profile.html" class="user-option-btn user-option-btn--account">
                                     <i class="ri-user-fill icon"></i>
@@ -173,12 +103,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="user-option">
-                                <a href="#" class="user-option-btn user-option-btn--account">
-                                    <i class="ri-heart-3-fill icon"></i>
-                                    <span class="counter">۲</span>
-                                </a>
                             </div>
                             <div class="user-option user-option--cart">
                                 <a href="cart.html" class="user-option-btn user-option-btn--cart">
@@ -300,13 +224,18 @@
                 </div>
             </div>
             <!-- end of page-header-middle -->
-            <!-- start of page-header-bottom -->
-            <div class="page-header--bottom">
+            <!-- start of page-header-top -->
+            <div class="page-header--top backGray">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="page-header--top-right">
+                                        <!-- start of page-header-bottom -->
+            <div class="page-header--bottom marginFromRightHeader">
                 <div class="container">
                     <div class="d-flex align-items-center">
                         <div class="vertical-menu">
-                            <a href="#" class="vertical-menu-btn">دسته بندی کالاها <i class="ri-apps-fill icon"></i></a>
-                            <div class="vertical-menu-items">
+                            <a href="#" class="vertical-menu-btn colorWhite">دسته بندی کالاها <i class="ri-apps-fill icon"></i></a>
+                            <div class="vertical-menu-items marginFromRightHeaderNegative">
                                 <ul>
                                     <li class="mega-menu-category show">
                                         <a href="#">کالای دیجیتال</a>
@@ -375,27 +304,34 @@
                                 </ul>
                             </div>
                         </div>
-                        <ul class="nav">
+                        <ul class="nav marginTopNegative5">
                             <li class="nav-item">
-                                <a class="nav-link" href="index-1.html">خانه</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">وبلاگ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">پرسش های متداول</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">تماس با ما</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">درباره ما</a>
+                                <a class="nav-link colorWhite" href="index-1.html">پسشنهاد های ویژه</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- end of page-header-bottom -->
+                        </div>
+                        <div class="page-header--top-left">
+                            <ul class="nav nav-light justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">پرسش های متداول</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">تماس با ما</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">درباره ما</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of page-header-top -->
+
         </header>
         <!-- end of page-header -->
         <header class="page-header-responsive d-md-none">
