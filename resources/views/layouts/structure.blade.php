@@ -547,7 +547,10 @@
             @yield('content')
         </main>
         <!-- end of page-content -->
-        @include('layouts.footer')
+        @section('footer')
+            @include('layouts.footer')
+        @show
+        
     </div>
 
 
@@ -583,6 +586,23 @@
             }
         });
 
+    </script>
+    <script>
+     
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.infobox') }}',
+            headers: {
+                'accept': 'application/json'
+            },
+            success: function(res) {
+                if(res.status === "ok") {
+                    $("#infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
+                    
+                }
+            }
+        });
+        
     </script>
 
     @section('extraJS')
