@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
@@ -26,4 +27,5 @@ Route::get('getDesc/{category?}', [HomeController::class, 'getDesc'])->name('api
 Route::get('faq', [FAQController::class, 'index']);
 
 Route::get('infobox', [InfoBoxController::class, 'index'])->name('api.infobox');
-// Route::get('getBanner/{category?}', [HomeController::class, 'getBanner'])->name('api.bannerHalf');
+
+Route::get('banner', [BannerController::class, 'index'])->name('api.banner');
