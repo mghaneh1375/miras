@@ -3,21 +3,21 @@
                         <!-- start of banner -->
                         <div class="banner-img">
                             <a href="#">
-                                <img id="bannerHalf" src="./theme-assets/images/banner/018.jpg" alt="">
+                                <img id="banner1">
                             </a>
                         </div>
                         <!-- end of banner -->
                     </div>
-                    <div class="row mb-5">
                     <div class="col-md-6 mb-lg-0 mb-3">
                         <!-- start of banner -->
                         <div class="banner-img">
                             <a href="#">
-                                <img id="bannerHalf" src="./theme-assets/images/banner/018.jpg" alt="">
+                                <img id="banner2">
                             </a>
                         </div>
                         <!-- end of banner -->
                     </div>
+                </div>
     <script>
      
         $.ajax({
@@ -28,7 +28,8 @@
             },
             success: function(res) {
                 if(res.status === "ok") {
-                    $("#bannerHalf").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
+                    $("#banner1").attr('href', res.data[0].href).attr('src', res.data[0].img);
+                    $("#banner2").attr('href', res.data[1].href).attr('src', res.data[1].img);
                 }
             }
         });

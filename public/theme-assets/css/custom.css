@@ -9,3 +9,16 @@
 .padding0 {
     padding: 0;
 }
+.borderNone {
+    border: none !important;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #00000000 !important;
+    box-shadow: none;
+    outline: 0;
+}
+.accordion-button:focus-visible {
+    color: inherit;
+    background-color: none !important;
+}

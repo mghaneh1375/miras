@@ -2,9 +2,27 @@
 @section('content')
 <div class="container">
             @include('layouts.slider')
-            @include('layouts.bannerHalf')
-                    
-                </div>
+            @include('layouts.banner')
+                {{-- <div class="row mb-5">
+                    <div class="col-md-6 mb-lg-0 mb-3">
+                        <!-- start of banner -->
+                        <div class="banner-img">
+                            <a href="#">
+                                <img src="./theme-assets/images/banner/018.jpg" alt="">
+                            </a>
+                        </div>
+                        <!-- end of banner -->
+                    </div>
+                    <div class="col-md-6 mb-lg-0 mb-3">
+                        <!-- start of banner -->
+                        <div class="banner-img">
+                            <a href="#">
+                                <img src="./theme-assets/images/banner/019.jpg" alt="">
+                            </a>
+                        </div>
+                        <!-- end of banner -->
+                    </div>
+                </div> --}}
                 <!-- start of box => specials-product-slider -->
                 <div class="ui-box ui-box-specials pb-3 mb-5" style="background-color: #f03426;">
                     <div class="container">
