@@ -22,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('faq', [FAQController::class, 'index']);
 
-Route::get('infobox', [InfoBoxController::class, 'index']);
+Route::get('infobox', [InfoBoxController::class, 'index'])->name('api.infobox');

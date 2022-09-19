@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\InfoBoxResource;
 use App\Models\InfoBox;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Rule;
@@ -16,9 +17,18 @@ class InfoBoxController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        $items = InfoBoxResource::collection(InfoBox::all())->toArray($request);
-        return view('admin.infobox.list', compact('items'));
+    {    
+        if($request->user() != null && 
+            (
+                $request->user()->level == User::$ADMIN_LEVEL ||
+                $request->user()->level == User::$EDITOR_LEVEL 
+            )
+        ) {
+            $items = InfoBoxResource::collection(InfoBox::all())->toArray($request);
+            return view('admin.infobox.list', compact('items'));
+        }
+
+        return InfoBoxResource::make(InfoBox::first())->additional(['status' => 'ok']);   
     }
 
     /**
@@ -52,7 +62,7 @@ class InfoBoxController extends Controller
     {
         $validator = [
             'alt' => 'nullable|string|min:2',
-            'href' => 'nullable|string|regex:/^http:\/\/\w+(\.\w+)*(:[0-9]+)?\/?$/',
+            'href' => 'nullable|string|url',
             'image_file_large' => 'required|image',
             'image_file_mid' => 'nullable|image',
             'image_file_small' => 'nullable|image',
