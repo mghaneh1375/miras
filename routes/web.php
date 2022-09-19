@@ -80,5 +80,8 @@ Route::view('login', 'admin.login')->name('loginPage');
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
 
 Route::view('alaki', 'alaki');

@@ -306,7 +306,7 @@
                         </div>
                         <ul class="nav marginTopNegative5">
                             <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html">پسشنهاد های ویژه</a>
+                                <a class="nav-link colorWhite" href="index-1.html">پیشنهاد های ویژه</a>
                             </li>
                         </ul>
                     </div>
