@@ -21,8 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('getDesc/{category?}', [HomeController::class, 'getDesc'])->name('api,getDesc');
+Route::get('getDesc/{category?}', [HomeController::class, 'getDesc'])->name('api.getDesc');
 
 Route::get('faq', [FAQController::class, 'index']);
 
 Route::get('infobox', [InfoBoxController::class, 'index'])->name('api.infobox');
+// Route::get('getBanner/{category?}', [HomeController::class, 'getBanner'])->name('api.bannerHalf');

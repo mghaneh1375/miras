@@ -26,13 +26,13 @@ class HomeController extends Controller
         if($category == null) {
             return response()->json([
                 'status' => 'ok',
-                'desc' => Config::first()->desc_default
+                'data' => Config::first()->desc_default
             ]);
         }
 
         return response()->json([
             'status' => 'ok',
-            'desc' => Config::first()->desc_default
+            'data' => Config::first()->desc_default
         ]);
     }
 }

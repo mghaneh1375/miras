@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./theme-assets/css/dependencies.css">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
     <link rel="stylesheet" href="./theme-assets/css/custom.css">
+    
+    <script src="{{ asset('theme-assets/js/dependencies/jquery-3.6.0.min.js') }}"></script>
 </head>
 
 <body>
@@ -554,7 +556,6 @@
     </div>
 
 
-    <script src="{{ asset('theme-assets/js/dependencies/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('theme-assets/js/dependencies/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('theme-assets/js/dependencies/bootstrap-slider.min.js') }}"></script>
     <script src="{{ asset('theme-assets/js/dependencies/jquery.countdown.min.js') }}"></script>
@@ -587,23 +588,7 @@
         });
 
     </script>
-    <script>
-     
-        $.ajax({
-            type: 'get',
-            url: '{{ route('api.infobox') }}',
-            headers: {
-                'accept': 'application/json'
-            },
-            success: function(res) {
-                if(res.status === "ok") {
-                    $("#infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
-                    
-                }
-            }
-        });
-        
-    </script>
+    
 
     @section('extraJS')
     @show
