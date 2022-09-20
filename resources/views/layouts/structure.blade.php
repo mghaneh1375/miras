@@ -9,9 +9,9 @@
     <meta name="msapplication-navbutton-color" content="#C59358">
     <meta name="apple-mobile-web-app-status-bar-style" content="#C59358">
     <title>ویزیت ایران | خانه</title>
-    <link rel="stylesheet" href="./theme-assets/css/dependencies.css">
+    <link rel="stylesheet" href="{{ asset('theme-assets/css/dependencies.css') }}">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
-    <link rel="stylesheet" href="./theme-assets/css/custom.css">
+    <link rel="stylesheet" href="{{ asset('theme-assets/css/custom.css') }}">
     
     <script src="{{ asset('theme-assets/js/dependencies/jquery-3.6.0.min.js') }}"></script>
 </head>
@@ -85,7 +85,7 @@
                                         </div>
                                         <ul class="nav nav-items-with-icon flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#"><i
+                                                <a class="nav-link" href="{{route('cart-empty')}}"><i
                                                         class="nav-link-icon ri-file-list-3-line"></i>
                                                     سفارش
                                                     های من</a>
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="user-option user-option--cart">
-                                <a href="cart.html" class="user-option-btn user-option-btn--cart">
+                                <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
                                     <i class="ri-shopping-bag-2-fill icon"></i>
                                     <span class="user-item-text">
                                         <span class="title">سبد خرید شما</span>
@@ -116,7 +116,7 @@
                                 <div class="mini-cart">
                                     <div class="mini-cart-header">
                                         <span class="mini-cart-products-count fa-num">4 کالا</span>
-                                        <a href="cart.html" class="btn btn-link px-0">مشاهده سبد خرید <i
+                                        <a href="{{route('cart')}}" class="btn btn-link px-0">مشاهده سبد خرید <i
                                                 class="ri-arrow-left-s-fill"></i></a>
                                     </div>
                                     <div class="mini-cart-products do-simplebar">

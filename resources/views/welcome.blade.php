@@ -285,13 +285,13 @@
                                     <!-- start of product-card -->
                                     <div class="product-card">
                                         <div class="product-thumbnail">
-                                            <a href="#">
+                                            <a href="{{route('single-product', ['productId' => 1, 'productName' => 'گوشی موبایل اپل مدل'])}}">
                                                 <img src="./theme-assets/images/products/05.jpg" alt="product title">
                                             </a>
                                         </div>
                                         <div class="product-card-body">
                                             <h2 class="product-title">
-                                                <a href="#">گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 دو سیم‌ کارت
+                                                <a href="{{route('single-product', ['productId' => 1, 'productName' => 'گوشی موبایل اپل مدل'])}}">گوشی موبایل اپل مدل iPhone 12 Pro Max A2412 دو سیم‌ کارت
                                                     ظرفیت
                                                     256 گیگابایت</a>
                                             </h2>
@@ -738,8 +738,6 @@
                     <a href="#" class="btn btn-sm btn-primary px-3">دیدن محصول</a>
                 </div>
             </div>
-            @include('cart')
-            @include('product')
             <!-- end of quick-view-modal -->
 @stop
 

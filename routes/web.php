@@ -80,8 +80,17 @@ Route::view('login', 'admin.login')->name('loginPage');
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
+
+Route::get('/cart-empty', function () {
+    return view('cart-empty');
+})->name('cart-empty');
+
+Route::get('/product/{productId}/{productName}', function () {
+    return view('product');
+})->name('single-product');
 
 Route::view('alaki', 'alaki');
