@@ -6,3 +6,50 @@
 .fontSize12 {
     font-size: 12px !important;
 }
+.padding0 {
+    padding: 0;
+}
+.borderNone {
+    border: none !important;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #00000000 !important;
+    box-shadow: none;
+    outline: 0;
+}
+.accordion-button:focus-visible {
+    color: inherit;
+    background-color: none !important;
+}
+.positionAbsolute {
+    position: absolute !important;
+}
+.topImg {
+    top: 60px;
+}
+.zIndex3 {
+    z-index: 3;
+}
+.heightHeader {
+    height: 50px;
+}
+.bold {
+    font-weight: 700;
+}
+.backGray {
+    background-color: #8d7f6c !important;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.marginFromRightHeader {
+    margin-right: 160px;
+}
+.marginFromRightHeaderNegative {
+    margin-right: -160px;
+}
+.colorWhite {
+    color: white !important;
+}
+.marginTopNegative5 {
+    margin-top: -5px;
+}

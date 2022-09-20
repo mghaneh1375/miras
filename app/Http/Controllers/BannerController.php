@@ -28,7 +28,7 @@ class BannerController extends Controller
             return view('admin.banner.list', compact('items'));
         }
 
-        return BannerResource::make(Banner::first())->additional(['status' => 'ok']);
+        return BannerResource::collection(Banner::all())->additional(['status' => 'ok']);
     }
 
     /**

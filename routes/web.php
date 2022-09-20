@@ -8,6 +8,7 @@ use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,6 +39,13 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
     Route::resource('infobox', InfoBoxController::class)->except(['show', 'update']);
     
     Route::post('infobox/{infobox}', [InfoBoxController::class, 'update'])->name('infobox.update');
+
+
+
+    Route::resource('slider', SliderController::class)->except(['show', 'update']);
+    
+    Route::post('slider/{infobox}', [SliderController::class, 'update'])->name('slider.update');
+
 
     
     Route::resource('banner', BannerController::class)->except(['show', 'update']);
@@ -80,5 +88,17 @@ Route::view('login', 'admin.login')->name('loginPage');
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
+Route::get('/cart-empty', function () {
+    return view('cart-empty');
+})->name('cart-empty');
+
+Route::get('/product/{productId}/{productName}', function () {
+    return view('product');
+})->name('single-product');
 
 Route::view('alaki', 'alaki');

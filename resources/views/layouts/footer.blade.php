@@ -1,14 +1,4 @@
 <footer class="page-footer">
-    <div class="container footer-logo-area">
-        <div class="d-flex align-items-start">
-            <div class="logo-container logo-box">
-                <a href="#" class="logo">
-                    <img src="./theme-assets/images/logo.svg" width="120" alt="">
-                    <span class="logo-text">بررسی،انتخاب و خرید آنلاین</span>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="d-flex align-items-center flex-wrap my-4">
             <span class="text-secondary me-2">تلفن پشتیبانی:</span>
@@ -131,22 +121,7 @@
                     <div class="expandable-text_text fa-num">
                         <div class="fs-6 fw-bold mb-2">فروشگاه اینترنتی یکتاکالا بررسی، انتخاب و خرید آنلاین
                         </div>
-                        <div class="fs-7 text-secondary text-justify">
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                            گرافیک
-                            است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
-                            شرایط فعلی
-                            تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
-                            زیادی
-                            در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-                            نرم
-                            افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو
-                            در زبان
-                            فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                            راهکارها، و
-                            شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و
-                            جوابگوی سوالات
-                            پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        <div id="footerDesc" class="fs-7 text-secondary text-justify">
                         </div>
                     </div>
                     <div class="expandable-text-expand-btn justify-content-start text-sm">
@@ -180,3 +155,20 @@
         </div>
     </div>
 </footer>
+<script>
+     
+    $.ajax({
+        type: 'get',
+        url: '{{ route('api.getDesc') }}',
+        headers: {
+            'accept': 'application/json'
+        },
+        success: function(res) {
+            if(res.status === "ok") {
+                $("#footerDesc").append(res.data);
+                
+            }
+        }
+    });
+        
+</script>
