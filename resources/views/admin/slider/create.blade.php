@@ -60,8 +60,8 @@
             </div>
             
             <div>
-                <label for="prioriry">اولویت</label>
-                <input value="{{ isset($item) ? $item['prioriry'] : '' }}" type="text" name="prioriry" id="prioriry"/>
+                <label for="priority">اولویت</label>
+                <input value="{{ isset($item) ? $item['priority'] : '' }}" type="text" name="priority" id="priority"/>
             </div>
 
             <div>

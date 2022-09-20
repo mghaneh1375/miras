@@ -14,6 +14,15 @@ class SliderResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'href' => $this->href,
+            'id' => $this->id,
+            'visibility' => $this->visibility,
+            'priority' => $this->priority,
+            'alt' => $this->alt,
+            'img_large' => asset('storage/slider/' . $this->img_large),
+            'img_mid' => $this->img_mid !== null ? asset('storage/slider/' . $this->img_mid) : null,
+            'img_small' => $this->img_small !== null ? asset('storage/slider/' . $this->img_small) : null
+        ];
     }
 }

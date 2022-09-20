@@ -44,7 +44,7 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
 
     Route::resource('slider', SliderController::class)->except(['show', 'update']);
     
-    Route::post('slider/{infobox}', [SliderController::class, 'update'])->name('slider.update');
+    Route::post('slider/{slider}', [SliderController::class, 'update'])->name('slider.update');
 
 
     

@@ -1,32 +1,10 @@
-                <div class="row mb-5">
-                    <div class="col-lg-12 mb-lg-0 mb-4">
+                <div class="row mb-4">
+                    <div class="col-lg-12">
                         <!-- start of main-slider -->
                         <div class="swiper main-swiper-slider">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide main-swiper-slide">
-                                    <a href="#"
-                                        style="background-image: url(./theme-assets/images/slider/main/01.jpg);">
-                                        <img src="./theme-assets/images/slider/main/01.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide main-swiper-slide">
-                                    <a href="#"
-                                        style="background-image: url(./theme-assets/images/slider/main/02.jpg);">
-                                        <img src="./theme-assets/images/slider/main/02.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide main-swiper-slide">
-                                    <a href="#"
-                                        style="background-image: url(./theme-assets/images/slider/main/03.jpg);">
-                                        <img src="./theme-assets/images/slider/main/03.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide main-swiper-slide">
-                                    <a href="#"
-                                        style="background-image: url(./theme-assets/images/slider/main/04.jpg);">
-                                        <img src="./theme-assets/images/slider/main/04.jpg" alt="">
-                                    </a>
+                                <div id="slider" class="swiper-slide main-swiper-slide opacity1">
                                 </div>
                             </div>
                             <!-- If we need pagination -->
@@ -39,3 +17,39 @@
                         <!-- end of main-slider -->
                     </div>
                 </div>
+                        <script>
+        var width = window.innerWidth;
+        console.log('====================================');
+        console.log(width);
+        console.log('====================================');
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.slider') }}',
+            headers: {
+                'accept': 'application/json'
+            },
+            success: function(res) {
+                var html= "";
+
+                if(res.status === "ok") {
+                     if (width > 1000) {
+                        for(var i = 0; i < res.data.length; i++) {
+                            html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_large + ')!important;"></a>';
+                        }
+                     }else if (width > 520) {
+                        
+                         for(var i = 0; i < res.data.length; i++) {
+                            html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_mid + ')!important;"></a>';
+                         }
+                     }else {
+                         for(var i = 0; i < res.data.length; i++) {
+                             html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_small + ')!important;"></a>';
+                         }
+                     }
+                     
+                        $("#slider").empty().append(html);
+                }
+            }
+        });
+
+    </script>

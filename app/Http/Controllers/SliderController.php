@@ -30,6 +30,18 @@ class SliderController extends Controller
         return SliderResource::collection(Slider::visible()->get())->additional(['status' => 'ok']);   
     }
 
+    
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Slider  $slider
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Slider $slider, Request $request)
+    {
+        return view('admin.slider.create', ['item' => SliderResource::make($slider)->toArray($request)]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -59,8 +71,8 @@ class SliderController extends Controller
             'visibility' => 'nullable|boolean',
         ];
         
-        if(self::hasAnyExcept(array_keys($validator), $request->keys()))
-            abort(401);
+        // if(self::hasAnyExcept(array_keys($validator), $request->keys()))
+        //     abort(401);
 
         $request->validate($validator);
 

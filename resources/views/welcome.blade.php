@@ -1,7 +1,9 @@
 @extends('layouts.structure')
 @section('content')
+
 <div class="container">
-            @include('layouts.slider')
+            
+    @include('layouts.slider')
             @include('layouts.banner')
                 <!-- end of box => categories-slider -->
                 <div class="row mb-5">
@@ -739,6 +741,7 @@
                 </div>
             </div>
             <!-- end of quick-view-modal -->
+            
 @stop
 
 @section('footer')
