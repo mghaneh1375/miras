@@ -240,33 +240,22 @@
                                     <li class="mega-menu-category show">
                                         <a href="#">کالای دیجیتال</a>
                                         <ul class="mega-menu">
-                                            <li class="parent"><a href="#">لوازم جانبی گوشی</a></li>
-                                            <li><a href="#">کیف و کاور گوشی</a></li>
-                                            <li><a href="#">پاور بانک (شارژر همراه)</a></li>
-                                            <li><a href="#">پایه نگهدارنده گوشی</a></li>
-                                            <li class="parent"><a href="#">گوشی موبایل</a></li>
-                                            <li><a href="#">سامسونگ</a></li>
-                                            <li><a href="#">هوآوی</a></li>
-                                            <li><a href="#">اپل</a></li>
-                                            <li><a href="#">شیائومی</a></li>
-                                            <li><a href="#">آنر</a></li>
-                                            <li><a href="#">نوکیا</a></li>
-                                            <li class="parent"><a href="#">واقعیت مجازی</a></li>
-                                            <li class="parent"><a href="#">مچ بند و ساعت هوشمند</a></li>
-                                            <li class="parent"><a href="#">لوازم جانبی گوشی</a></li>
-                                            <li><a href="#">کیف و کاور گوشی</a></li>
-                                            <li><a href="#">پاور بانک (شارژر همراه)</a></li>
-                                            <li><a href="#">پایه نگهدارنده گوشی</a></li>
-                                            <li class="parent"><a href="#">گوشی موبایل</a></li>
-                                            <li><a href="#">سامسونگ</a></li>
-                                            <li><a href="#">هوآوی</a></li>
-                                            <li><a href="#">اپل</a></li>
-                                            <li><a href="#">شیائومی</a></li>
-                                            <li><a href="#">آنر</a></li>
-                                            <li><a href="#">نوکیا</a></li>
-                                            <li class="parent"><a href="#">واقعیت مجازی</a></li>
-                                            <li class="parent"><a href="#">مچ بند و ساعت هوشمند</a></li>
-                                        </ul>
+                                            <li class="parent"><a href="#">صفحه زده شده </a></li>
+                                            <li><a href="{{route('404')}}"">404</a></li>
+                                            <li><a href="{{route('cart-empty')}}">سبد خرید خالی</a></li>
+                                            <li><a href="{{route('checkout-successful')}}">خرید موفق</a></li>
+                                            <li><a href="{{route('checkout-unsuccessful')}}">سبد ناموفق</a></li>
+                                            <li><a href="{{route('come')}}">حوش آمد گویی</a></li>
+                                            <li><a href="{{route('contact-us')}}">تماس با ما</a></li>
+                                            <li><a href="{{route('home')}}">خانه</a></li>
+                                            <li><a href="{{route('login-register')}}">ورود / ثبت نام</a></li>
+                                            <li><a href="{{route('password-reset')}}">پسورد</a></li>
+                                            <li><a href="{{route('product')}}">خرید محصول</a></li>
+                                            <li><a href="{{route('profile')}}">پروفایل</a></li>
+                                            <li><a href="{{route('shop')}}">لیست محصول</a></li>
+                                            <li><a href="{{route('verification')}}">کد ارسالی ورفیکشن</a></li>
+                                            <li><a href="{{route('welcome')}}">صحفه اصلی</a></li>
+                                    </ul>
                                     </li>
                                     <li class="mega-menu-category">
                                         <a href="#">مد و پوشاک</a>

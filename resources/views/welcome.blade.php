@@ -6,44 +6,7 @@
     @include('layouts.slider')
             @include('layouts.banner')
                 <!-- end of box => categories-slider -->
-                <div class="row mb-5">
-                    <div class="col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/020.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/021.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/022.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/023.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                </div>
+            @include('layouts.tiles')
                 <!-- start of box -->
                 <div class="ui-box mb-5">
                     <div class="ui-box-title">منتخب محصولات تخفیف و حراج</div>

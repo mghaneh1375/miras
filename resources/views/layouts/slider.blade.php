@@ -6,7 +6,7 @@
                             <div class="swiper-wrapper">
                                 <div id="slider" class="swiper-slide main-swiper-slide opacity1">
                                 </div>
-                            </div>
+                            </div> 
                             <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>
 
@@ -34,16 +34,16 @@
                 if(res.status === "ok") {
                      if (width > 1000) {
                         for(var i = 0; i < res.data.length; i++) {
-                            html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_large + ')!important;"></a>';
+                            html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_large + ')!important;"></a>';
                         }
                      }else if (width > 520) {
                         
                          for(var i = 0; i < res.data.length; i++) {
-                            html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_mid + ')!important;"></a>';
+                            html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_mid + ')!important;"></a>';
                          }
                      }else {
                          for(var i = 0; i < res.data.length; i++) {
-                             html += '<a href="' + res.data[i].href + '" style="background-image: url(' + res.data[i].img_small + ')!important;"></a>';
+                             html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_small + ')!important;"></a>';
                          }
                      }
                      

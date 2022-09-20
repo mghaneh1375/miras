@@ -102,3 +102,50 @@ Route::get('/product/{productId}/{productName}', function () {
 })->name('single-product');
 
 Route::view('alaki', 'alaki');
+Route::get('/checkout-successful', function () {
+    return view('checkout-successful');
+})->name('checkout-successful');
+
+Route::get('/checkout-unsuccessful', function () {
+    return view('checkout-unsuccessful');
+})->name('checkout-unsuccessful');
+
+Route::get('/login-register', function () {
+    return view('login-register');
+})->name('login-register');
+
+Route::get('/verification', function () {
+    return view('verification');
+})->name('verification');
+
+Route::get('/come', function () {
+    return view('come');
+})->name('come');
+
+Route::get('/password-reset', function () {
+    return view('password-reset');
+})->name('password-reset');
+
+Route::get('/shop', function () {
+    return view('shop');
+})->name('shop');
+
+Route::get('/contact-us', function () {
+    return view('contact-us');
+})->name('contact-us');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/404', function () {
+    return view('404');
+})->name('404');
+
+Route::get('/product', function () {
+    return view('product');
+})->name('product');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
