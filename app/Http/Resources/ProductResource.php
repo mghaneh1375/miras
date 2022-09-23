@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BrandResource extends JsonResource
+class ProductResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,11 +14,6 @@ class BrandResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'name' => $this->name,
-            'id' => $this->id,
-            'alt' => $this->alt,
-            'logo' => $this->logo == null ? asset('default.png') : asset('storage/brands/' . $this->logo)
-        ];
+        return parent::toArray($request);
     }
 }

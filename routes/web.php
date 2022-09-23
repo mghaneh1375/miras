@@ -6,9 +6,11 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
 use App\Http\Controllers\SliderController;
+use App\Http\Resources\FeatureResource;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,10 +32,9 @@ Route::middleware(['auth'])->group(function() {
 
 Route::middleware(['auth', 'editorLevel'])->group(function() {
 
-    Route::resource('brand', BrandController::class)->only(['store', 'destroy', 'update', 'index']);
+    Route::resource('brand', BrandController::class)->except(['show', 'update']);
 
-    Route::view('brand/create', 'admin.brand.create');
-
+    Route::post('brand/{brand}', [BrandController::class, 'update'])->name('brand.update');
 
 
     Route::resource('infobox', InfoBoxController::class)->except(['show', 'update']);
@@ -53,33 +54,52 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
     Route::post('banner/{banner}', [BannerController::class, 'update'])->name('banner.update');
 
 
+    Route::resource('category', CategoryController::class)->except('update');
+
+    Route::prefix('category')->group(function() {
+
+        Route::post('/', [CategoryController::class, 'uploadCategories'])->name('category.upload');
+
+        Route::post('/{category}', [CategoryController::class, 'update'])->name('category.update');
+        
+        Route::get('/sub/{category}', [CategoryController::class, 'sub'])->name('category.sub');
+
+    });
+
+    Route::resource('category.features', FeatureController::class)->except('show', 'update')->shallow();
+
+    Route::post('feature/{feature}', [FeatureController::class, 'update'])->name('feature.update');
+
 
     Route::resource('faq', FAQController::class)->except(['show', 'update']);
 
     Route::post('faq/{faq}', [FAQController::class, 'update'])->name('faq.update');
     
+
     Route::resource('config', ConfigController::class)->only(['index']);
 
     Route::post('config', [ConfigController::class, 'update'])->name('config.update');
+
 
     Route::post('uploadImg', [HomeController::class, 'uploadImg'])->name('uploadImg');
 
     Route::get('/panel', function () {
         return view('admin.home');
     })->name('panel');
+
 });
 
-Route::get('category/list', [CategoryController::class, 'list'])->name('category.list');
+// Route::get('category/list', [CategoryController::class, 'list'])->name('category.list');
 
-Route::view('addCategory', 'admin.category.create')->name('category.add');
+// Route::view('addCategory', 'admin.category.create')->name('category.add');
 
-Route::get('updateCategory/{category}', [CategoryController::class, 'update'])->name('category.update');
+// Route::get('updateCategory/{category}', [CategoryController::class, 'update'])->name('category.update');
 
-Route::post('updateCategory/{category}', [CategoryController::class, 'doUpdate'])->name('category.doUpdate');
+// Route::post('updateCategory/{category}', [CategoryController::class, 'doUpdate'])->name('category.doUpdate');
 
-Route::post('storeCategory', [CategoryController::class, 'store'])->name('category.store');
+// Route::post('storeCategory', [CategoryController::class, 'store'])->name('category.store');
 
-Route::delete('removeCategory/{category}', [CategoryController::class, 'remove'])->name('category.remove');
+// Route::delete('removeCategory/{category}', [CategoryController::class, 'remove'])->name('category.remove');
 
 Route::post('login', [AuthController::class, 'login'])->name('login');
 

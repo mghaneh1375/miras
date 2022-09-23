@@ -9,11 +9,11 @@ class ProductFeatures extends Model
 {
     use HasFactory;
     
-    protected $table = 'product_feature';
+    protected $table = 'product_features';
 
     protected $fillable = [
         'id',
-        'sub_category_feature_id',
+        'category_feature_id',
         'product_id',
         'value'
     ];

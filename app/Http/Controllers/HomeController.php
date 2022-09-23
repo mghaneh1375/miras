@@ -16,7 +16,7 @@ class HomeController extends Controller
         ]);
 
         $filename = $request->upload->save('public/ck');
-        $filename = str_replace('public/ck', '', $filename);
+        $filename = str_replace('public/ck/', '', $filename);
 
         return response()->json(['status' => 'ok', 'url' => asset('storage/ck/' . $filename)]);
     }

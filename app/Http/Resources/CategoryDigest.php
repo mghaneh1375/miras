@@ -2,9 +2,10 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Category;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class CategoryDigest extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -18,13 +19,9 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'alt' =>  $this->alt,
-            'digest' =>  $this->digest,
-            'keywords' =>  $this->keywords,
-            'tags' =>  $this->tags,
             'priority' =>  $this->priority,
             'visibility' =>  $this->visibility,
-            'show_in_first_page' => $this->show_in_first_page,
-            'show_items_in_first_page' => $this->show_items_in_first_page,
+            'has_sub' => $this->sub()->count() > 0,
             'parent_id' => $this->parent_id,
             'img' => $this->img == null ? asset('default.png') : asset('storage/categories/' . $this->img)
         ];

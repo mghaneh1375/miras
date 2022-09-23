@@ -10,7 +10,6 @@
 
 @section('items')
     
-
     <table>
         <thead>
             <tr>
@@ -25,7 +24,7 @@
             <?php $i = 1; ?>
             @foreach($items as $item)
                 
-                <tr id="item_{{ $item['id'] }}">
+                <tr id="item_{{ $item->id }}">
                     <td>{{ $i }}</td>
                     <td>{{ $item->title }}</td>
                     <td>{{ $item->visibility ? 'نمایش' : 'عدم نمایش' }}</td>

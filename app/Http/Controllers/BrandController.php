@@ -18,6 +18,16 @@ class BrandController extends Controller
     {
         return view('admin.brand.list', ['items' => BrandResource::collection(Brand::all())->toArray($request)]);
     }
+    
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('admin.brand.create');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -27,19 +37,36 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'logo_file' => 'nullable|image',
+        $validator = [
+            'name' => 'required|string|min:2',
+            'image_file' => 'nullable|image',
             'alt' => 'nullable|string|min:2'
-        ]);
+        ];
+        
+        if(self::hasAnyExcept(array_keys($validator), $request->keys()))
+            abort(401);
 
-        if($request->has('logo_file')) {
-           $request->logo = $request->logo_file->store('public/brands');
-           $request->logo = str_replace('public/brands', '', $request->logo);
+        $request->validate($validator);
+
+        if($request->has('image_file')) {
+            $filename = $request->image_file->store('public/brands');
+            $request['logo'] = str_replace('public/brands/', '', $filename);
         }
 
         Brand::create($request->toArray());
         return Redirect::route('brand.index');
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Brand  $brand
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Brand $brand, Request $request)
+    {
+        return view('admin.brand.create', ['item' => BrandResource::make($brand)->toArray($request)]);
     }
 
     /**
@@ -51,15 +78,23 @@ class BrandController extends Controller
      */
     public function update(Request $request, Brand $brand)
     {
-        $request->validate([
-            'name' => 'nullable|string',
-            'logo_file' => 'nullable|image',
+        
+        $validator = [
+            'name' => 'nullable|string|min:2',
+            'image_file' => 'nullable|image',
             'alt' => 'nullable|string|min:2'
-        ]);
+        ];
+        
+        if(self::hasAnyExcept(array_keys($validator), $request->keys()))
+            abort(401);
 
-        if($request->has('logo_file')) {
-           $filename = $request->logo_file->store('public/brands');
-           $filename = str_replace('public/brands', '', $filename);
+        $request->validate($validator);
+    
+        if($request->has('image_file')) {
+           
+            $filename = $request->image_file->store('public/brands');
+            $filename = str_replace('public/brands/', '', $filename);
+
            if($brand->logo != null &&
                 file_exists(__DIR__ . '/../../../public/storage/brands/' . $brand->logo)
             ) {

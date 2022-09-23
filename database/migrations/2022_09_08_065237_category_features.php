@@ -20,6 +20,8 @@ class CategoryFeatures extends Migration
             $table->boolean('effect_on_price')->default(false);
             $table->boolean('effect_on_available_count')->default(false);
             $table->string('unit')->nullable();
+            $table->string('choices')->nullable();
+            $table->unsignedInteger('priority');
             $table->enum('answer_type', ['number', 'text', 'longtext', 'multi_choice'])->default('text');
             $table->unsignedInteger('category_id');
             $table->index('category_id');

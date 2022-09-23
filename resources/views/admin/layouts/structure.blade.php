@@ -180,7 +180,20 @@
         .flex {
             display: flex;
         }
-
+        
+        .flex-start {
+            align-self: flex-start;
+        }
+        
+        .flex-end {
+            align-self: flex-end;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .space-between {
+            justify-content: space-between
+        }
         .flex-col {
             flex-direction: column;
         }
@@ -365,8 +378,11 @@
 
                         <li class="nav-item"><a data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i></i> <span class="mini-dn">تنظیمات سیستمی</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="{{route('category.list')}}" class="dropdown-item">مدیریت دسته ها</a>
+                                <a href="{{route('category.index')}}" class="dropdown-item">مدیریت دسته ها</a>
                                 <a href="{{route('infobox.index')}}" class="dropdown-item">مدیریت بنر اطلاعات</a>
+                                <a href="{{route('faq.index')}}" class="dropdown-item">مدیریت سوالات متداول</a>
+                                <a href="{{route('slider.index')}}" class="dropdown-item">مدیریت اسلایدر</a>
+                                <a href="{{route('brand.index')}}" class="dropdown-item">مدیریت برند ها</a>
                                 <a href="{{route('banner.index')}}" class="dropdown-item">مدیریت بنر های تبلیغاتی</a>
                                 <a href="{{route('config.index')}}" class="dropdown-item">پیکربندی</a>
                             </div>
