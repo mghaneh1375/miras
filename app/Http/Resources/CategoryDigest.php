@@ -19,6 +19,7 @@ class CategoryDigest extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'alt' =>  $this->alt,
+            'digest' =>  $this->digest,
             'priority' =>  $this->priority,
             'visibility' =>  $this->visibility,
             'has_sub' => $this->sub()->count() > 0,

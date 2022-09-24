@@ -524,7 +524,7 @@
             success: function(res) {
                 if(res.status === "ok") {
                     $("#infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
-                    
+    
                 }
             }
         });
