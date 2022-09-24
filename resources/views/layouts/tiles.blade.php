@@ -1,57 +1,71 @@
-                <div class="row mb-5">
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            </a>
+                <div class="ui-box mb-1">
+                    <div class="ui-box-content">
+                        <!-- Slider main container -->
+                        <div class="swiper product-swiper-slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- start of product-card -->
+                                    <div class="banner-img tiles">
+                                        <a href="#" class="tiles">
+                                            <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- end of product-card -->
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img tiles">
-                            <a href="#" class="tiles">
-                                <img class="imgResponsive positionRelative" src="./theme-assets/images/tiles/terme-l-main.png" alt="">
-                            <p class="positionAbsolute">متن روی تصویر</p>
-                            </a>
-                        </div>
-                        <!-- end of banner -->
                     </div>
                 </div>
