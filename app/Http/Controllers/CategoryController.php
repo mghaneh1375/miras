@@ -122,10 +122,14 @@ class CategoryController extends Controller
         }
 
         $cats = Category::visible()->top()->get();
+        $menuCats = Category::visible()->head()->get();
 
         return response()->json(
             [
-                'data' => CategoryDigest::collection($cats)->toArray($request),
+                'data' => [
+                    "top" => CategoryDigest::collection($cats)->toArray($request),
+                    "menu" => CategoryDigest::collection($menuCats)->toArray($request),
+                ],
                 'status' => 'ok'
             ]
         );

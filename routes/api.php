@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
@@ -32,3 +33,5 @@ Route::get('infobox', [InfoBoxController::class, 'index'])->name('api.infobox');
 Route::get('banner', [BannerController::class, 'index'])->name('api.banner');
 
 Route::get('slider', [SliderController::class, 'index'])->name('api.slider');
+
+Route::get('category', [CategoryController::class, 'index'])->name('api.category');
