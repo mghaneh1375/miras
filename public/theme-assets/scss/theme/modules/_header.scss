@@ -56,13 +56,10 @@
             position: absolute;
             right: 0;
             left: 0;
-            bottom: -1px;
-            height: 1px;
-            background-color: #efefef;
         }
 
         .vertical-menu {
-            min-width: 250px;
+            // min-width: 250px;
             position: relative;
             margin-left: 1rem;
 
@@ -70,8 +67,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-right: 1px solid #efefef;
-                border-left: 1px solid #efefef;
                 color: #212121;
                 padding: 0.75rem 1rem;
                 font-weight: 600;
@@ -95,7 +90,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transform: translate3d(0, 10px, 0);
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
 
                 ul {
                     list-style: none;
@@ -112,10 +107,9 @@
                     }
                 }
 
-                &>ul {
-                    &>li {
-
-                        &>a {
+                & > ul {
+                    & > li {
+                        & > a {
                             padding: 10px 15px;
                             position: relative;
 
@@ -124,7 +118,7 @@
                                 font-family: $font-icon;
                                 position: absolute;
                                 left: 15px;
-                                transition: all .3s ease-in-out;
+                                transition: all 0.3s ease-in-out;
                             }
 
                             &:hover::after {
@@ -133,8 +127,7 @@
                         }
 
                         &:hover {
-
-                            &>a {
+                            & > a {
                                 color: $color-primary;
                             }
                         }
@@ -210,7 +203,6 @@
             }
 
             &:hover {
-
                 .vertical-menu-items {
                     opacity: 1;
                     visibility: visible;
@@ -284,7 +276,7 @@
             opacity: 0;
             visibility: hidden;
             transform: translate3d(0, -10px, 0);
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             z-index: 1;
 
             .ui-box {
@@ -315,7 +307,7 @@
             opacity: 0;
             visibility: hidden;
             transform: translate3d(0, -10px, 0);
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             z-index: 1;
 
             &.mini-cart-dropdown-right {
@@ -361,7 +353,7 @@
                             box-sizing: border-box;
 
                             &::after {
-                                content: '';
+                                content: "";
                                 position: absolute;
                                 top: 0;
                                 right: 0;
@@ -369,7 +361,7 @@
                                 bottom: 0;
                                 background-color: #000;
                                 border-radius: 10px;
-                                opacity: .03;
+                                opacity: 0.03;
                                 z-index: 10;
                             }
                         }
@@ -387,7 +379,7 @@
                         a {
                             color: #212121;
                             text-decoration: none;
-                            transition: all .2s ease-in-out;
+                            transition: all 0.2s ease-in-out;
 
                             &:hover {
                                 color: $color-primary;
@@ -435,7 +427,8 @@
                                         width: 15px;
                                         height: 15px;
                                         border-radius: 50%;
-                                        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+                                        box-shadow: inset 0 0 3px
+                                            rgba(0, 0, 0, 0.5);
                                     }
                                 }
                             }
@@ -543,7 +536,7 @@
         overflow: hidden;
         opacity: 0;
         visibility: hidden;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform: translate3d(0, -10px, 0);
         z-index: 1;
 
@@ -638,7 +631,7 @@
         background-color: #f3f3f3;
         box-shadow: 0 0 9px rgba(0, 0, 0, 0.03);
         padding: 0 20px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform: translateY(-100%);
         z-index: 12;
 
@@ -666,7 +659,7 @@
                 right: 0;
                 color: #000;
                 font-size: 18px;
-                opacity: .4;
+                opacity: 0.4;
                 transform: translateY(-50%);
             }
 
@@ -707,7 +700,7 @@
                         border-radius: 25rem;
                         color: #363636;
                         text-decoration: none;
-                        transition: all .2s ease;
+                        transition: all 0.2s ease;
 
                         &:hover {
                             background-color: $color-primary;
@@ -736,7 +729,7 @@
                         color: #363636;
                         position: relative;
                         text-decoration: none;
-                        transition: all .2s ease;
+                        transition: all 0.2s ease;
 
                         &::before {
                             content: "\F0D1";
@@ -782,13 +775,12 @@
         left: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.3);
-        transition: all .2s cubic-bezier(.215, .61, .355, 1) .1s;
+        transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
         transform: translateY(-100%);
         z-index: 11;
     }
 
     &.show {
-
         .mega-search-box,
         .mega-search-overlay {
             transform: translateY(0);

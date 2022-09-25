@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#C59358">
-    <meta name="msapplication-navbutton-color" content="#C59358">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#C59358">
+    <meta name="theme-color" content="#0089B7">
+    <meta name="msapplication-navbutton-color" content="#0089B7">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0089B7">
     <title>ویزیت ایران | خانه</title>
     <link rel="stylesheet" href="{{ asset('theme-assets/css/dependencies.css') }}">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
@@ -20,7 +20,7 @@
 
     <div class="page-wrapper">
         <!-- start of page-header -->
-        <header class="page-header d-md-block d-none">
+        <header class="page-header d-md-block d-none customFixedMenu">
             <!-- start banner -->
             <div class="alert banner-container alert-dismissible fade show" role="alert">
                 <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
@@ -32,8 +32,8 @@
             <div class="page-header--middle">
                 <div class="container heightHeader">
                     <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center flex-grow-1 pe-3 zIndex3 ">
-                            <div class="logo-container logo-box me-3 positionAbsolute topImg">
+                        <div class="d-flex align-items-center flex-grow-1 pe-3 zIndex3 position-relative">
+                            <div class="logo-container logo-box me-3 positionAbsolute logoImgFromTop">
                                     <img src="./theme-assets/images/menuImage.png" width="120" alt="">
                             </div>
                             <div class="marginFromRightHeader">
@@ -41,77 +41,15 @@
                                 <div class="notification-item--text fontSize12 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
                             </div>
                         </div>
-                        <div class="user-options heightHeader">
-                            <div class="user-option user-option--account">
-                                <a href="profile.html" class="user-option-btn user-option-btn--account">
-                                    <i class="ri-user-fill icon"></i>
-                                    <i class="ri-arrow-down-s-fill icon fs-7 text-muted"></i>
+                        <div class="user-options heightHeader customFilterGray">
+                            <div class="user-option user-option--search customBorderLeft1">
+                                <a href="profile.html" class="user-option-btn user-option-btn--search gap10">
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/search.svg" alt="">
                                 </a>
-                                <div class="user-option--dropdown user-option--dropdown-right">
-                                    <div class="profile-user-info ui-box">
-                                        <div class="profile-detail">
-                                            <div class="d-flex align-items-center">
-                                                <div class="profile-avatar me-3"><img
-                                                        src="./theme-assets/images/avatar/default.png" alt="avatar">
-                                                </div>
-                                                <div class="profile-info">
-                                                    <a href="#" class="text-decoration-none text-dark fw-bold mb-2">جلال
-                                                        بهرامی
-                                                        راد</a>
-                                                    <div class="text-muted fs-7 fw-bold">۰۹xxxxxxxxx</div>
-                                                </div>
-                                            </div>
-                                            <div class="user-options">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">کیف پول</span>
-                                                        <span class="detail">
-                                                            <span class="d-block">۰ <span
-                                                                    class="currency fs-7 fw-bold">تومان</span></span>
-                                                            <a href="#"
-                                                                class="link border-bottom-0 text-info fs-7 fw-bold">افزایش
-                                                                موجودی <i class="ri-arrow-left-s-line"></i></a>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">باشگاه مشتریان</span>
-                                                        <span class="detail">
-                                                            <span class="d-block">۰ <span
-                                                                    class="score text-muted fs-7">امتیاز</span></span>
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <ul class="nav nav-items-with-icon flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{route('cart-empty')}}"><i
-                                                        class="nav-link-icon ri-file-list-3-line"></i>
-                                                    سفارش
-                                                    های من</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#"><i
-                                                        class="nav-link-icon ri-copper-coin-fill"></i>
-                                                    باشگاه مشتریان</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#"><i
-                                                        class="nav-link-icon ri-logout-box-r-line"></i>
-                                                    خروج</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="user-option user-option--cart">
+                            <div class="user-option user-option--cart customBorderLeft1">
                                 <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
-                                    <i class="ri-shopping-bag-2-fill icon"></i>
-                                    <span class="user-item-text">
-                                        <span class="title">سبد خرید شما</span>
-                                        <span class="value fa-num">83,678,000 <span class="currency">تومان</span></span>
-                                    </span>
-                                    <span class="counter">۴</span>
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/basket.svg" alt="">
                                 </a>
                                 <div class="mini-cart">
                                     <div class="mini-cart-header">
@@ -142,72 +80,6 @@
                                                 <button class="mini-cart-product-remove"></button>
                                             </div>
                                         </div>
-                                        <div class="mini-cart-product">
-                                            <div class="mini-cart-product-thumbnail">
-                                                <a href="#"><img src="./theme-assets/images/products/02.jpg" alt=""></a>
-                                            </div>
-                                            <div class="mini-cart-product-detail">
-                                                <div class="mini-cart-product-brand"><a href="#">xiaomi</a></div>
-                                                <div class="mini-cart-product-title">
-                                                    <a href="product-v1.html">گوشی موبایل شیائومی مدل 11 lite 5G NE
-                                                        2109119DG دو سیم‌ کارت
-                                                        ظرفیت 256 گیگابایت و رم 8 گیگابایت</a>
-                                                </div>
-                                                <div class="mini-cart-purchase-info">
-                                                    <div class="mini-cart-product-meta">
-                                                        <span class="fa-num">1 عدد</span>
-                                                        <span class="color" style="background-color: #d4d4d4;"></span>
-                                                    </div>
-                                                    <div class="mini-cart-product-price fa-num">8,239,000 <span
-                                                            class="currency">تومان</span></div>
-                                                </div>
-                                                <button class="mini-cart-product-remove"></button>
-                                            </div>
-                                        </div>
-                                        <div class="mini-cart-product">
-                                            <div class="mini-cart-product-thumbnail">
-                                                <a href="#"><img src="./theme-assets/images/products/05.jpg" alt=""></a>
-                                            </div>
-                                            <div class="mini-cart-product-detail">
-                                                <div class="mini-cart-product-brand"><a href="#">apple</a></div>
-                                                <div class="mini-cart-product-title">
-                                                    <a href="product-v1.html">گوشی موبایل اپل مدل iPhone 12 Pro Max
-                                                        A2412 دو سیم‌ کارت ظرفیت
-                                                        256 گیگابایت</a>
-                                                </div>
-                                                <div class="mini-cart-purchase-info">
-                                                    <div class="mini-cart-product-meta">
-                                                        <span class="fa-num">1 عدد</span>
-                                                        <span class="color" style="background-color: #d4d4d4;"></span>
-                                                    </div>
-                                                    <div class="mini-cart-product-price fa-num">36,300,000 <span
-                                                            class="currency">تومان</span></div>
-                                                </div>
-                                                <button class="mini-cart-product-remove"></button>
-                                            </div>
-                                        </div>
-                                        <div class="mini-cart-product">
-                                            <div class="mini-cart-product-thumbnail">
-                                                <a href="#"><img src="./theme-assets/images/products/07.jpg" alt=""></a>
-                                            </div>
-                                            <div class="mini-cart-product-detail">
-                                                <div class="mini-cart-product-brand"><a href="#">samsung</a></div>
-                                                <div class="mini-cart-product-title">
-                                                    <a href="product-v1.html">گوشی موبایل سامسونگ مدل Galaxy S9 Plus دو
-                                                        سیم کارت ظرفیت 64
-                                                        گیگابایت</a>
-                                                </div>
-                                                <div class="mini-cart-purchase-info">
-                                                    <div class="mini-cart-product-meta">
-                                                        <span class="fa-num">1 عدد</span>
-                                                        <span class="color" style="background-color: #d4d4d4;"></span>
-                                                    </div>
-                                                    <div class="mini-cart-product-price fa-num">12,890,000 <span
-                                                            class="currency">تومان</span></div>
-                                                </div>
-                                                <button class="mini-cart-product-remove"></button>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="mini-cart-footer">
                                         <div class="mini-cart-total">
@@ -216,6 +88,45 @@
                                                     class="currency">تومان</span></span>
                                         </div>
                                         <a href="#" class="btn btn-primary">ورود و ثبت سفارش</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-option user-option--account  paddingRight15">
+                                <a href="profile.html" class="user-option-btn user-option-btn--account gap10">
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/user.svg" alt="">
+                                    <div>ورود / ثبت نام</div>
+                                </a>
+                                <div class="user-option--dropdown user-option--dropdown-right">
+                                    <div class="profile-user-info ui-box">
+                                        <div class="profile-detail">
+                                            <div class="d-flex align-items-center">
+                                                <div class="profile-avatar me-3">
+                                                    <img src="./theme-assets/images/avatar/default.png" alt="avatar">
+                                                </div>
+                                                <div class="profile-info">
+                                                    <a href="#" class="text-decoration-none text-dark fw-bold mb-2">
+                                                        جلال
+                                                        بهرامی
+                                                        راد
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nav nav-items-with-icon flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{route('cart-empty')}}"><i
+                                                        class="nav-link-icon ri-file-list-3-line"></i>
+                                                    سفارش
+                                                    های من
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><i
+                                                        class="nav-link-icon ri-logout-box-r-line"></i>
+                                                    خروج
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -233,14 +144,14 @@
             <div class="page-header--bottom marginFromRightHeader">
                 <div class="container">
                     <div class="d-flex align-items-center">
-                        <div class="vertical-menu">
-                            <a href="#" class="vertical-menu-btn colorWhite">دسته بندی کالاها <i class="ri-apps-fill icon"></i></a>
-                            <div class="vertical-menu-items marginFromRightHeaderNegative">
+                        <div class="vertical-menu minWidthUnset">
+                            <a href="#" class="vertical-menu-btn p-0 m-0 colorWhite"><img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt="">دسته بندی کالاها</a>
+                            <div class="vertical-menu-items marginFromRightHeaderNegative custom-vertical-menu-items zIndex10 mt-10">
                                 <ul>
                                     <li class="mega-menu-category show">
-                                        <a href="#">کالای دیجیتال</a>
+                                        <a href="#">صفحه های طراحی شده</a>
                                         <ul class="mega-menu">
-                                            <li class="parent"><a href="#">صفحه زده شده </a></li>
+                                            <li class="parent"><a class="colorBlue" href="#">صفحه زده شده </a></li>
                                             <li><a href="{{route('404')}}"">404</a></li>
                                             <li><a href="{{route('cart-empty')}}">سبد خرید خالی</a></li>
                                             <li><a href="{{route('checkout-successful')}}">خرید موفق</a></li>
@@ -258,44 +169,29 @@
                                     </ul>
                                     </li>
                                     <li class="mega-menu-category">
-                                        <a href="#">مد و پوشاک</a>
+                                        <a href="#">دسته بندی محصولات</a>
                                         <ul class="mega-menu">
-                                            <li class="parent"><a href="#">لوازم جانبی گوشی</a></li>
-                                            <li><a href="#">کیف و کاور گوشی</a></li>
-                                            <li><a href="#">پاور بانک (شارژر همراه)</a></li>
-                                            <li><a href="#">پایه نگهدارنده گوشی</a></li>
-                                            <li class="parent"><a href="#">گوشی موبایل</a></li>
-                                            <li><a href="#">سامسونگ</a></li>
-                                            <li><a href="#">هوآوی</a></li>
-                                            <li><a href="#">اپل</a></li>
-                                            <li><a href="#">شیائومی</a></li>
-                                            <li><a href="#">آنر</a></li>
-                                            <li><a href="#">نوکیا</a></li>
-                                            <li class="parent"><a href="#">لوازم جانبی گوشی</a></li>
-                                            <li><a href="#">کیف و کاور گوشی</a></li>
-                                            <li><a href="#">پاور بانک (شارژر همراه)</a></li>
-                                            <li><a href="#">پایه نگهدارنده گوشی</a></li>
-                                            <li class="parent"><a href="#">گوشی موبایل</a></li>
-                                            <li><a href="#">سامسونگ</a></li>
-                                            <li><a href="#">هوآوی</a></li>
-                                            <li><a href="#">اپل</a></li>
-                                            <li><a href="#">شیائومی</a></li>
-                                            <li><a href="#">آنر</a></li>
-                                            <li><a href="#">نوکیا</a></li>
+                                            <li class="parent"><a class="colorBlue" href="#">فرش</a></li>
+                                            <li><a href="#">منسوجات</a></li>
+                                            <li><a href="#">منزل و دکوراسیون</a></li>
+                                            <li><a href="#">ابزار</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">اسباب بازی</a></li>
-                                    <li><a href="#">زیبایی و سلامت</a></li>
-                                    <li><a href="#">خانه و آشپزخانه</a></li>
-                                    <li><a href="#">لوازم تحریر</a></li>
-                                    <li><a href="#">ورزش و سفر</a></li>
-                                    <li><a href="#">سوپرمارکت</a></li>
+                                    <li><a href="#">فرش</a></li>
+                                    <li><a href="#">ابزار</a></li>
+                                    <li><a href="#">منزل و دکوراسیون</a></li>
+                                    <li><a href="#">منسوجات</a></li>
+                                    <li><a href="#">مینا کاری</a></li>
+                                    <li><a href="#">منبت کاری</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <ul class="nav marginTopNegative5">
+                        <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html">پیشنهاد های ویژه</a>
+                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/home.svg" alt="">صفحه اصلی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/label.svg" alt="">پیشنهاد های ویژه</a>
                             </li>
                         </ul>
                     </div>
@@ -305,11 +201,8 @@
                         </div>
                         <div class="page-header--top-left">
                             <ul class="nav nav-light justify-content-end">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">پرسش های متداول</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">تماس با ما</a>
+                                <li class="nav-item d-md-none d-lg-block">
+                                    <a class="nav-link" href="#">تازه‌ها</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">درباره ما</a>
@@ -470,9 +363,9 @@
             </div>
         </header>
         <!-- start of page-content -->
-        <main class="page-content">
+       <div class="mt-md-150">
             @yield('content')
-        </main>
+        </div>
         <!-- end of page-content -->
         @section('footer')
             @include('layouts.footer')

@@ -1,12 +1,13 @@
 @extends('layouts.structure')
 @section('content')
 
-<div class="container">
-            
-    @include('layouts.slider')
-            @include('layouts.banner')
+@include('layouts.slider')
+<main class="page-content">
+    <div class="container">            
+    
+                @include('layouts.banner')
                 <!-- end of box => categories-slider -->
-            @include('layouts.tiles')
+                @include('layouts.tiles')
                 <!-- start of box -->
                 <div class="ui-box mb-5">
                     <div class="ui-box-title">منتخب محصولات تخفیف و حراج</div>
@@ -507,7 +508,8 @@
                         <!-- end of banner -->
                     </div>
                 </div>
-            </div>
+    </div>
+</main>
             <!-- start of quick-view-modal -->
             <div class="remodal remodal-lg" data-remodal-id="quick-view-modal"
                 data-remodal-options="hashTracking: false">

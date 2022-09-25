@@ -31,8 +31,8 @@
 .positionRelative {
     position: relative !important;
 }
-.topImg {
-    top: 60px;
+.logoImgFromTop {
+    top: -5px;
 }
 .zIndex3 {
     z-index: 3;
@@ -132,4 +132,78 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+.margin45Negative {
+    margin: -45px 0px !important;
+}
+.borderRadius0 {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.overflowHidden {
+    overflow: hidden;
+}
+.custom-vertical-menu-items {
+    min-width: 250px;
+}
+.minWidthUnset {
+    min-width: unset !important;
+}
+.zIndex10 {
+    z-index: 10;
+}
+.iconSvg {
+    vertical-align: -2px;
+    padding: 0 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.customIconHeadLine {
+    width: 21px;
+    height: 21px;
+    filter: contrast(0.5);
+    -webkit-filter: contrast(0.5);
+}
+.gap10 {
+    gap: 10px;
+}
+.gap15 {
+    gap: 15px;
+}
+.customBorderLeft1 {
+    border-left: 1px solid #9c9c9c;
+    padding: 0 15px;
+}
+.customFilterGray {
+    background-color: #efefef;
+    padding: 0 15px;
+    box-shadow: inset 0px 0px 6px 6px #dddddd;
+}
+.paddingRight15 {
+    padding-right: 15px;
+}
+.colorYellow {
+    color: #c59358;
+}
+.colorBlue {
+    color: #0089b7 !important;
+}
+.backgroundColorYellow {
+    background-color: #c59358;
+}
+.customFixedMenu {
+    position: fixed !important;
+    width: 100% !important;
+}
+.mt-150 {
+    margin-top: 150px;
+}
+@media (min-width: 768px) {
+    .mt-md-150 {
+        margin-top: 150px;
+    }
 }
