@@ -29,8 +29,8 @@
             </div>
             <!-- end banner -->
                         <!-- start of page-header-middle -->
-            <div class="page-header--middle">
-                <div class="container heightHeader">
+            <div class="page-header--middle customBackgroundWhite">
+                <div class="container heightHeader customBackgroundWhite">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center flex-grow-1 pe-3 zIndex3 position-relative">
                             <div class="logo-container logo-box me-3 positionAbsolute logoImgFromTop">
@@ -146,12 +146,12 @@
                     <div class="d-flex align-items-center">
                         <div class="vertical-menu minWidthUnset">
                             <a href="#" class="vertical-menu-btn p-0 m-0 colorWhite"><img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt="">دسته بندی کالاها</a>
-                            <div class="vertical-menu-items marginFromRightHeaderNegative custom-vertical-menu-items zIndex10 mt-10">
+                            <div class="vertical-menu-items marginFromRightHeaderNegative custom-vertical-menu-items zIndex2 mt-10">
                                 <ul>
                                     <li class="mega-menu-category show">
                                         <a href="#">صفحه های طراحی شده</a>
                                         <ul class="mega-menu">
-                                            <li class="parent"><a class="colorBlue" href="#">صفحه زده شده </a></li>
+                                            <li class="parent"><a class="colorBlue customBold" href="#">صفحه زده شده </a></li>
                                             <li><a href="{{route('404')}}"">404</a></li>
                                             <li><a href="{{route('cart-empty')}}">سبد خرید خالی</a></li>
                                             <li><a href="{{route('checkout-successful')}}">خرید موفق</a></li>
@@ -171,7 +171,7 @@
                                     <li class="mega-menu-category">
                                         <a href="#">دسته بندی محصولات</a>
                                         <ul class="mega-menu">
-                                            <li class="parent"><a class="colorBlue" href="#">فرش</a></li>
+                                            <li class="parent"><a class="colorBlue customBold" href="#">فرش</a></li>
                                             <li><a href="#">منسوجات</a></li>
                                             <li><a href="#">منزل و دکوراسیون</a></li>
                                             <li><a href="#">ابزار</a></li>
@@ -225,7 +225,7 @@
                             <div class="navigation-header">
                                 <div class="logo-container logo-box">
                                     <a href="#" class="logo">
-                                        <img src="./theme-assets/images/logo.svg" width="120" alt="">
+                                        <img src="./theme-assets/images/logo.svg" width="110" alt="">
                                         <span class="logo-text">بررسی،انتخاب و خرید آنلاین</span>
                                     </a>
                                 </div>
@@ -363,7 +363,7 @@
             </div>
         </header>
         <!-- start of page-content -->
-       <div class="mt-md-150">
+       <div class="mt-md-110">
             @yield('content')
         </div>
         <!-- end of page-content -->

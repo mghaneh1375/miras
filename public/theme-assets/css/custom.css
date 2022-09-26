@@ -3,11 +3,20 @@
 .creamColor {
     color: #c59358;
 }
+.fontSize10 {
+    font-size: 10px !important;
+}
 .fontSize12 {
     font-size: 12px !important;
 }
 .fontSize14 {
     font-size: 14px !important;
+}
+.fontSize15 {
+    font-size: 15px !important;
+}
+.fontSize20 {
+    font-size: 20px !important;
 }
 .padding0 {
     padding: 0;
@@ -37,6 +46,9 @@
 .zIndex3 {
     z-index: 3;
 }
+.zIndex2 {
+    z-index: 2;
+}
 .heightHeader {
     height: 50px;
 }
@@ -44,8 +56,9 @@
     font-weight: 700;
 }
 .backGray {
-    background-color: #555a5d99 !important;
-    box-shadow: 0px 3px 6px #00000029;
+    background: #555a5da6 0% 0% no-repeat padding-box !important;
+    box-shadow: 0px 3px 6px #00000029 !important;
+    opacity: 1;
 }
 .marginFromRightHeader {
     margin-right: 160px;
@@ -83,7 +96,7 @@
     background-color: #555a5d5c;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    bottom: 12px;
+    bottom: 20px;
 }
 .labelForCat {
     padding-right: 15px;
@@ -162,6 +175,9 @@
 .mt-10 {
     margin-top: 10px;
 }
+.pl-10 {
+    padding-left: 10px;
+}
 .customIconHeadLine {
     width: 21px;
     height: 21px;
@@ -195,6 +211,9 @@
 .backgroundColorYellow {
     background-color: #c59358;
 }
+.colorRed {
+    color: #ff0000;
+}
 .customFixedMenu {
     position: fixed !important;
     width: 100% !important;
@@ -202,8 +221,40 @@
 .mt-150 {
     margin-top: 150px;
 }
+.customBorderBoxShadow {
+    border: 1px solid #dedede;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px 0px #00000029;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.customBoxLabel {
+    padding: 5px 10px;
+    background-color: #555a5d;
+    margin-right: -10px;
+    margin-top: 15px;
+}
+.textColor {
+    color: #555a5d !important;
+}
+.customBackgroundWhite {
+    background-color: #fff;
+}
+.customBold {
+    font-weight: 800;
+}
+.spaceBetween {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.customOff {
+    right: 6px;
+    top: 5px;
+}
 @media (min-width: 768px) {
-    .mt-md-150 {
-        margin-top: 150px;
+    .mt-md-110 {
+        margin-top: 110px;
     }
 }

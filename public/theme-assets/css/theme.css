@@ -305,7 +305,7 @@ body {
     background-color: #f8f8f8;
     border: 1px solid #eee;
     border-radius: 18px;
-    padding: 45px 35px;
+    padding: 0px 35px;
 }
 
 @media (max-width: 768px) {
@@ -1321,7 +1321,7 @@ body.loaded .product-card .product-thumbnail a::before {
 
 .swiper.product-swiper-slider {
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 
 .mini-slider-container {
@@ -1983,7 +1983,7 @@ body.loaded .product-card .product-thumbnail a::before {
 .logo-container.logo-box {
     min-width: 150px;
     background-color: #ffffff;
-    padding: 15px;
+    padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0px 9px 7px 5px #00000029;
@@ -1999,14 +1999,14 @@ body.loaded .product-card .product-thumbnail a::before {
 . Modules:Header
 ========================================================================== */
 .page-header {
-    background-color: #fff;
+    /* background-color: #fff; */
     position: relative;
     z-index: 10;
 }
 
-.page-header .page-header--top {
+/* .page-header .page-header--top {
     background-color: #1f1f1f;
-}
+} */
 
 .page-header .page-header--top .page-header--top-right,
 .page-header .page-header--top .page-header--top-left {

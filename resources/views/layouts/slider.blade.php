@@ -5,10 +5,10 @@
         <div class="swiper-wrapper">
             <!-- commented id slider -->
             <div id="slider" class="swiper-slide main-swiper-slide opacity1">
-                <a href="#"
+                {{-- <a href="#"
                     style="background-image: url(./theme-assets/images/slider/main/04.jpg);border-radius:0;">
-                    <img style="border-radius:0;" src="./theme-assets/images/slider/main/04.jpg" alt="">
-                </a>
+                    <img  style="border-radius:0;" src="./theme-assets/images/slider/main/04.jpg" alt="">
+                </a> --}}
         </div>
         </div> 
         <!-- If we need pagination -->
@@ -33,16 +33,16 @@
                  if(res.status === "ok") {
                       if (width > 1000) {
                          for(var i = 0; i < res.data.length; i++) {
-                             html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_large + ')!important;"><img src="' + res.data[i].img_large + '" alt=""></a>';
+                             html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_large + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_large + '" alt=""></a>';
                          }
                       }else if (width > 520) {
                       
                           for(var i = 0; i < res.data.length; i++) {
-                             html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_mid + ')!important;"><img src="' + res.data[i].img_mid + '" alt=""></a>';
+                             html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_mid + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_mid + '" alt=""></a>';
                           }
                       }else {
                           for(var i = 0; i < res.data.length; i++) {
-                              html += '<a href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_small + ')!important;"><img src="' + res.data[i].img_small + '" alt=""></a>';
+                              html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_small + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_small + '" alt=""></a>';
                           }
                       }
                      

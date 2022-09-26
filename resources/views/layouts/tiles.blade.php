@@ -1,5 +1,5 @@
-                <div class="ui-box mb-1">
-                    <div class="ui-box-content">
+                <div class="ui-box mb-5 mt-5 p-0">
+                    <div class="ui-box-content p-0 pb-1">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
                             <!-- Additional required wrapper -->
@@ -26,7 +26,7 @@
                                 for(var i = 0; i < res.data.top.length; i++) {
                                     html += '<div class="swiper-slide d-flex justify-content-center">';
                                     html += '<div class="banner-img ">';
-                                    html += '<a href="#" class="tiles">';
+                                    html += '<a target="_blank" href="#" class="tiles">';
                                     html +='<img class="imgResponsive" src="' + res.data.top[i].img + '" alt="' + res.data.top[i].alt + '">';
                                     html += '<div class="catDetails"><div class="catTitle"></div><span class="catText">' + res.data.top[i].digest + '</span><div class="arrowLeftIcon colorWhite"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div></div>'
                                     html += '<div class="text-category position-absolute labelForCat"><h4 class="colorWhite fontSize14">' + res.data.top[i].name + '</h4></div>';
