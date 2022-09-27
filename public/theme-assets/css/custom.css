@@ -253,6 +253,12 @@
     right: 6px;
     top: 5px;
 }
+.customlineText {
+    text-decoration-color: red;
+    text-decoration-line: line-through;
+    -moz-text-decoration-line: line-through;
+    -moz-text-decoration-color: red;
+}
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;
