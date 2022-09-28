@@ -28,7 +28,7 @@
                                     html += '<div class="banner-img ">';
                                     html += '<a target="_blank" href="#" class="tiles">';
                                     html +='<img class="imgResponsive" src="' + res.data.top[i].img + '" alt="' + res.data.top[i].alt + '">';
-                                    html += '<div class="catDetails"><div class="catTitle"></div><span class="catText">' + res.data.top[i].digest + '</span><div class="arrowLeftIcon colorWhite"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div></div>'
+                                    html += '<div class="catDetails"><div class="catTitle"></div><span class="catText">' + res.data.top[i].digest + '</span>                            <div class="arrowLeftIcon backgroundGray p-0"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div></div>'
                                     html += '<div class="text-category position-absolute labelForCat"><h4 class="colorWhite fontSize14">' + res.data.top[i].name + '</h4></div>';
                                     html +='</a></div></div>';
                                 }

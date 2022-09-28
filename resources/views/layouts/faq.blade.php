@@ -1,5 +1,5 @@
             <div class="container">
-                <div class="ui-box bg-white">
+                <div class="bg-white">
                      <div id="faq" class="ui-box-content">
                             <div class="accordion" id="accordionExample">
                             <!-- start of accordion-item -->

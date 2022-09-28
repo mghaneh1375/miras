@@ -8,27 +8,9 @@
                 @include('layouts.tiles')
                 @include('layouts.box')
                 @include('layouts.banner')
+                @include('layouts.box')
                 <!-- end of box => categories-slider -->
-                <div class="row mb-5">
-                    <div class="col-md-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/018.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                    <div class="col-md-6 mb-lg-0 mb-3">
-                        <!-- start of banner -->
-                        <div class="banner-img">
-                            <a href="#">
-                                <img src="./theme-assets/images/banner/019.jpg" alt="">
-                            </a>
-                        </div>
-                        <!-- end of banner -->
-                    </div>
-                </div>
+                {{-- @include('layouts.banner-light') --}}
     </div>
 </main>
             <!-- start of quick-view-modal -->
