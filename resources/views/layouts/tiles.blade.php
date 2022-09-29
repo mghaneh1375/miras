@@ -1,4 +1,4 @@
-                <div class="ui-box mb-5 mt-5 p-0">
+                <div class="mb-5 mt-5 p-0 backgroundWhite">
                     <div class="ui-box-content p-0 pb-1">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">

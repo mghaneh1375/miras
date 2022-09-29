@@ -144,7 +144,12 @@
             <div class="page-header--bottom marginFromRightHeader">
                 <div class="container">
                     <div class="d-flex align-items-center">
-                        <div class="vertical-menu minWidthUnset">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/home.svg" alt="">صفحه اصلی</a>
+                            </li>
+                            <li class="nav-item align-self-center">
+                            <div class="vertical-menu minWidthUnset">
                             <a href="#" class="vertical-menu-btn p-0 m-0 colorWhite"><img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt="">دسته بندی کالاها</a>
                             <div class="vertical-menu-items marginFromRightHeaderNegative custom-vertical-menu-items zIndex2 mt-10">
                                 <ul>
@@ -185,13 +190,10 @@
                                     <li><a href="#">منبت کاری</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        <ul class="nav">
+                        </div>                            
+                    </li>
                             <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/home.svg" alt="">صفحه اصلی</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/label.svg" alt="">پیشنهاد های ویژه</a>
+                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg customIconTag" src="./theme-assets/images/svg/label.svg" alt="">پیشنهاد های ویژه</a>
                             </li>
                         </ul>
                     </div>
@@ -217,10 +219,14 @@
         </header>
         <!-- end of page-header -->
         <header class="page-header-responsive d-md-none">
+             <div class="alert banner-container alert-dismissible fade show" role="alert">
+                <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
+                    style="height: 60px;"></a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
             <div class="page-header-responsive-row mb-3">
                 <div class="d-flex align-items-center">
                     <div class="navigation-container">
-                        <button class="toggle-navigation"></button>
                         <div class="navigation">
                             <div class="navigation-header">
                                 <div class="logo-container logo-box">
@@ -230,7 +236,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="navigation-body">
+                            {{-- <div class="navigation-body">
                                 <ul class="menu">
                                     <li>
                                         <a href="#" class="toggle-submenu">
@@ -297,17 +303,113 @@
                                         <a href="#">خانه طراحان ایرانی</a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="navigation-overlay"></div>
                     </div>
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./theme-assets/images/logo-dark.svg" alt="">
-                        </a>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center flex-grow-1 pe-3 position-relative">
+                            <div class="logo-container logo-box customLogoBoxInMobile me-3 positionAbsolute logoImgFromTop">
+                                    <img src="./theme-assets/images/menuImage.png" width="70" alt="">
+                            </div>
+                            <div class="marginFromRightHeaderMobile">
+                                <div class="notification-item--text creamColor bold"> ویزیت ایران </div>
+                                <div class="notification-item--text fontSize10 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
+                            </div>
+                        </div>
+                        {{-- <div class="user-options heightHeader customFilterGray">
+                            <div class="user-option user-option--search customBorderLeft1">
+                                <a href="profile.html" class="user-option-btn user-option-btn--search gap10">
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/search.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="user-option user-option--cart customBorderLeft1">
+                                <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/basket.svg" alt="">
+                                </a>
+                                <div class="mini-cart">
+                                    <div class="mini-cart-header">
+                                        <span class="mini-cart-products-count fa-num">4 کالا</span>
+                                        <a href="{{route('cart')}}" class="btn btn-link px-0">مشاهده سبد خرید <i
+                                                class="ri-arrow-left-s-fill"></i></a>
+                                    </div>
+                                    <div class="mini-cart-products do-simplebar">
+                                        <div class="mini-cart-product">
+                                            <div class="mini-cart-product-thumbnail">
+                                                <a href="#"><img src="./theme-assets/images/products/01.jpg" alt=""></a>
+                                            </div>
+                                            <div class="mini-cart-product-detail">
+                                                <div class="mini-cart-product-brand"><a href="#">apple</a></div>
+                                                <div class="mini-cart-product-title">
+                                                    <a href="product-v1.html">گوشی موبایل اپل مدل iPhone 13 A2634 دو
+                                                        سیم‌ کارت ظرفیت 128
+                                                        گیگابایت و رم 4 گیگابایت</a>
+                                                </div>
+                                                <div class="mini-cart-purchase-info">
+                                                    <div class="mini-cart-product-meta">
+                                                        <span class="fa-num">1 عدد</span>
+                                                        <span class="color" style="background-color: #d4d4d4;"></span>
+                                                    </div>
+                                                    <div class="mini-cart-product-price fa-num">26,249,000 <span
+                                                            class="currency">تومان</span></div>
+                                                </div>
+                                                <button class="mini-cart-product-remove"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mini-cart-footer">
+                                        <div class="mini-cart-total">
+                                            <span class="mini-cart-total-label">مبلغ قابل پرداخت:</span>
+                                            <span class="mini-cart-total-value fa-num">83,678,000 <span
+                                                    class="currency">تومان</span></span>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">ورود و ثبت سفارش</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-option user-option--account  paddingRight15">
+                                <a href="profile.html" class="user-option-btn user-option-btn--account gap10">
+                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/user.svg" alt="">
+                                    <div>ورود / ثبت نام</div>
+                                </a>
+                                <div class="user-option--dropdown user-option--dropdown-right">
+                                    <div class="profile-user-info ui-box">
+                                        <div class="profile-detail">
+                                            <div class="d-flex align-items-center">
+                                                <div class="profile-avatar me-3">
+                                                    <img src="./theme-assets/images/avatar/default.png" alt="avatar">
+                                                </div>
+                                                <div class="profile-info">
+                                                    <a href="#" class="text-decoration-none text-dark fw-bold mb-2">
+                                                        جلال
+                                                        بهرامی
+                                                        راد
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nav nav-items-with-icon flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{route('cart-empty')}}"><i
+                                                        class="nav-link-icon ri-file-list-3-line"></i>
+                                                    سفارش
+                                                    های من
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><i
+                                                        class="nav-link-icon ri-logout-box-r-line"></i>
+                                                    خروج
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
                     </div>
                 </div>
-                <div class="user-options">
+                {{-- <div class="user-options">
                     <div class="user-option">
                         <a href="#" class="user-option-btn user-option-btn--account">
                             <i class="ri-user-fill icon"></i>
@@ -325,9 +427,11 @@
                             <span class="counter">۴</span>
                         </a>
                     </div>
-                </div>
+                </div> --}}
+                <button class="toggle-navigation"></button>
             </div>
-            <div class="page-header-responsive-row">
+            
+            {{-- <div class="page-header-responsive-row">
                 <div class="search-container">
                     <form action="#" class="search-form">
                         <input type="text" class="form-control search-field" placeholder="جستجو کنید..">
@@ -360,7 +464,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </header>
         <!-- start of page-content -->
        <div class="mt-md-110">

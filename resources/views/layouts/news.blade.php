@@ -1,6 +1,6 @@
                 <!-- start of box -->
                 <div class="mb-5">
-                    <div class="ui-box-content">
+                    <div class="ui-box-content backgroundWhite">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
                             <!-- Additional required wrapper -->

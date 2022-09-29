@@ -73,6 +73,9 @@ a {
 .marginFromRightHeader {
     margin-right: 160px;
 }
+.marginFromRightHeaderMobile {
+    margin-right: 90px;
+}
 .marginFromRightHeaderNegative {
     margin-right: -160px;
 }
@@ -208,6 +211,9 @@ a {
 .customPaddingTopBottom10 {
     padding: 10px 0;
 }
+.backgroundWhite {
+    background-color: #f5f5f5;
+}
 .customFilterGray {
     background-color: #efefef;
     padding: 0 15px;
@@ -316,6 +322,20 @@ a {
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     color: #555a5d;
+}
+.page-header .page-header--bottom .vertical-menu:hover .vertical-menu-items {
+    margin-right: -285px;
+}
+.customIconTag {
+    vertical-align: -6px;
+}
+.customLogoBoxInMobile {
+    min-width: 80px !important;
+    background-color: #ffffff;
+    padding: 5px !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 9px 7px 5px #00000029;
 }
 @media (min-width: 768px) {
     .mt-md-110 {

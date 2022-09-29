@@ -35,26 +35,25 @@
             </div>
             <div class="col-lg-3 col-md-4 ol-sm-6 col-12">
                 <div class="widget widget-footer">
-                    <div class="widget-title">خدمات مشتریان</div>
+                    <div class="widget-title">برای مشتریان</div>
                     <div class="widget-content widget-list">
                         <ul>
-                            <li><a href="#">پاسخ به پرسشهای متداول</a></li>
-                            <li><a href="#">رویه های بازگرداندن کالا</a></li>
-                            <li><a href="#">شرایط استفاده</a></li>
-                            <li><a href="#">حریم خصوصی</a></li>
-                            <li><a href="#">گزارش باگ</a></li>
+                            <li><a href="#">سیاست حریم خصوصی</a></li>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#">نحوه ارسال کالا و عودت</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="widget widget-footer">
-                    <div class="widget-title">راهنمای خرید از سایت</div>
+                    <div class="widget-title">نماد اطمینان</div>
                     <div class="widget-content widget-list">
                         <ul>
-                            <li><a href="#">نحوه ثبت سفارش</a></li>
-                            <li><a href="#">رویه ارسال سفارش</a></li>
-                            <li><a href="#">شیوه های پرداخت</a></li>
+                            <li><a href="#">وزارت میراث فرهنگی، صنایع دستی و گردشگری</a></li>
+                            <li><a href="#">کانون جهانگردی و اتومبیلرانی جمهوری اسلامی ایران</a></li>
+                            <li><a href="#">سامانه گردشگری ویزیت ایران</a></li>
                         </ul>
                     </div>
                 </div>
