@@ -1,69 +1,39 @@
 <footer class="page-footer">
     <div class="container">
-        <div class="d-flex align-items-center flex-wrap my-4">
-            <span class="text-secondary me-2">تلفن پشتیبانی:</span>
-            <a href="#" class="link border-bottom-0">۰۱۲۳۴۵۶۷ - ۰۲۱</a>
-            <span class="fs-7 text-muted mx-2">|</span>
-            <span>هفت روز هفته، ۲۴ ساعت شبانه روز پاسخگوی شما هستیم.</span>
-        </div>
-        <div class="services border-bottom py-4 mb-4">
-            <div class="service-container">
-                <a href="#" class="service">
-                    <span class="service-icon">
-                        <img src="./theme-assets/images/services/01.svg" alt="">
-                    </span>
-                    <span class="service-label">امکان تحویل اکسپرس</span>
-                </a>
-            </div>
-            <div class="service-container">
-                <a href="#" class="service">
-                    <span class="service-icon">
-                        <img src="./theme-assets/images/services/02.svg" alt="">
-                    </span>
-                    <span class="service-label">امکان پرداخت در محل</span>
-                </a>
-            </div>
-            <div class="service-container">
-                <a href="#" class="service">
-                    <span class="service-icon">
-                        <img src="./theme-assets/images/services/03.svg" alt="">
-                    </span>
-                    <span class="service-label">۷ روز هفته، ۲۴ ساعته</span>
-                </a>
-            </div>
-            <div class="service-container">
-                <a href="#" class="service">
-                    <span class="service-icon">
-                        <img src="./theme-assets/images/services/04.svg" alt="">
-                    </span>
-                    <span class="service-label">۷ روز ضمانت بازگشت کالا</span>
-                </a>
-            </div>
-            <div class="service-container">
-                <a href="#" class="service">
-                    <span class="service-icon">
-                        <img src="./theme-assets/images/services/05.svg" alt="">
-                    </span>
-                    <span class="service-label">ضمانت اصل بودن کالا</span>
-                </a>
-            </div>
-        </div>
+        <div class="d-flex spaceBetween alignItemsCenter">
+            <span class="ui-box-title fontSize20"> <img class="p-2" src="{{ asset('./theme-assets/images/svg/headlineTitle.svg') }}" alt="">تماس با ما</span>        </div>
         <div class="row mb-3">
-            <div class="col-lg-3 col-md-4 col-6">
-                <div class="widget widget-footer">
-                    <div class="widget-title">با ما</div>
-                    <div class="widget-content widget-list">
+            <div class="col-lg-3 col-md-5">
+                <div class="widget widget-footer mb-4">
+                        <div class="widget-title">با ما همراه باشید</div>
+                        <div class="textColor customPaddingTopBottom10">پشتیبانی</div>
+                        <div class="colorYellow customPaddingTopBottom10">هفت روز هفته از ساعت 8 الی 17</div>
+                        <div class="textColor customPaddingTopBottom10">تلفن پشتیبانی : 021 - 88819568</div>
+                    <div class="widget-content widget-socials">
                         <ul>
-                            <li><a href="#">اتاق خبر</a></li>
-                            <li><a href="#">فروش در سایت</a></li>
-                            <li><a href="#">فرصت های شغلی</a></li>
-                            <li><a href="#">تماس با ما</a></li>
-                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-telegram-fill"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-6">
+            <div class="col-lg-3 col-md-4 ol-sm-6 col-12">
+                <div class="widget widget-footer">
+                    <div class="widget-title">از جدیدترین تخفیف ها باخبر شوید</div>
+                    <div class="widget-content widget-newsletter">
+                        <form action="#">
+                            <div class="form-element-row with-btn">
+                                <input type="text" class="form-control"
+                                    placeholder="آدرس ایمیل خود را وارد کنید">
+                                <button class="btn btn-primary backgroundGray">ثبت</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 ol-sm-6 col-12">
                 <div class="widget widget-footer">
                     <div class="widget-title">خدمات مشتریان</div>
                     <div class="widget-content widget-list">
@@ -77,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                 <div class="widget widget-footer">
                     <div class="widget-title">راهنمای خرید از سایت</div>
                     <div class="widget-content widget-list">
@@ -89,34 +59,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-5">
-                <div class="widget widget-footer mb-4">
-                    <div class="widget-title">با ما همراه باشید</div>
-                    <div class="widget-content widget-socials">
-                        <ul>
-                            <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
-                            <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
-                            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
-                            <li><a href="#"><i class="ri-telegram-fill"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="widget widget-footer">
-                    <div class="widget-title">از جدیدترین تخفیف ها باخبر شوید</div>
-                    <div class="widget-content widget-newsletter">
-                        <form action="#">
-                            <div class="form-element-row with-btn">
-                                <input type="text" class="form-control"
-                                    placeholder="آدرس ایمیل خود را وارد کنید">
-                                <button class="btn btn-primary">ثبت</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 mb-4">
+            <div class="col-lg-12 mb-4">
                 <div class="expandable-text pt-1" style="height: 100px;">
                     <div class="expandable-text_text fa-num">
                         <div class="fs-6 fw-bold mb-2">فروشگاه اینترنتی یکتاکالا بررسی، انتخاب و خرید آنلاین
@@ -134,24 +79,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="trust-symbol">
-                    <a href="#">
-                        <img src="./theme-assets/images/symbol/01.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="./theme-assets/images/symbol/02.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="./theme-assets/images/symbol/03.png" alt="">
-                    </a>
-                </div>
-            </div>
         </div>
         <div class="copy-right text-center text-muted py-3">
-            استفاده از مطالب فروشگاه اینترنتی یکتاکالا فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است. کلیه
-            حقوق این
-            سایت متعلق به echo_designer می‌باشد.
+            کلیه حقوق این سایت به متعلق به شرکت سیسوتک می باشد
         </div>
     </div>
 </footer>

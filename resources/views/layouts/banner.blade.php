@@ -1,11 +1,10 @@
-                <div class="row mb-3">
+                <div class="row mb-5">
                     <div class="col-md-6 mb-lg-0 mb-3">
                         <!-- start of banner -->
                         <div class="banner-img">
                             <a href="#">
                                 <img id="banner1">
                                 <div class="arrowLeftIcon positionAbsolute customArrowLeftIcon backgroundGray"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div>
-
                             </a>
                         </div>
                         <!-- end of banner -->

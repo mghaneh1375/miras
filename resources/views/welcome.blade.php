@@ -9,6 +9,9 @@
                 @include('layouts.box')
                 @include('layouts.banner')
                 @include('layouts.box')
+                @include('layouts.labelmore')
+                @include('layouts.news')
+                
                 <!-- end of box => categories-slider -->
                 {{-- @include('layouts.banner-light') --}}
     </div>

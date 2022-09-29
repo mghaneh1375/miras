@@ -10,7 +10,7 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-                                <div class="swiper-slide">
+                                <div class="swiper-slide customBox">
                                     <!-- start of product-card -->
                                     <div class="product-card customBorderBoxShadow">
                                         <div class="product-thumbnail">
@@ -45,6 +45,7 @@
                                     </div>
                                     <!-- end of product-card -->
                                 </div>
+                                <!-- Slides -->
                                 <div class="swiper-slide">
                                     <!-- start of product-card -->
                                     <div class="product-card customBorderBoxShadow">

@@ -3451,7 +3451,6 @@ body.loaded .product-card .product-thumbnail a::before {
 .banner-img img {
     max-width: 100%;
     border-radius: 10px;
-    height: 100px;
 }
 
 .banner-img.banner-side-main-slider a {
