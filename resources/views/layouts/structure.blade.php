@@ -218,7 +218,7 @@
 
         </header>
         <!-- end of page-header -->
-        <header class="page-header-responsive d-md-none">
+        <header class="page-header-responsive d-md-none p-0">
              <div class="alert banner-container alert-dismissible fade show" role="alert">
                 <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
                     style="height: 60px;"></a>
