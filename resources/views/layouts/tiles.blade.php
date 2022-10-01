@@ -1,4 +1,4 @@
-                <div class="mb-5 mt-5 p-0 backgroundWhite">
+                <div id="topCategoriesDiv" class="mb-5 mt-5 p-0 backgroundWhite">
                     <div class="ui-box-content p-0 pb-1">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
@@ -22,7 +22,12 @@
                         },
                         success: function(res) {
                             var html='';
-                            if(res.status === "ok") {                            
+                            if(res.status === "ok") {
+                                if(res.data.top.length === 0) {
+                                    $("#topCategoriesDiv").remove();
+                                    $("#cat").empty();
+                                    return;
+                                }                         
                                 for(var i = 0; i < res.data.top.length; i++) {
                                     html += '<div class="swiper-slide d-flex justify-content-center">';
                                     html += '<div class="banner-img ">';

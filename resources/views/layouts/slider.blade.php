@@ -2,14 +2,13 @@
     <!-- start of main-slider -->
     <div class="swiper main-swiper-slider">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- commented id slider -->
-            <div id="slider" class="swiper-slide main-swiper-slide opacity1">
-                {{-- <a href="#"
+        <div id="slider" class="swiper-wrapper">
+            {{-- <div class="swiper-slide main-swiper-slide opacity1">
+                <a href="#"
                     style="background-image: url(./theme-assets/images/slider/main/04.jpg);border-radius:0;">
                     <img  style="border-radius:0;" src="./theme-assets/images/slider/main/04.jpg" alt="">
-                </a> --}}
-        </div>
+                </a>
+            </div> --}}
         </div> 
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -33,16 +32,16 @@
                  if(res.status === "ok") {
                       if (width > 1000) {
                          for(var i = 0; i < res.data.length; i++) {
-                             html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_large + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_large + '" alt=""></a>';
+                             html += '<div class="swiper-slide main-swiper-slide"><a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_large + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_large + '" alt=""></a></div>';
                          }
                       }else if (width > 520) {
                       
                           for(var i = 0; i < res.data.length; i++) {
-                             html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_mid + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_mid + '" alt=""></a>';
+                             html += '<div class="swiper-slide main-swiper-slide"><a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_mid + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_mid + '" alt=""></a></div>';
                           }
                       }else {
                           for(var i = 0; i < res.data.length; i++) {
-                              html += '<a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_small + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_small + '" alt=""></a>';
+                              html += '<div class="swiper-slide main-swiper-slide"><a target="_blank" href=' + res.data[i].href + ' style="background-image: url(' + res.data[i].img_small + ')!important;border-radius:0;"><img style="border-radius:0;" class="imgResponsive" src="' + res.data[i].img_small + '" alt=""></a></div>';
                           }
                       }
                      
