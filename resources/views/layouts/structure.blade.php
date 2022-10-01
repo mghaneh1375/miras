@@ -224,7 +224,7 @@
                     style="height: 60px;"></a>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="page-header-responsive-row mb-3">
+            <div class="page-header-responsive-row">
                 <div class="d-flex align-items-center">
                     <div class="navigation-container">
                         <div class="navigation">
@@ -430,7 +430,26 @@
                 </div> --}}
                 <button class="toggle-navigation"></button>
             </div>
-            
+            <div class="page-header--top backGray">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between" style="height: 50px">
+                        <div class="page-header--top-right d-flex gap10">
+                            <a href="profile.html" class="user-option-btn user-option-btn--search gap10">
+                                <img class="customIconHeadLine" src="./theme-assets/images/svg/search.svg" alt="">
+                            </a>
+                            <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
+                                <img class="customIconHeadLine" src="./theme-assets/images/svg/basket.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="page-header--top-left">
+                            <a href="profile.html" class="user-option-btn user-option-btn--account gap10 d-flex ">
+                                <img class="customIconHeadLine" src="./theme-assets/images/svg/user-mobile.svg" alt="">
+                                <div class="colorWhite fontSize10 align-self-center">ورود / ثبت نام</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {{-- <div class="page-header-responsive-row">
                 <div class="search-container">
                     <form action="#" class="search-form">

@@ -337,6 +337,9 @@ a {
     border-bottom-right-radius: 10px;
     box-shadow: 0px 9px 7px 5px #00000029;
 }
+.heightMobileViewAuth {
+    height: 50px !important;
+}
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;
