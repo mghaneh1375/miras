@@ -8,38 +8,50 @@
                         <div class="ui-sticky ui-sticky-top">
                             <div class="ui-box sidebar-widgets">
                                 <!-- start of widget -->
-                                <div class="widget p-0 mb-3">
-                                    <div class="widget-content widget--free-shipping">
-                                        <div class="free-shipping--detail">
-                                            <div class="title">ارسال رایگان سفارش</div>
-                                            <div class="subtitle">سفارش‌های بالای ۳۰۰ هزار تومان</div>
-                                        </div>
-                                        <div class="free-shipping--banner">
-                                            <img src="./theme-assets/images/theme/free-shipping--banner.png"
-                                                alt="ارسال رایگان سفارش">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of widget -->
-                                <!-- start of widget -->
                                 <div class="widget mb-3">
-                                    <div class="widget-title">دسته‌بندی نتایج</div>
-                                    <div class="widget-content widget--category-results">
+                                    <div class="spaceBetween">
+                                        <div class="widget-title">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
+                                        <div class="colorRed fontSize8 align-self-center">حذف نتایج</div>
+                                    </div>
+                                    {{-- <div class="widget-content widget--category-results">
                                         <ul>
                                             <li class="category--arrow-left">
-                                                <a href="#">کالای دیجیتال</a>
+                                                <a href="#">دسته بندی کالا ها</a>
                                                 <ul>
                                                     <li class="category--arrow-down">
-                                                        <a href="#">موبایل</a>
+                                                        <a href="#">فرش</a>
                                                         <ul>
-                                                            <li class="current">گوشی موبایل</li>
+                                                            <li class="current">فرش دست بافت</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </div> --}}
+                                </div>
+                                                                <!-- start of widget -->
+                                <div class="widget widget-collapse mb-3">
+                                    <div class="widget-title widget-title--collapse-btn" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseBrandFilter" aria-expanded="false"
+                                        aria-controls="collapseBrandFilter" role="button">دسته بندی</div>
+                                    <div class="widget-content widget--search collapse" id="collapseBrandFilter">
+                                        <form action="#" class="pt-2">
+                                            <div class="filter-options do-simplebar pt-2 mt-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="brandOption1">
+                                                    <label class="form-check-label d-block" for="brandOption1">
+                                                        <span class="d-flex align-items-center justify-content-between">
+                                                            <span>شیائومی</span>
+                                                            <span class="text-muted en_text fs-7">Xiaomi</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
+                                <!-- end of widget -->
                                 <!-- end of widget -->
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
@@ -206,7 +218,8 @@
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" id="has_jet_delivery">
                                             <label class="form-check-label" for="has_jet_delivery">فقط ارسال
-                                                فوری</label>
+                                                فوری
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
