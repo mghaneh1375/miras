@@ -344,6 +344,11 @@ a {
 .heightMobileViewAuth {
     height: 50px !important;
 }
+.wx-100 {
+    max-width: 100% !important;
+    background-color: red !important;
+    /* width: 100%; */
+}
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;

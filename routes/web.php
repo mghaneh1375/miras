@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
 use App\Http\Controllers\SliderController;
 use App\Http\Resources\FeatureResource;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -106,6 +107,7 @@ Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::view('login', 'admin.login')->name('loginPage');
 
 Route::get('/', function () {
+    App::setLocale('fa');
     return view('welcome');
 })->name('home');
 

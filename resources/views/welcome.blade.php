@@ -1,21 +1,15 @@
 @extends('layouts.structure')
 @section('content')
 
-@include('layouts.slider')
-<main class="page-content p-0">
-    <div class="container">            
-
+@include('layouts.slider')    
                 @include('layouts.tiles')
                 @include('layouts.box')
                 @include('layouts.banner')
                 @include('layouts.box')
                 @include('layouts.labelmore')
                 @include('layouts.news')
-                
                 <!-- end of box => categories-slider -->
                 {{-- @include('layouts.banner-light') --}}
-    </div>
-</main>
             <!-- start of quick-view-modal -->
             <div class="remodal remodal-lg" data-remodal-id="quick-view-modal"
                 data-remodal-options="hashTracking: false">

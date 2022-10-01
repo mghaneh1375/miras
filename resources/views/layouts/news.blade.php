@@ -1,6 +1,7 @@
                 <!-- start of box -->
-                <div class="mb-5">
-                    <div class="ui-box-content backgroundWhite">
+                <div class="w-100 mb-5 backgroundWhite">
+                    <div class="container">
+                                            <div class="ui-box-content backgroundWhite">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
                             <!-- Additional required wrapper -->
@@ -69,6 +70,7 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <!-- end of box -->

@@ -1,8 +1,11 @@
                 <!-- start of box -->
-                <div class="mb-5">
-                   <div class="d-flex spaceBetween alignItemsCenter">
-                     <span class="ui-box-title fontSize20"> <img class="p-2" src="{{ asset('./theme-assets/images/svg/headlineTitle.svg') }}" alt="">پر فروش ترین‌ها</span>
-                     <span class="alignItemsCenter colorBlue"><a href="">مشاهده همه</a></span>
+                <div class="w-100 mb-5">
+                    <div class="container">
+                                           <div class="d-flex spaceBetween alignItemsCenter">
+                        <span class="ui-box-title fontSize20"> 
+                            <img class="p-2" src="{{ asset('./theme-assets/images/svg/headlineTitle.svg') }}" alt="">پر فروش ترین‌ها
+                        </span>
+                        <span class="alignItemsCenter colorBlue"><a href="">مشاهده همه</a></span>
                     </div>
                     <div class="ui-box-content">
                         <!-- Slider main container -->
@@ -89,6 +92,7 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <!-- end of box -->
