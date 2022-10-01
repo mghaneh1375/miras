@@ -270,6 +270,20 @@
         table th {
             background-color: #ddd;
         }
+        .mCSB_scrollTools, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight, .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            transition: unset !important;
+            -webkit-transition: unset !important;
+            -moz-transition: unset !important;
+            -o-transition: unset !important;
+
+        }
+        *{
+            animation-delay: unset !important;
+            transition-delay: unset !important;
+            transition: unset !important;
+            animation: unset !important
+        }
+
     </style>
 
 

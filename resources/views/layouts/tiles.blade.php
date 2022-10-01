@@ -1,6 +1,6 @@
 <div class="w-100 backgroundWhite">
     <div class="container">
-    <div id="topCategoriesDiv" class="mb-5 mt-5 p-0 ">
+    <div id="topCategoriesDiv" class="mb-5 p-0">
        <div class="ui-box-content p-0 pb-1">
            <!-- Slider main container -->
            <div class="swiper product-swiper-slider">
@@ -38,7 +38,7 @@
                     html += '<div class="banner-img ">';
                     html += '<a target="_blank" href="#" class="tiles">';
                     html +='<img class="imgResponsive" src="' + res.data.top[i].img + '" alt="' + res.data.top[i].alt + '">';
-                    html += '<div class="catDetails"><div class="catTitle"></div><span class="catText">' + res.data.top[i].digest + '</span>                            <div class="arrowLeftIcon backgroundGray p-0"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div></div>'
+                    html += '<div class="catDetails"><div class="catTitle"></div><span class="catText mb-3">' + res.data.top[i].digest + '</span>                            <div class="arrowLeftIcon backgroundGray p-0 customCategoryIconBack"><img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}"></div></div>'
                     html += '<div class="text-category position-absolute labelForCat"><h4 class="colorWhite fontSize14">' + res.data.top[i].name + '</h4></div>';
                     html +='</a></div></div>';
                 }

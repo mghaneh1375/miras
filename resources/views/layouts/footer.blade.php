@@ -8,7 +8,7 @@
                         <div class="widget-title">با ما همراه باشید</div>
                         <div class="textColor customPaddingTopBottom10">پشتیبانی</div>
                         <div class="colorYellow customPaddingTopBottom10">هفت روز هفته از ساعت 8 الی 17</div>
-                        <div class="textColor customPaddingTopBottom10">تلفن پشتیبانی : 021 - 88819568</div>
+                        <div class="textColor customPaddingTopBottom10">تلفن پشتیبانی : 88819568-021</div>
                     <div class="widget-content widget-socials">
                         <ul>
                             <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>

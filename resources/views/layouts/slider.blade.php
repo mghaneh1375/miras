@@ -1,4 +1,4 @@
-<div class="w-100 overflowHidden">
+<div id="SliderParent" class="w-100 overflowHidden">
     <!-- start of main-slider -->
     <div class="swiper main-swiper-slider">
         <!-- Additional required wrapper -->

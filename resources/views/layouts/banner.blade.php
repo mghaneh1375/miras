@@ -1,7 +1,7 @@
 <div class="w-100 mb-5 backgroundWhite">
     <div class="container">
-        <div class="row mb-3 gap15">
-            <div class="col-md-6 mb-lg-0 ">
+        <div class="row mb-3 customPaddingTopBottom10">
+            <div class="col-md-6 mb-lg-0 mb-3">
                 <!-- start of banner -->
                 <div class="banner-img">
                     <a href="#">

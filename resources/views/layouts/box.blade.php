@@ -13,11 +13,12 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-                                <div class="swiper-slide customBox">
+                                <a href="#" class="cursorPointer">
+                                    <div class="swiper-slide customBox">
                                     <!-- start of product-card -->
                                     <div class="product-card customBorderBoxShadow">
                                         <div class="product-thumbnail">
-                                            <a href="#">
+                                            <a href="#" target="_blank">
                                                 <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                             </a>
                                         </div>
@@ -48,8 +49,9 @@
                                     </div>
                                     <!-- end of product-card -->
                                 </div>
+                                </a>
                                 <!-- Slides -->
-                                <div class="swiper-slide">
+                                {{-- <div class="swiper-slide">
                                     <!-- start of product-card -->
                                     <div class="product-card customBorderBoxShadow">
                                         <div class="product-thumbnail">
@@ -83,7 +85,7 @@
                                         </div>
                                     </div>
                                     <!-- end of product-card -->
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>

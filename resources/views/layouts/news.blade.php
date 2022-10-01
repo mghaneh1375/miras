@@ -1,7 +1,11 @@
                 <!-- start of box -->
                 <div class="w-100 mb-5 backgroundWhite">
                     <div class="container">
-                                            <div class="ui-box-content backgroundWhite">
+                        <div class="d-flex spaceBetween alignItemsCenter">
+                            <span class="ui-box-title fontSize20"> <img class="p-2" src="{{ asset('./theme-assets/images/svg/headlineTitle.svg') }}" alt="">تازه ها</span>
+                            <span class="alignItemsCenter colorBlue"><a href="">مشاهده همه</a></span>
+                        </div>
+                    <div class="ui-box-content backgroundWhite">
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
                             <!-- Additional required wrapper -->
@@ -27,7 +31,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-footer d-flex justify-content-end">
-                                                <div class="arrowLeftIcon positionAbsolute customArrowLeftIcon backGray customIconBottom12">
+                                                <div class="cursorPointer arrowLeftIcon positionAbsolute customArrowLeftIcon backGray customIconBottom12">
                                                 <img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}">
                                             </div>
                                         </div>
@@ -55,7 +59,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-footer d-flex justify-content-end">
-                                                <div class="arrowLeftIcon positionAbsolute customArrowLeftIcon backGray customIconBottom12">
+                                                <div class="cursorPointer arrowLeftIcon positionAbsolute customArrowLeftIcon backGray customIconBottom12">
                                                 <img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}">
                                             </div>
                                         </div>

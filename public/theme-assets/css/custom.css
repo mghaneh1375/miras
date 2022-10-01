@@ -4,8 +4,26 @@ a {
     text-decoration: none;
     color: #0089b7;
 }
+::selection {
+    color: #0089b7 !important;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0089b7;
+}
 .creamColor {
-    color: #c59358;
+    color: #0089b7;
 }
 .fontSize8 {
     font-size: 8px !important;
@@ -349,6 +367,15 @@ a {
     background-color: red !important;
     /* width: 100%; */
 }
+.customCategoryIconBack {
+    position: absolute;
+    bottom: 9px;
+    left: 11px;
+}
+.cursorPointer {
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;

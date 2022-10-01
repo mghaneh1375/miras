@@ -25,8 +25,16 @@
             <div class="alert banner-container alert-dismissible fade show" role="alert">
                 <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
                     style="height: 60px;"></a>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button id="close" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            <script>
+                $(document).ready(function() {
+                    $('#close').on('click', function() {
+                        $('#SliderParent').css('margin-top','-50px');
+                    })
+                });
+                
+            </script>
             <!-- end banner -->
                         <!-- start of page-header-middle -->
             <div class="page-header--middle customBackgroundWhite">
