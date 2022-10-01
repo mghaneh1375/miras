@@ -229,81 +229,54 @@
                     <div class="navigation-container">
                         <div class="navigation">
                             <div class="navigation-header">
-                                <div class="logo-container logo-box">
+                                <div class="logo-container logo-box p-0">
                                     <a href="#" class="logo">
-                                        <img src="./theme-assets/images/logo.svg" width="110" alt="">
-                                        <span class="logo-text">بررسی،انتخاب و خرید آنلاین</span>
+                                        <img src="./theme-assets/images/menuImage.png" width="110" alt="">
+                                        <span class="logo-text colorBlue">دسته بندی کالاها<img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt=""></span>
                                     </a>
                                 </div>
                             </div>
-                            {{-- <div class="navigation-body">
+                            <div class="navigation-body">
                                 <ul class="menu">
                                     <li>
                                         <a href="#" class="toggle-submenu">
-                                            <span>زنانه</span>
+                                            <span>فرش</span>
                                         </a>
                                         <ul class="submenu">
                                             <li class="close-submenu">
                                                 <i class="ri-arrow-right-s-line"></i>
-                                                زنانه
+                                                منسوجات 
                                             </li>
                                             <li>
                                                 <a href="#" class="toggle-submenu">
-                                                    لباس
+                                                    منسوجات
                                                 </a>
                                                 <ul class="submenu">
                                                     <li class="close-submenu">
                                                         <i class="ri-arrow-right-s-line"></i>
-                                                        لباس
+                                                        منسوجات
                                                     </li>
                                                     <li>
-                                                        <a href="#">تی شرت و پولوشرت</a>
+                                                        <a href="#">لوازم</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">لباس راحتی و خواب</a>
+                                                        <a href="#">فرش دست بافت</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">مانتو، پانچو و رویه</a>
+                                                        <a href="#">رو فرشی</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">شومیز و پیراهن</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">بلوز</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">پیراهن و لباس مجلسی</a>
+                                                        <a href="#">زیر فرش</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle-submenu">
-                                            <span>مردانه</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="toggle-submenu">
-                                            <span>بچگانه</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="toggle-submenu">
-                                            <span>زیبایی و سلامت</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">فروش ویژه</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">برندها</a>
-                                    </li>
-                                    <li>
                                         <a href="#">خانه طراحان ایرانی</a>
                                     </li>
                                 </ul>
-                            </div> --}}
+                            </div>
                         </div>
                         <div class="navigation-overlay"></div>
                     </div>
@@ -317,117 +290,8 @@
                                 <div class="notification-item--text fontSize10 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
                             </div>
                         </div>
-                        {{-- <div class="user-options heightHeader customFilterGray">
-                            <div class="user-option user-option--search customBorderLeft1">
-                                <a href="profile.html" class="user-option-btn user-option-btn--search gap10">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/search.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="user-option user-option--cart customBorderLeft1">
-                                <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/basket.svg" alt="">
-                                </a>
-                                <div class="mini-cart">
-                                    <div class="mini-cart-header">
-                                        <span class="mini-cart-products-count fa-num">4 کالا</span>
-                                        <a href="{{route('cart')}}" class="btn btn-link px-0">مشاهده سبد خرید <i
-                                                class="ri-arrow-left-s-fill"></i></a>
-                                    </div>
-                                    <div class="mini-cart-products do-simplebar">
-                                        <div class="mini-cart-product">
-                                            <div class="mini-cart-product-thumbnail">
-                                                <a href="#"><img src="./theme-assets/images/products/01.jpg" alt=""></a>
-                                            </div>
-                                            <div class="mini-cart-product-detail">
-                                                <div class="mini-cart-product-brand"><a href="#">apple</a></div>
-                                                <div class="mini-cart-product-title">
-                                                    <a href="product-v1.html">گوشی موبایل اپل مدل iPhone 13 A2634 دو
-                                                        سیم‌ کارت ظرفیت 128
-                                                        گیگابایت و رم 4 گیگابایت</a>
-                                                </div>
-                                                <div class="mini-cart-purchase-info">
-                                                    <div class="mini-cart-product-meta">
-                                                        <span class="fa-num">1 عدد</span>
-                                                        <span class="color" style="background-color: #d4d4d4;"></span>
-                                                    </div>
-                                                    <div class="mini-cart-product-price fa-num">26,249,000 <span
-                                                            class="currency">تومان</span></div>
-                                                </div>
-                                                <button class="mini-cart-product-remove"></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mini-cart-footer">
-                                        <div class="mini-cart-total">
-                                            <span class="mini-cart-total-label">مبلغ قابل پرداخت:</span>
-                                            <span class="mini-cart-total-value fa-num">83,678,000 <span
-                                                    class="currency">تومان</span></span>
-                                        </div>
-                                        <a href="#" class="btn btn-primary">ورود و ثبت سفارش</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="user-option user-option--account  paddingRight15">
-                                <a href="profile.html" class="user-option-btn user-option-btn--account gap10">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/user.svg" alt="">
-                                    <div>ورود / ثبت نام</div>
-                                </a>
-                                <div class="user-option--dropdown user-option--dropdown-right">
-                                    <div class="profile-user-info ui-box">
-                                        <div class="profile-detail">
-                                            <div class="d-flex align-items-center">
-                                                <div class="profile-avatar me-3">
-                                                    <img src="./theme-assets/images/avatar/default.png" alt="avatar">
-                                                </div>
-                                                <div class="profile-info">
-                                                    <a href="#" class="text-decoration-none text-dark fw-bold mb-2">
-                                                        جلال
-                                                        بهرامی
-                                                        راد
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul class="nav nav-items-with-icon flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{route('cart-empty')}}"><i
-                                                        class="nav-link-icon ri-file-list-3-line"></i>
-                                                    سفارش
-                                                    های من
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#"><i
-                                                        class="nav-link-icon ri-logout-box-r-line"></i>
-                                                    خروج
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-                {{-- <div class="user-options">
-                    <div class="user-option">
-                        <a href="#" class="user-option-btn user-option-btn--account">
-                            <i class="ri-user-fill icon"></i>
-                        </a>
-                    </div>
-                    <div class="user-option">
-                        <a href="#" class="user-option-btn user-option-btn--account">
-                            <i class="ri-heart-3-fill icon"></i>
-                            <span class="counter">۲</span>
-                        </a>
-                    </div>
-                    <div class="user-option user-option--cart">
-                        <a href="#" class="user-option-btn user-option-btn--cart">
-                            <i class="ri-shopping-bag-2-fill icon"></i>
-                            <span class="counter">۴</span>
-                        </a>
-                    </div>
-                </div> --}}
                 <button class="toggle-navigation"></button>
             </div>
             <div class="page-header--top backGray">
@@ -450,40 +314,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="page-header-responsive-row">
-                <div class="search-container">
-                    <form action="#" class="search-form">
-                        <input type="text" class="form-control search-field" placeholder="جستجو کنید..">
-                        <button class="btn btn-primary btn-search btn-action">
-                            <i class="ri-search-2-line"></i>
-                        </button>
-                        <button class="btn btn-primary btn-close-search-result btn-action d-none">
-                            <i class="ri-close-line"></i>
-                        </button>
-                    </form>
-                    <div class="search-result-container">
-                        <div class="search-result-tags-container">
-                            <div class="search-result-tags-label"><i class="ri-fire-line"></i> بیشترین جستجوهای اخیر
-                            </div>
-                            <ul class="search-result-tags">
-                                <li><a href="#" class="search-result-tag">گوشی موبایل</a></li>
-                                <li><a href="#" class="search-result-tag">لوازم خانگی برقی</a></li>
-                                <li><a href="#" class="search-result-tag">لپ تاپ</a></li>
-                                <li><a href="#" class="search-result-tag">کنسول بازی</a></li>
-                                <li><a href="#" class="search-result-tag">دوچرخه</a></li>
-                            </ul>
-                        </div>
-                        <div class="border-bottom my-3"></div>
-                        <ul class="search-result-items">
-                            <li><a href="#">گوشی موبایل</a></li>
-                            <li><a href="#">گوشی موبایل شیائومی</a></li>
-                            <li><a href="#">گوشی موبایل سامسونگ</a></li>
-                            <li><a href="#">قاب گوشی موبایل</a></li>
-                            <li><a href="#">گوشی موبایل اپل</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> --}}
         </header>
         <!-- start of page-content -->
        <div class="mt-md-110">

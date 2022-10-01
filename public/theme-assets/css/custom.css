@@ -330,12 +330,13 @@ a {
     vertical-align: -6px;
 }
 .customLogoBoxInMobile {
+    margin-right: 5px !important;
     min-width: 80px !important;
     background-color: #ffffff;
     padding: 5px !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0px 9px 7px 5px #00000029;
+    box-shadow: 0px 5px 17px 4px #00000029 !important;
 }
 .heightMobileViewAuth {
     height: 50px !important;
