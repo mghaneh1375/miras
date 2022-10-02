@@ -10,9 +10,10 @@
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
                                     <div class="spaceBetween">
-                                        <div class="widget-title">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
+                                        <div class="widget-title m-0 b-0">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
                                         <div class="colorRed fontSize8 align-self-center">حذف نتایج</div>
                                     </div>
+                                    <div class="colorBlue fontSize8 align-self-center">300 کالا</div>
                                     {{-- <div class="widget-content widget--category-results">
                                         <ul>
                                             <li class="category--arrow-left">
@@ -31,10 +32,10 @@
                                 </div>
                                                                 <!-- start of widget -->
                                 <div class="widget widget-collapse mb-3">
-                                    <div class="widget-title widget-title--collapse-btn" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseBrandFilter" aria-expanded="false"
-                                        aria-controls="collapseBrandFilter" role="button">دسته بندی</div>
-                                    <div class="widget-content widget--search collapse" id="collapseBrandFilter">
+                                    <div class="widget-title widget-title--collapse-btn d-flex gap10 align-items-center" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseGrouping" aria-expanded="false"
+                                        aria-controls="collapseGrouping" role="button">دسته بندی <div class="circle colorBlue align-self-center"></div><span class="colorBlue fontSize8">1 فیلتر</span></div>
+                                    <div class="widget-content widget--search collapse" id="collapseGrouping">
                                         <form action="#" class="pt-2">
                                             <div class="filter-options do-simplebar pt-2 mt-2">
                                                 <div class="form-check">
@@ -42,26 +43,41 @@
                                                         id="brandOption1">
                                                     <label class="form-check-label d-block" for="brandOption1">
                                                         <span class="d-flex align-items-center justify-content-between">
-                                                            <span>شیائومی</span>
-                                                            <span class="text-muted en_text fs-7">Xiaomi</span>
+                                                            <span>دسته اول</span>
+                                                            <span class="text-muted en_text fs-7">Pack1</span>
                                                         </span>
                                                     </label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="brandOption1">
+                                                        <label class="form-check-label d-block" for="brandOption1">
+                                                            <span class="d-flex align-items-center justify-content-between">
+                                                                <span>دسته دوم</span>
+                                                                <span class="text-muted en_text fs-7">Pack2</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- end of widget -->
-                                <!-- end of widget -->
-                                <!-- start of widget -->
-                                <div class="widget mb-3">
-                                    <div class="widget-title">جستجو در نتایج:</div>
-                                    <div class="widget-content widget--search">
-                                        <form action="#">
-                                            <div class="form-element-row">
-                                                <input type="text" name="s" class="form-control"
-                                                    placeholder="نام محصول یا…">
-                                                <i class="ri-search-line icon"></i>
+                                                <div class="form-check mt-4">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="brandOption1">
+                                                    <label class="form-check-label d-block" for="brandOption1">
+                                                        <span class="d-flex align-items-center justify-content-between">
+                                                            <span>دسته اول</span>
+                                                            <span class="text-muted en_text fs-7">Pack1</span>
+                                                        </span>
+                                                    </label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="brandOption1">
+                                                        <label class="form-check-label d-block" for="brandOption1">
+                                                            <span class="d-flex align-items-center justify-content-between">
+                                                                <span>دسته دوم</span>
+                                                                <span class="text-muted en_text fs-7">Pack2</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
@@ -74,12 +90,7 @@
                                         aria-controls="collapseBrandFilter" role="button">برند</div>
                                     <div class="widget-content widget--search collapse" id="collapseBrandFilter">
                                         <form action="#" class="pt-2">
-                                            <div class="form-element-row">
-                                                <input type="text" name="s" class="form-control"
-                                                    placeholder="جستجوی نام برند...">
-                                                <i class="ri-search-line icon"></i>
-                                            </div>
-                                            <div class="filter-options do-simplebar border-top pt-2 mt-2">
+                                            <div class="filter-options do-simplebar pt-2 mt-2">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value=""
                                                         id="brandOption1">
@@ -122,71 +133,11 @@
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption5">
-                                                    <label class="form-check-label d-block" for="brandOption5">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>هوآوی</span>
-                                                            <span class="text-muted en_text fs-7">Huawei</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption6">
-                                                    <label class="form-check-label d-block" for="brandOption6">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>موتورولا</span>
-                                                            <span class="text-muted en_text fs-7">Motorola</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption7">
-                                                    <label class="form-check-label d-block" for="brandOption7">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>آنر</span>
-                                                            <span class="text-muted en_text fs-7">Honor</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption8">
-                                                    <label class="form-check-label d-block" for="brandOption8">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>ال جی</span>
-                                                            <span class="text-muted en_text fs-7">LG</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
                                                         id="brandOption9">
                                                     <label class="form-check-label d-block" for="brandOption9">
                                                         <span class="d-flex align-items-center justify-content-between">
                                                             <span>جی پلاس</span>
                                                             <span class="text-muted en_text fs-7">G Plus</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption10">
-                                                    <label class="form-check-label d-block" for="brandOption10">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>مایکروسافت</span>
-                                                            <span class="text-muted en_text fs-7">Microsoft</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption11">
-                                                    <label class="form-check-label d-block" for="brandOption11">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>بلک بری</span>
-                                                            <span class="text-muted en_text fs-7">BlackBerry</span>
                                                         </span>
                                                     </label>
                                                 </div>
@@ -196,34 +147,51 @@
                                 </div>
                                 <!-- end of widget -->
                                 <!-- start of widget -->
-                                <div class="widget py-1 mb-3">
-                                    <div class="widget-content widget--filter-switcher">
-                                        <div class="d-flex border-bottom pb-1 mb-2">
-                                            <i class="ri-user-2-fill text-primary me-2"></i>
-                                            <span class="fs-7">با خرید از کالاهایی با امکان ارسال توسط فروشنده سفارش خود
-                                                را
-                                                زودتر تحویل بگیرید </span>
-                                        </div>
-                                        <div class="form-check form-switch mb-0">
-                                            <input class="form-check-input" type="checkbox" id="has_ship_by_seller">
-                                            <label class="form-check-label" for="has_ship_by_seller">امکان ارسال توسط
-                                                فروشنده</label>
-                                        </div>
+                                <div class="widget widget-collapse">
+                                    <div class="widget-title widget-title--collapse-btn" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsePriceFilter" aria-expanded="false"
+                                        aria-controls="collapsePriceFilter" role="button">محدوده قیمت </div>
+                                    <div class="widget-content widget--search fa-num collapse" id="collapsePriceFilter">
+                                        <form action="#" class="pt-2">
+                                            <div class="filter-price">
+                                                <div class="filter-slider">
+                                                    <div id="slider-non-linear-step" class="price-slider"></div>
+                                                </div>
+                                                <ul class="filter-range mb-4">
+                                                    <li>
+                                                        <input type="text" data-value="0" value="0" name="price[min]"
+                                                            data-range="0" class="js-slider-range-from"
+                                                            id="skip-value-lower" disabled>
+                                                        <span class="fontSize20 colorYellow">ت</span>
+                                                    </li>
+                                                    <li class="label fw-bold">تا</li>
+                                                    <li>
+                                                        <input type="text" data-value="17700000" value="17700000"
+                                                            name="price[max]" data-range="17700000"
+                                                            class="js-slider-range-to" id="skip-value-upper" disabled>
+                                                        <span class="fontSize20 colorYellow">ت</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <!-- end of widget -->
                                 <!-- start of widget -->
-                                <div class="widget py-1 mb-3">
-                                    <div class="widget-content widget--filter-switcher">
-                                        <div class="form-check form-switch mb-0">
-                                            <input class="form-check-input" type="checkbox" id="has_jet_delivery">
-                                            <label class="form-check-label" for="has_jet_delivery">فقط ارسال
-                                                فوری
-                                            </label>
-                                        </div>
+                                <div class="widget mb-3">
+                                    <div class="widget-title">جستجو در نتایج:</div>
+                                    <div class="widget-content widget--search">
+                                        <form action="#">
+                                            <div class="form-element-row">
+                                                <input type="text" name="s" class="form-control"
+                                                    placeholder="نام محصول یا…">
+                                                <i class="ri-search-line icon"></i>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <!-- end of widget -->
+                        
                                 <!-- start of widget -->
                                 <div class="widget py-1 mb-3">
                                     <div class="widget-content widget--filter-switcher">
@@ -369,37 +337,6 @@
                                                         </span>
                                                     </label>
                                                 </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- end of widget -->
-                                <!-- start of widget -->
-                                <div class="widget widget-collapse">
-                                    <div class="widget-title widget-title--collapse-btn" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsePriceFilter" aria-expanded="false"
-                                        aria-controls="collapsePriceFilter" role="button">محدوده قیمت</div>
-                                    <div class="widget-content widget--search fa-num collapse" id="collapsePriceFilter">
-                                        <form action="#" class="pt-2">
-                                            <div class="filter-price">
-                                                <div class="filter-slider">
-                                                    <div id="slider-non-linear-step" class="price-slider"></div>
-                                                </div>
-                                                <ul class="filter-range mb-4">
-                                                    <li>
-                                                        <input type="text" data-value="0" value="0" name="price[min]"
-                                                            data-range="0" class="js-slider-range-from"
-                                                            id="skip-value-lower" disabled>
-                                                        <span>تومان</span>
-                                                    </li>
-                                                    <li class="label fw-bold">تا</li>
-                                                    <li>
-                                                        <input type="text" data-value="17700000" value="17700000"
-                                                            name="price[max]" data-range="17700000"
-                                                            class="js-slider-range-to" id="skip-value-upper" disabled>
-                                                        <span>تومان</span>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </form>
                                     </div>

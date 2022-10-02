@@ -30,7 +30,7 @@
             <script>
                 $(document).ready(function() {
                     $('#close').on('click', function() {
-                        $('#SliderParent').addClass('marginTopMediaQuaryForSlider')
+                        $('#SliderParent').addClass('marginTopMediaQuaryForSlider');
                     })
                 });
                 
@@ -45,7 +45,7 @@
                                     <img src="./theme-assets/images/menuImage.png" width="120" alt="">
                             </div>
                             <div class="marginFromRightHeader">
-                                <div class="notification-item--text creamColor bold"> ویزیت ایران </div>
+                                <div class="notification-item--text colorYellow bold"> ویزیت ایران </div>
                                 <div class="notification-item--text fontSize12 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                                     <img src="./theme-assets/images/menuImage.png" width="70" alt="">
                             </div>
                             <div class="marginFromRightHeaderMobile">
-                                <div class="notification-item--text creamColor bold"> ویزیت ایران </div>
+                                <div class="notification-item--text colorYellow bold"> ویزیت ایران </div>
                                 <div class="notification-item--text fontSize10 bold"> سامانه فروش صنایع دستی و هنرهای تزئینی </div>
                             </div>
                         </div>
