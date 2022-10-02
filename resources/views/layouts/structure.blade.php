@@ -30,7 +30,7 @@
             <script>
                 $(document).ready(function() {
                     $('#close').on('click', function() {
-                        $('#SliderParent').css('margin-top','-50px');
+                        $('#SliderParent').addClass('marginTopMediaQuaryForSlider')
                     })
                 });
                 
