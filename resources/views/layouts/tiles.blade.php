@@ -34,7 +34,7 @@
                     return;
                 }                         
                 for(var i = 0; i < res.data.top.length; i++) {
-                    html += '<div class="swiper-slide d-flex justify-content-center">';
+                    html += '<div class="swiper-slide d-flex justify-content-center width-200">';
                     html += '<div class="banner-img ">';
                     html += '<a target="_blank" href="#" class="tiles">';
                     html +='<img class="imgResponsive" src="' + res.data.top[i].img + '" alt="' + res.data.top[i].alt + '">';

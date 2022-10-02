@@ -11,6 +11,7 @@
     <title>ویزیت ایران | خانه</title>
     <link rel="stylesheet" href="{{ asset('theme-assets/css/dependencies.css') }}">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme-assets/css/visitiran.css') }}">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/custom.css') }}">
     
     <script src="{{ asset('theme-assets/js/dependencies/jquery-3.6.0.min.js') }}"></script>
@@ -25,7 +26,7 @@
             <div class="alert banner-container alert-dismissible fade show" role="alert">
                 <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
                     style="height: 60px;"></a>
-                <button id="close" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button id="close" type="button" class="btn-close customCloseIconBanner p-0" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <script>
                 $(document).ready(function() {
@@ -33,7 +34,6 @@
                         $('#SliderParent').addClass('marginTopMediaQuaryForSlider');
                     })
                 });
-                
             </script>
             <!-- end banner -->
                         <!-- start of page-header-middle -->
@@ -52,12 +52,12 @@
                         <div class="user-options heightHeader customFilterGray">
                             <div class="user-option user-option--search customBorderLeft1">
                                 <a href="profile.html" class="user-option-btn user-option-btn--search gap10">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/search.svg" alt="">
+                                    <i class="icon-visit-search customHeader textColor"></i>
                                 </a>
                             </div>
                             <div class="user-option user-option--cart customBorderLeft1">
                                 <a href="{{route('cart')}}" class="user-option-btn user-option-btn--cart">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/basket.svg" alt="">
+                                    <i class="icon-visit-basket customHeader colorYellow"></i>
                                 </a>
                                 <div class="mini-cart">
                                     <div class="mini-cart-header">
@@ -100,9 +100,8 @@
                                 </div>
                             </div>
                             <div class="user-option user-option--account  paddingRight15">
-                                <a href="profile.html" class="user-option-btn user-option-btn--account gap10">
-                                    <img class="customIconHeadLine" src="./theme-assets/images/svg/user.svg" alt="">
-                                    <div>ورود / ثبت نام</div>
+                                <a href="profile.html" class="user-option-btn user-option-btn--account gap10 btnHover textColor">
+                                    <i class="icon-visit-person customHeader"></i>ورود / ثبت نام
                                 </a>
                                 <div class="user-option--dropdown user-option--dropdown-right">
                                     <div class="profile-user-info ui-box">

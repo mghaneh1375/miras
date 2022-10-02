@@ -34,7 +34,7 @@
                                 <div class="widget widget-collapse mb-3">
                                     <div class="widget-title widget-title--collapse-btn d-flex gap10 align-items-center" data-bs-toggle="collapse"
                                         data-bs-target="#collapseGrouping" aria-expanded="false"
-                                        aria-controls="collapseGrouping" role="button">دسته بندی <div class="circle colorBlue align-self-center"></div><span class="colorBlue fontSize8">1 فیلتر</span></div>
+                                        aria-controls="collapseGrouping" role="button">دسته بندی <i class="circle colorBlue align-self-center"></i><span class="colorBlue fontSize8">1 فیلتر</span></div>
                                     <div class="widget-content widget--search collapse" id="collapseGrouping">
                                         <form action="#" class="pt-2">
                                             <div class="filter-options do-simplebar pt-2 mt-2">
@@ -177,6 +177,28 @@
                                     </div>
                                 </div>
                                 <!-- end of widget -->
+                                                                <!-- start of widget -->
+                                <div class="widget py-1 mb-3">
+                                    <div class="widget-content widget--filter-switcher">
+                                        <div class="form-check form-switch mb-0">
+                                            <input class="form-check-input" type="checkbox" id="has_selling_stock">
+                                            <label class="form-check-label" for="has_selling_stock">فقط کالاهای
+                                                موجود</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of widget -->
+                                                                <!-- start of widget -->
+                                <div class="widget py-1 mb-3">
+                                    <div class="widget-content widget--filter-switcher">
+                                        <div class="form-check form-switch mb-0">
+                                            <input class="form-check-input" type="checkbox" id="has_selling_offs">
+                                            <label class="form-check-label" for="has_sellingoffs">فقط کالاهای
+                                                دارای تخفیف</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of widget -->
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
                                     <div class="widget-title">جستجو در نتایج:</div>
@@ -191,156 +213,25 @@
                                     </div>
                                 </div>
                                 <!-- end of widget -->
-                        
-                                <!-- start of widget -->
-                                <div class="widget py-1 mb-3">
-                                    <div class="widget-content widget--filter-switcher">
-                                        <div class="form-check form-switch mb-0">
-                                            <input class="form-check-input" type="checkbox" id="has_selling_stock">
-                                            <label class="form-check-label" for="has_selling_stock">فقط کالاهای
-                                                موجود</label>
-                                        </div>
-                                    </div>
+                                                                <!-- start of widget -->
+                                <div class="widget mb-3">
+                                    <div class="widget-title">مرتب سازی بر اساس :</div>
+                                        <form action="#">
+                                            <div class="form-element-row">
+                                                <select class="b-0 p-2" name="" id="">
+                                                  <option class="b-0 p-2" value="expensive">گران ترین</option>
+                                                  <option class="b-0 p-2" value="cheap">ارزان ترین</option>
+                                                  <option class="b-0 p-2" value="new">جدید ترین</option>
+                                                  <option class="b-0 p-2" value="popular">محبوب ترین</option>
+                                                  <option class="b-0 p-2" value="best">پرفروش ترین</option>
+                                                  <option class="b-0 p-2" value="popular">پربازدید ترین</option>
+                                                </select>
+                                            </div>
+                                        </form>
                                 </div>
                                 <!-- end of widget -->
                                 <!-- start of widget -->
-                                <div class="widget widget-collapse mb-3">
-                                    <div class="widget-title widget-title--collapse-btn" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseColorFilter" aria-expanded="false"
-                                        aria-controls="collapseColorFilter" role="button">رنگ ها</div>
-                                    <div class="widget-content widget--search collapse" id="collapseColorFilter">
-                                        <form action="#" class="pt-2">
-                                            <div class="form-element-row">
-                                                <input type="text" name="s" class="form-control"
-                                                    placeholder="جستجوی نام برند...">
-                                                <i class="ri-search-line icon"></i>
-                                            </div>
-                                            <div class="filter-options do-simplebar border-top pt-2 mt-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption1">
-                                                    <label class="form-check-label d-block" for="colorOption1">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>مشکی</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(43,43,43);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption2">
-                                                    <label class="form-check-label d-block" for="colorOption2">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>آبی</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(0,0,255);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption3">
-                                                    <label class="form-check-label d-block" for="colorOption3">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>سفید</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(255,255,255);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption4">
-                                                    <label class="form-check-label d-block" for="colorOption4">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>خاکستری</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(128,128,128);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption5">
-                                                    <label class="form-check-label d-block" for="colorOption5">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>سبز</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(0,128,0);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption6">
-                                                    <label class="form-check-label d-block" for="colorOption6">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>بنفش</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(128,0,128);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption7">
-                                                    <label class="form-check-label d-block" for="colorOption7">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>نقره ای</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(222,222,222);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption8">
-                                                    <label class="form-check-label d-block" for="colorOption8">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>طلایی</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(201,146,18);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption9">
-                                                    <label class="form-check-label d-block" for="colorOption9">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>آبی تیره</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(76,94,116);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption10">
-                                                    <label class="form-check-label d-block" for="colorOption10">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>آبی روشن</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(64,170,255);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="colorOption11">
-                                                    <label class="form-check-label d-block" for="colorOption11">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>زرد</span>
-                                                            <span class="color-preview"
-                                                                style="background-color: rgb(255,255,0);"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+
                                 <!-- end of widget -->
                             </div>
                         </div>
