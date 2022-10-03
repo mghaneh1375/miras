@@ -82,6 +82,11 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
     Route::post('config', [ConfigController::class, 'update'])->name('config.update');
 
 
+    Route::resource('product.productGallery', GalleryController::class)->except('show', 'update', 'edit')->shallow();
+    
+    Route::resource('product.productFeature', ProductFeatureController::class)->only('index', 'store')->shallow();
+
+
     Route::post('uploadImg', [HomeController::class, 'uploadImg'])->name('uploadImg');
 
     Route::get('/panel', function () {

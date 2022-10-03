@@ -19,9 +19,16 @@ class Product extends Model
         'is_in_top_list',
         'visibility',
         'off',
+        'off_type',
+        'off_expiration',
         'priority',
         'brand_id',
-        'sub_category_id'
+        'category_id',
+        'digest',
+        'keywords',
+        'tags',
+        'seller_id',
+        'alt'
     ];
     
     public $timestamps = false;
