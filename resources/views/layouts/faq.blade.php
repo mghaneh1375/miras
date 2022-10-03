@@ -7,8 +7,8 @@
                         </span>
                     </div>
                      <div class="ui-box-content">
-                            <div id="faq" class="accordion" id="accordionExample">
-                                    
+                            <div  class="accordion px-5" id="accordionExample">
+                                    <div id="faq" class="accordion-item b-0"></div>
                             </div>
                      </div>
                 </div>
@@ -25,11 +25,11 @@
                 if(res.status === "ok") {
                     var html = "";
                     for(var i = 0; i < res.data.length; i++) {
-                        html += '<div class="accordion-item"><h2 class="accordion-header" id="heading' + res.data[i].id + '">';
+                        html += '<h2 class="accordion-header" id="heading' + res.data[i].id + '">';
                         html += '<button class="accordion-button collapsed pb-3 " type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + res.data[i].id + '" aria-expanded="true" aria-controls="collapse' + res.data[i].id + '">';
                         html += res.data[i].title + '</button></h2>';
                         html += '<div id="collapse' + res.data[i].id + '" class="accordion-collapse collapse" aria-labelledby="heading' + res.data[i].id + '" data-bs-parent="#accordionExample">';
-                        html += '<div class="accordion-body">' + res.data[i].description + '</div></div>';
+                        html += '<div class="accordion-body">' + res.data[i].description + '</div>';
                         html += '</div>';
                     }
                     $("#faq").empty().append(html);

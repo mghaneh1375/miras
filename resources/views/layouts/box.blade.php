@@ -5,7 +5,7 @@
                         <span class="ui-box-title fontSize20"> 
                             <img class="p-2" src="{{ asset('./theme-assets/images/svg/headlineTitle.svg') }}" alt="">پر فروش ترین‌ها
                         </span>
-                        <span class="alignItemsCenter colorBlue"><a href="">مشاهده همه</a></span>
+                        <span class="alignItemsCenter colorBlue"><a class="hoverBold" href="">مشاهده همه</a></span>
                     </div>
                     <div class="ui-box-content">
                         <!-- Slider main container -->
@@ -14,7 +14,7 @@
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <a href="#" class="cursorPointer">
-                                    <div class="swiper-slide customBox">
+                                    <div class="swiper-slide customBox customWidthBox">
                                     <!-- start of product-card -->
                                     <div class="product-card customBorderBoxShadow">
                                         <div class="product-thumbnail">
@@ -27,11 +27,12 @@
                                                 <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                             </h2>
                                             <div class="product-variant">
-                                                <span class="colorWhite customBoxLabel">خاتم کاری</span>
+                                                <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
                                             </div>
+                                            <div class="colorCircle"></div>
                                             <div class="spaceBetween mt-3 mb-3">
-                                                <span class="fontSize12 colorRed">موجودی تنها دو عدد</span>
-                                                <span><img src="{{ asset('theme-assets/images/svg/star.svg') }}" alt=""><img src="{{ asset('theme-assets/images/svg/star.svg') }}" alt=""><img src="{{ asset('theme-assets/images/svg/star.svg') }}" alt=""><img src="{{ asset('theme-assets/images/svg/star.svg') }}" alt=""><img src="{{ asset('theme-assets/images/svg/star.svg') }}" alt=""></span>
+                                                <span class="fontSize11 colorRed">موجودی تنها دو عدد</span>
+                                                <span><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                             </div>
                                             <div class="product-price fa-num">
                                                 <div class="d-flex align-items-center">
@@ -44,11 +45,49 @@
                                             </div>
                                         </div>
                                         <div class="product-card-footer mb-2">
-                                            <div class="textColor">از تهران دستی</div>
+                                            <div class="textColor bold">از تهران دستی</div>
                                         </div>
                                     </div>
                                     <!-- end of product-card -->
-                                </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="cursorPointer">
+                                    <div class="swiper-slide customBox customWidthBox">
+                                    <!-- start of product-card -->
+                                    <div class="product-card customBorderBoxShadow">
+                                        <div class="product-thumbnail">
+                                            <a href="#" target="_blank">
+                                                <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
+                                            </a>
+                                        </div>
+                                        <div class="product-card-body">
+                                            <h2 class="product-title">
+                                                <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
+                                            </h2>
+                                            <div class="product-variant">
+                                                <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                            </div>
+                                            <div class="colorCircle"></div>
+                                            <div class="spaceBetween mt-3 mb-3">
+                                                <span class="fontSize12 colorRed">موجودی تنها دو عدد</span>
+                                                <span><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
+                                            </div>
+                                            <div class="product-price fa-num">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                    <del class="customlineText textColor fontSize15">26,900,000</del>
+                                                </div>
+                                                <div class="fontSize20">26,249,000 <span
+                                                        class="fontSize20 colorYellow">ت</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-card-footer mb-2">
+                                            <div class="textColor bold">از تهران دستی</div>
+                                        </div>
+                                    </div>
+                                    <!-- end of product-card -->
+                                    </div>
                                 </a>
                                 <!-- Slides -->
                                 {{-- <div class="swiper-slide">

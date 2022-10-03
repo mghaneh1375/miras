@@ -8,6 +8,25 @@
     <meta name="theme-color" content="#0089B7">
     <meta name="msapplication-navbutton-color" content="#0089B7">
     <meta name="apple-mobile-web-app-status-bar-style" content="#0089B7">
+    {{-- logo --}}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('theme-assets/images/logo/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('theme-assets/images/logo/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('theme-assets/images/logo/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('theme-assets/images/logo/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('theme-assets/images/logo/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('theme-assets/images/logo/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('theme-assets/images/logo/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('theme-assets/images/logo/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('theme-assets/images/logo/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('theme-assets/images/logo/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('theme-assets/images/logo/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('theme-assets/images/logo/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('theme-assets/images/logo/favicon-16x16.png') }}">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#00B2BC">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00B2BC">
+    {{-- logo --}}
     <title>ویزیت ایران | خانه</title>
     <link rel="stylesheet" href="{{ asset('theme-assets/css/dependencies.css') }}">
     <link rel="stylesheet" href="{{ asset('theme-assets/css/theme.css') }}">
@@ -19,23 +38,33 @@
 
 <body>
 
+       <script>
+      var width = window.innerWidth;
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.infobox') }}',
+            headers: {
+                'accept': 'application/json'
+            },
+            success: function(res) {
+                if(res.status === "ok") {
+                     if (width > 1000) {
+                         $(".infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
+                     }else if(width > 768){
+                        $(".infobox").css('background-image', "url(" + res.data.img_mid + ")").attr('href', res.data.href);
+                     }else{
+                        $(".infobox").css('background-image', "url(" + res.data.img_small + ")").attr('href', res.data.href);
+                     }
+                }
+            }
+        });
+
+    </script>
+
     <div class="page-wrapper">
         <!-- start of page-header -->
         <header class="page-header d-md-block d-none customFixedMenu">
-            <!-- start banner -->
-            <div class="alert banner-container alert-dismissible fade show" role="alert">
-                <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
-                    style="height: 60px;"></a>
-                <button id="close" type="button" class="btn-close customCloseIconBanner p-0" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <script>
-                $(document).ready(function() {
-                    $('#close').on('click', function() {
-                        $('#SliderParent').addClass('marginTopMediaQuaryForSlider');
-                    })
-                });
-            </script>
-            <!-- end banner -->
+            @include('layouts.top-banner')
                         <!-- start of page-header-middle -->
             <div class="page-header--middle customBackgroundWhite">
                 <div class="container heightHeader customBackgroundWhite">
@@ -226,11 +255,7 @@
         </header>
         <!-- end of page-header -->
         <header class="page-header-responsive d-md-none p-0">
-             <div class="alert banner-container alert-dismissible fade show" role="alert">
-                <a href="#" target="_blank" id="infobox" class="banner-placement rounded-0"
-                    style="height: 60px;"></a>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+            @include('layouts.top-banner')
             <div class="page-header-responsive-row">
                 <div class="d-flex align-items-center">
                     <div class="navigation-container">
@@ -314,8 +339,7 @@
                         </div>
                         <div class="page-header--top-left">
                             <a href="profile.html" class="user-option-btn user-option-btn--account gap10 d-flex ">
-                                <img class="customIconHeadLine" src="./theme-assets/images/svg/user-mobile.svg" alt="">
-                                <div class="colorWhite fontSize10 align-self-center">ورود / ثبت نام</div>
+                                    <span class=" d-flex colorWhite fontSize10 align-self-center btnHover pl-2"> <i class="icon-visit-person customHeader"></i>ورود / ثبت نام </span>
                             </a>
                         </div>
                     </div>
@@ -347,44 +371,6 @@
     <script src="{{ asset('theme-assets/js/dependencies/simplebar.min.js') }}"></script>
     <script src="{{ asset('theme-assets/js/dependencies/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('theme-assets/js/dependencies/zoomsl.min.js') }}"></script>
-    
-    
-    <script>
-     
-        $.ajax({
-            type: 'get',
-            url: '{{ route('api.infobox') }}',
-            headers: {
-                'accept': 'application/json'
-            },
-            success: function(res) {
-                if(res.status === "ok") {
-                    $("#infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
-                    
-                }
-            }
-        });
-
-    </script>
-        <script>
-     
-        $.ajax({
-            type: 'get',
-            url: '{{ route('api.infobox') }}',
-            headers: {
-                'accept': 'application/json'
-            },
-            success: function(res) {
-                if(res.status === "ok") {
-                    $("#infobox").css('background-image', "url(" + res.data.img_large + ")").attr('href', res.data.href);
-    
-                }
-            }
-        });
-
-    </script>
-    
-
     @section('extraJS')
     @show
 </body>

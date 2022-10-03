@@ -68,3 +68,10 @@
     -ms-transform: rotate(30deg);
     -o-transform: rotate(30deg);
 }
+.icon-visit-star,
+.icon-visit-staroutline {
+    color: #c59358;
+}
+.icon-visit-staroutline {
+    font-size: 10px;
+}
