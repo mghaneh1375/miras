@@ -591,6 +591,7 @@ figure .ck-widget {
 }
 .image-style-align-left {
     float: left !important;
+    margin-right: 1.5rem;
 }
 @media (min-width: 768px) {
     .mt-md-110 {
