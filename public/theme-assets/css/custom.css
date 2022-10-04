@@ -148,6 +148,9 @@ a {
 .fontSize20 {
     font-size: 20px !important;
 }
+.fontNormal {
+    font-weight: normal !important;
+}
 .bold {
     font-weight: bold;
 }
@@ -571,6 +574,20 @@ select:focus-visible {
     opacity: 60% !important;
     box-shadow: none !important;
 }
+.swiper .swiper-button-next:disabled,
+.swiper .swiper-buttonprev:disabled {
+    opacity: 0% !important;
+    box-shadow: none !important;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
 .swiper .swiper-button-next:hover,
 .swiper .swiper-button-prev:hover {
     opacity: 100% !important;
@@ -597,6 +614,34 @@ figure .ck-widget {
     float: right !important;
     margin-left: 1.5rem;
 }
+
+element.style {
+}
+.pagination .page-item.active .page-link {
+    color: #fff;
+    cursor: default;
+}
+.pagination .page-item .page-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #212121;
+    padding: 0;
+}
+.page-item.active .page-link {
+    background-color: #00b2bc;
+    border-color: #00b2bc;
+}
+
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;

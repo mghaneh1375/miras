@@ -3,40 +3,23 @@
 <div class="container">
         <main class="page-content">
             <div class="container">
+                <!-- start of product-detail-container -->
                 <!-- start of breadcrumb -->
+                <div class="product-detail-container mb-3">
                 <nav class="mb-5" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                        <li class="breadcrumb-item"><a href="#">کالای دیجیتال</a></li>
-                        <li class="breadcrumb-item"><a href="#">موبایل</a></li>
-                        <li class="breadcrumb-item"><a href="#">گوشی موبایل</a></li>
+                        <li class="breadcrumb-item"><a href="#">منسوجات </a></li>
+                        <li class="breadcrumb-item"><a href="#">فرش</a></li>
                     </ol>
                 </nav>
                 <!-- end of breadcrumb -->
-                <!-- start of product-detail-container -->
-                <div class="product-detail-container mb-5">
                     <div class="row">
                         <div class="col-lg-4 col-md-5 mb-md-0 mb-4">
                             <div class="ui-sticky ui-sticky-top">
                                 <!-- start of product-gallery -->
                                 <div class="product-gallery">
-                                    <div class="product-options">
-                                        <ul>
-                                            <!-- 
-                                                Add this class to enable the option => 'added'.
-                                                for example :
-                                                <li><a href="#" class="added"><i class="ri-heart-3-fill"></i></a></li>
-                                            -->
-                                            <li><a href="#"><i class="ri-heart-3-fill"></i></a></li>
-                                            <li><a href="#" data-remodal-target="share-modal"><i
-                                                        class="ri-share-forward-fill"></i></a></li>
-                                            <li><a href="#" data-remodal-target="notification-modal"><i
-                                                        class="ri-notification-fill"></i></a></li>
-                                            <li><a href="#"><i class="ri-line-chart-fill"></i></a></li>
-                                            <li><a href="#"><i class="ri-scales-3-fill"></i></a></li>
-                                            <li><a href="#"><i class="ri-play-list-add-fill"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    
                                     <div class="gallery-img-container">
                                         <div class="gallery-img">
                                             <img src="./theme-assets/images/gallery/main.jpg" class="zoom-img" alt="">
@@ -63,14 +46,6 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-4 col-md-7 mb-lg-0 mb-4">
-                            <!-- start of breadcrumb -->
-                            <nav class="mb-2" aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">اپل</a></li>
-                                    <li class="breadcrumb-item"><a href="#">گوشی موبایل اپل</a></li>
-                                </ol>
-                            </nav>
-                            <!-- end of breadcrumb -->
                             <!-- start of product-detail -->
                             <h2 class="product-title">گوشی موبایل اپل مدل iPhone 13 A2634 دو سیم کارت ظرفیت 128
                                 گیگابایت و رم 4 گیگابایت</h2>

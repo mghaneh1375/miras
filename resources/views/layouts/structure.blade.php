@@ -186,7 +186,7 @@
                             </li>
                             <li class="nav-item align-self-center">
                             <div class="vertical-menu minWidthUnset">
-                            <a href="#" class="vertical-menu-btn p-0 m-0 colorWhite"><img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt="">دسته بندی کالاها</a>
+                            <a href="#" class="vertical-menu-btn p-0 m-0 colorWhite fontNormal"><img class="iconSvg" src="./theme-assets/images/svg/headline.svg" alt="">دسته بندی کالاها</a>
                             <div class="vertical-menu-items marginFromRightHeaderNegative custom-vertical-menu-items zIndex2 mt-10">
                                 <ul>
                                     <li class="mega-menu-category show">
@@ -229,7 +229,7 @@
                         </div>                            
                     </li>
                             <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg customIconTag" src="./theme-assets/images/svg/label.svg" alt="">پیشنهاد های ویژه</a>
+                                <a class="nav-link colorWhite fontNormal" href="index-1.html"><img class="iconSvg customIconTag" src="./theme-assets/images/svg/label.svg" alt="">پیشنهاد های ویژه</a>
                             </li>
                         </ul>
                     </div>
