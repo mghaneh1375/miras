@@ -246,6 +246,9 @@ a {
 .gap15 {
     gap: 15px;
 }
+.whiteSpaceNoWrap {
+    white-space: nowrap;
+}
 .circle {
     content: "as";
     width: 6px;
