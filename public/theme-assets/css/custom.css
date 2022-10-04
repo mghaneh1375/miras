@@ -586,6 +586,12 @@ select:focus-visible {
     font-weight: 600 !important;
     color: #0089b7 !important;
 }
+figure .ck-widget {
+    text-align: center;
+}
+figure .ck-widget .img-style-align-left {
+    float: left;
+}
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;
