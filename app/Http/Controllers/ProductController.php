@@ -6,11 +6,11 @@ use App\Http\Resources\BrandResource;
 use App\Http\Resources\CategoryDigest;
 use App\Http\Resources\ProductDigest;
 use App\Http\Resources\ProductResource;
-use App\Http\Resources\subCategoryDigest;
+use App\Http\Resources\SellerResource;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
-use App\Models\SubCategory;
+use App\Models\Seller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -25,7 +25,10 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         
-        if($request->user() != null && $request->user()->level == User::$ADMIN_LEVEL) {
+        if($request->user() != null && (
+            $request->user()->level == User::$ADMIN_LEVEL ||
+            $request->user()->level == User::$EDITOR_LEVEL
+        )) {
             return view('admin.product.list', [
                 'items' => ProductDigest::collection(Product::all())->toArray($request)
             ]);
@@ -50,6 +53,7 @@ class ProductController extends Controller
 
         return view('admin.product.create', [
             'brands' => BrandResource::collection(Brand::all())->toArray($request),
+            'sellers' => SellerResource::collection(Seller::all())->toArray($request),
             'categories' => CategoryDigest::collection($arr)->toArray($request),
         ]);
     }
@@ -62,14 +66,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->has('seller_id') && $request['seller_id'] == -1)
+            $request['seller_id'] = null;
+
         $validator = [
             'name' => 'required|string|min:2',
-            'sub_category_id' => 'required|exists:sub_category,id',
-            'brand_id' => 'required|exists:brand,id',
+            'category_id' => 'required|exists:categories,id',
+            'brand_id' => 'required|exists:brands,id',
+            'seller_id' => 'nullable|exists:sellers,id',
             'description' => 'required|string|min:2',
+            'digest' => 'nullable|string|min:2',
+            'keywords' => 'nullable|string|min:2',
+            'tags' => 'nullable|string|min:2',
             'price' => 'required|integer|min:0',
-            'off' => 'nullable|integer|min:0',
-            'available_count' => 'required|integer|min:0',
+            // 'off' => 'nullable|integer|min:0',
+            // 'available_count' => 'required|integer|min:0',
             'priority' => 'required|integer|min:0',
             'is_in_top_list' => 'required|boolean',
             'visibility' => 'required|boolean',
@@ -111,6 +122,7 @@ class ProductController extends Controller
         return view('admin.product.create', [
             'item' => ProductResource::make($product)->toArray($request),
             'brands' => BrandResource::collection(Brand::all())->toArray($request),
+            'sellers' => SellerResource::collection(Seller::all())->toArray($request),
             'categories' => CategoryDigest::collection($arr)->toArray($request),
         ]);   
     }

@@ -14,6 +14,16 @@ class ProductDigest extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'brand' => $this->brand->name,
+            'category' => $this->category->name,
+            'available_count' => $this->available_count,
+            'is_in_top_list' => $this->is_in_top_list,
+            'visibility' => $this->visibility,
+            'priority' => $this->priority,
+            'price' => $this->price
+        ];
     }
 }

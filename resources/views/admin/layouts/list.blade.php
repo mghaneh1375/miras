@@ -23,7 +23,8 @@
                 <div id="mainContainer" class="page-content" style="margin-top: 5%; margin: 50px; direction: rtl">
 
                     <div class="row">
-                        <div class="flex center">
+                        <div class="flex center gap10">
+                            @yield('backBtn')
                             <button onclick="document.location.href = @yield('createNew')" class="btn btn-success">افزودن مورد جدید</button>
                         </div>
                         <div class="col-xs-12">

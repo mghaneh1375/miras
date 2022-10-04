@@ -100,10 +100,15 @@ class BrandController extends Controller
             ) {
                 unlink(__DIR__ . '/../../../public/storage/brands/' . $brand->logo);
             }
+
+            $brand->logo = $filename;
         }
 
+        $brand->alt = $request->has('alt') ? $request['alt'] : $brand->alt;
+        $brand->name = $request->has('name') ? $request['name'] : $brand->name;
+
         $brand->save();
-        return response()->json(['status' => 'ok']);
+        return Redirect::route('brand.index');
     }
 
     /**

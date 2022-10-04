@@ -349,6 +349,10 @@
             div, center {
                 direction: rtl;
             }
+
+            .mCSB_container {
+                overflow: scroll !important;
+            }
         </style>
 
         <script>
@@ -401,6 +405,14 @@
                                 <a href="{{route('config.index')}}" class="dropdown-item">پیکربندی</a>
                             </div>
                         </li>
+
+                        <li class="nav-item"><a data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i></i> <span class="mini-dn">کاربران</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="{{route('seller.index')}}" class="dropdown-item">فروشنده ها</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="{{ route('product.index') }}" role="button" class="nav-link"><i></i> <span class="mini-dn">مدیریت محصولات</span></a></li>
 
                     </ul>
                 </div>

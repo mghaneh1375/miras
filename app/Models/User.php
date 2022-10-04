@@ -13,7 +13,9 @@ class User extends Authenticatable
 
     public static $ADMIN_LEVEL = 'admin';
     public static $FINANCE_LEVEL = 'finance';
+    public static $REPORT_LEVEL = 'report';
     public static $EDITOR_LEVEL = 'editor';
+    public static $NEWS_LEVEL = 'news';
     public static $USER_LEVEL = 'user';
 
 

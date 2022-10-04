@@ -46,11 +46,11 @@
                     <div class="row">
 
                         <div class="col-xs-12" style="padding: 0">
-                            @if(isset($category))
+                            {{-- @if(isset($category))
                                 <div class="flex center">
                                     <img width="200px" src="{{ $category->img }}" />
                                 </div>
-                            @endif
+                            @endif --}}
                             <div style="margin-top: 10px;">
                                 @yield('form')
                             </div>

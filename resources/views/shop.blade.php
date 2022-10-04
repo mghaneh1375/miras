@@ -1,20 +1,29 @@
 
 @extends('layouts.structure')
 @section('content')
-            <main class="page-content">
-            <div class="container">
+        <main class="page-content TopParentBannerMoveOnTop">
+            <div class="container mt-2">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-5 responsive-sidebar">
                         <div class="ui-sticky ui-sticky-top">
-                            <div class="ui-box sidebar-widgets">
+                            <div class="ui-box sidebar-widgets customFilter ">
+                                <!-- start of breadcrumb -->
+                                <nav class="mb-2 mt-3" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                        <li class="breadcrumb-item"><a href="#">فرش</a></li>
+                                        <li class="breadcrumb-item"><a href="#">منسوجات</a></li>
+                                    </ol>
+                                </nav>
+                                <!-- end of breadcrumb -->
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
                                     <div class="spaceBetween">
                                         <div class="widget-title m-0 b-0">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
-                                        <div class="colorRed fontSize8 align-self-center">حذف نتایج</div>
+                                        <a href="#" class="colorRed fontSize12 align-self-center">حذف نتایج</a>
                                     </div>
                                     <div class="colorBlue fontSize8 align-self-center">300 کالا</div>
-                                    {{-- <div class="widget-content widget--category-results">
+                                    <div class="widget-content widget--category-results">
                                         <ul>
                                             <li class="category--arrow-left">
                                                 <a href="#">دسته بندی کالا ها</a>
@@ -28,9 +37,40 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </div> --}}
+                                    </div>
                                 </div>
-                                                                <!-- start of widget -->
+                                <!-- start of widget -->
+                                <div class="widget mb-3">
+                                    <div class="widget-title b-0" > نحوه نمایش :</div>
+                                        <form action="#">
+                                            <div class="form-element-row">
+                                                <select class="form-select b-0 p-2" aria-label="Default select example">
+                                                  <option selected value="expensive">گران ترین</option>
+                                                  <option value="cheap">ارزان ترین</option>
+                                                  <option value="new">جدید ترین</option>
+                                                  <option value="popular">محبوب ترین</option>
+                                                  <option value="best">پرفروش ترین</option>
+                                                  <option value="popular">پربازدید ترین</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                </div>
+                                <!-- end of widget --> 
+                                <!-- start of widget -->
+                                <div class="widget mb-3">
+                                    <div class="widget-title b-0">جستجو :</div>
+                                    <div class="widget-content widget--search">
+                                        <form action="#">
+                                            <div class="form-element-row">
+                                                <input type="text" name="s" class="form-control"
+                                                    placeholder="نام محصول یا…">
+                                                <i class="ri-search-line icon"></i>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- end of widget -->
+                                <!-- start of widget -->
                                 <div class="widget widget-collapse mb-3">
                                     <div class="widget-title widget-title--collapse-btn d-flex gap10 align-items-center" data-bs-toggle="collapse"
                                         data-bs-target="#collapseGrouping" aria-expanded="false"
@@ -38,45 +78,37 @@
                                     <div class="widget-content widget--search collapse" id="collapseGrouping">
                                         <form action="#" class="pt-2">
                                             <div class="filter-options do-simplebar pt-2 mt-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption1">
-                                                    <label class="form-check-label d-block" for="brandOption1">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>دسته اول</span>
-                                                            <span class="text-muted en_text fs-7">Pack1</span>
-                                                        </span>
-                                                    </label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="brandOption1">
-                                                        <label class="form-check-label d-block" for="brandOption1">
-                                                            <span class="d-flex align-items-center justify-content-between">
-                                                                <span>دسته دوم</span>
-                                                                <span class="text-muted en_text fs-7">Pack2</span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
+                                                <div class="parent form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""/>والد دسته اول
                                                 </div>
-                                                <div class="form-check mt-4">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption1">
-                                                    <label class="form-check-label d-block" for="brandOption1">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>دسته اول</span>
-                                                            <span class="text-muted en_text fs-7">Pack1</span>
-                                                        </span>
-                                                    </label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="brandOption1">
-                                                        <label class="form-check-label d-block" for="brandOption1">
-                                                            <span class="d-flex align-items-center justify-content-between">
-                                                                <span>دسته دوم</span>
-                                                                <span class="text-muted en_text fs-7">Pack2</span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
+                                                <div>
+                                                    <ul class="child form-check">
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته اول
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته دوم
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته سوم
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="parent form-check mt-3">
+                                                    <input class="form-check-input" type="checkbox" value=""/>والد دسته دوم
+                                                </div>
+                                                <div>
+                                                    <ul class="child form-check">
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته اول
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته دوم
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته سوم
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </form>
@@ -178,7 +210,7 @@
                                 </div>
                                 <!-- end of widget -->
                                                                 <!-- start of widget -->
-                                <div class="widget py-1 mb-3">
+                                <div class="widget py-1 mt-3 mb-3">
                                     <div class="widget-content widget--filter-switcher">
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" id="has_selling_stock">
@@ -200,105 +232,15 @@
                                 </div>
                                 <!-- end of widget -->
                                 <!-- start of widget -->
-                                <div class="widget mb-3">
-                                    <div class="widget-title">جستجو در نتایج:</div>
-                                    <div class="widget-content widget--search">
-                                        <form action="#">
-                                            <div class="form-element-row">
-                                                <input type="text" name="s" class="form-control"
-                                                    placeholder="نام محصول یا…">
-                                                <i class="ri-search-line icon"></i>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- end of widget -->
-                                                                <!-- start of widget -->
-                                <div class="widget mb-3">
-                                    <div class="widget-title">مرتب سازی بر اساس :</div>
-                                        <form action="#">
-                                            <div class="form-element-row">
-                                                <select class="b-0 p-2" name="" id="">
-                                                  <option class="b-0 p-2" value="expensive">گران ترین</option>
-                                                  <option class="b-0 p-2" value="cheap">ارزان ترین</option>
-                                                  <option class="b-0 p-2" value="new">جدید ترین</option>
-                                                  <option class="b-0 p-2" value="popular">محبوب ترین</option>
-                                                  <option class="b-0 p-2" value="best">پرفروش ترین</option>
-                                                  <option class="b-0 p-2" value="popular">پربازدید ترین</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                </div>
-                                <!-- end of widget -->
-                                <!-- start of widget -->
 
                                 <!-- end of widget -->
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-8 col-md-7">
-                        <!-- start of breadcrumb -->
-                        <nav class="mb-2" aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                                <li class="breadcrumb-item"><a href="#">کالای دیجیتال</a></li>
-                                <li class="breadcrumb-item"><a href="#">موبایل</a></li>
-                                <li class="breadcrumb-item"><a href="#">گوشی موبایل</a></li>
-                            </ol>
-                        </nav>
-                        <!-- end of breadcrumb -->
                         <button class="btn btn-primary mb-3 d-md-none toggle-responsive-sidebar">فیلتر پیشرفته
                             <i class="ri-equalizer-fill ms-1"></i></button>
                         <div class="listing-products">
-                            <div class="listing-products-header mb-4">
-                                <div class="listing-products-filter-container do-simplebar me-4">
-                                    <div class="listing-products-filter">
-                                        <!-- start of nav-tabs -->
-                                        <ul class="nav nav-pills nav-tabs align-items-center" id="sort-tab"
-                                            role="tablist">
-                                            <li class="d-inline-flex align-items-center nav-item me-3 text-muted">
-                                                <i class="ri-equalizer-line me-2"></i>
-                                                مرتب سازی بر اساس:
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="most-visited-tab"
-                                                    data-bs-toggle="tab" data-bs-target="#most-visited" type="button"
-                                                    role="tab" aria-controls="most-visited"
-                                                    aria-selected="true">پربازدید ترین</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="best-selling-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#best-selling" type="button" role="tab"
-                                                    aria-controls="best-selling" aria-selected="false">پرفروش
-                                                    ترین</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="most-popular-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#most-popular" type="button" role="tab"
-                                                    aria-controls="most-popular" aria-selected="false">محبوب
-                                                    ترین</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="newest-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#newest" type="button" role="tab"
-                                                    aria-controls="newest" aria-selected="false">جدید ترین</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="cheapest-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#cheapest" type="button" role="tab"
-                                                    aria-controls="cheapest" aria-selected="false">ارزان ترین</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="most-expensive-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#most-expensive" type="button" role="tab"
-                                                    aria-controls="most-expensive" aria-selected="false">گران
-                                                    ترین</button>
-                                            </li>
-                                        </ul>
-                                        <!-- end of nav-tabs -->
-                                    </div>
-                                </div>
-                            </div>
                             <div class="listing-products-content">
                                 <!-- start of tab-content -->
                                 <div class="tab-content" id="sort-tabContent">
@@ -310,819 +252,216 @@
                                                 <div class="row mx-0">
                                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/01.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل اپل مدل iPhone 13 A2634 دو
-                                                                        سیم‌ کارت
-                                                                        ظرفیت 128
-                                                                        گیگابایت و رم 4 گیگابایت</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #d4d4d4;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e86841;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #b82c32;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
+                                                                <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
-                                                                        <del class="price-old">26,900,000</del>
-                                                                        <span class="discount ms-2">%2</span>
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
                                                                     </div>
-                                                                    <span class="price-now">26,249,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="fontSize20">29999,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
                                                     </div>
                                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/02.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل شیائومی مدل 11 lite 5G NE
-                                                                        2109119DG
-                                                                        دو
-                                                                        سیم‌ کارت
-                                                                        ظرفیت 256 گیگابایت و رم 8 گیگابایت</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #4d5b63;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #57415f;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #984638;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
                                                                 </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">8,239,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/03.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل شیائومی مدل Redmi Note 10
-                                                                        pro
-                                                                        M2101K6G
-                                                                        دو سیم‌
-                                                                        کارت
-                                                                        ظرفیت 128 گیگابایت و رم 6</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">7,599,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/04.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy Z Flip3
-                                                                        5G ظرفیت
-                                                                        256
-                                                                        گیگابایت
-                                                                        و
-                                                                        رم 8 گیگابایت</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">22,499,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/05.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل اپل مدل iPhone 12 Pro Max
-                                                                        A2412 دو
-                                                                        سیم‌
-                                                                        کارت
-                                                                        ظرفیت
-                                                                        256 گیگابایت</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #d4d4d4;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e86841;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #b82c32;"></span>
-                                                                    <span>+</span>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">36,300,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/06.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل شیائومی مدل Mi 11i 5G
-                                                                        M2012K11G دو
-                                                                        سیم‌
-                                                                        کارت
-                                                                        ظرفیت
-                                                                        256 گیگابایت و 8 گیگابایت رم</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #4d5b63;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #57415f;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #984638;"></span>
-                                                                    <span>+</span>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">16,199,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/07.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy S9 Plus
-                                                                        دو سیم
-                                                                        کارت
-                                                                        ظرفیت 64
-                                                                        گیگابایت</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <span class="price-now">12,890,000 <span
-                                                                            class="currency">تومان</span></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/08.jpg"
-                                                                        alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy Note 20
-                                                                        5G
-                                                                        SM-N981B/DS دو سیم
-                                                                        کارت ظرفیت 256 گیگابایت و رم 8</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
+                                                                <div class="colorCircle"></div>
+                                                                    <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
-                                                                        <del class="price-old">23,570,000</del>
-                                                                        <span class="discount ms-2">%3</span>
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
                                                                     </div>
-                                                                    <span class="price-now">22,799,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="fontSize20">26,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
                                                     </div>
                                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/01.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل اپل مدل iPhone 13 A2634 دو
-                                                                        سیم‌ کارت
-                                                                        ظرفیت 128
-                                                                        گیگابایت و رم 4 گیگابایت</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #d4d4d4;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e86841;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #b82c32;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
+                                                                    <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
-                                                                        <del class="price-old">26,900,000</del>
-                                                                        <span class="discount ms-2">%2</span>
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
                                                                     </div>
-                                                                    <span class="price-now">26,249,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="fontSize20">26,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
                                                     </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
+                                                                                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/02.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل شیائومی مدل 11 lite 5G NE
-                                                                        2109119DG
-                                                                        دو
-                                                                        سیم‌ کارت
-                                                                        ظرفیت 256 گیگابایت و رم 8 گیگابایت</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #4d5b63;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #57415f;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #984638;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
+                                                                    <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
-                                                                    <span class="price-now">8,239,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
+                                                                    </div>
+                                                                    <div class="fontSize20">26,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
                                                     </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
+                                                                                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/03.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل شیائومی مدل Redmi Note 10
-                                                                        pro
-                                                                        M2101K6G
-                                                                        دو سیم‌
-                                                                        کارت
-                                                                        ظرفیت 128 گیگابایت و رم 6</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
+                                                                    <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
-                                                                    <span class="price-now">7,599,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
+                                                                    </div>
+                                                                    <div class="fontSize20">26,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
                                                     </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
+                                                                                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
                                                         <!-- start of product-card -->
-                                                        <div class="product-card">
+                                                        <div class="product-card customBorderBoxShadow">
                                                             <div class="product-thumbnail">
-                                                                <a href="#">
-                                                                    <img src="./theme-assets/images/products/04.jpg"
-                                                                        alt="product title">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
                                                                 </a>
                                                             </div>
                                                             <div class="product-card-body">
                                                                 <h2 class="product-title">
-                                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy Z Flip3
-                                                                        5G ظرفیت
-                                                                        256
-                                                                        گیگابایت
-                                                                        و
-                                                                        رم 8 گیگابایت</a>
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
                                                                 </h2>
                                                                 <div class="product-variant">
-                                                                    <span class="color"
-                                                                        style="background-color: #24476e;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #12505b;"></span>
-                                                                    <span class="color"
-                                                                        style="background-color: #e4a793;"></span>
-                                                                    <span>+</span>
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
+                                                                <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                                                 </div>
                                                                 <div class="product-price fa-num">
-                                                                    <span class="price-now">22,499,000 <span
-                                                                            class="currency">تومان</span></span>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
+                                                                    </div>
+                                                                    <div class="fontSize20">28,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="product-card-footer">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-between border-top mt-2 py-2">
-                                                                    <div class="product-actions">
-                                                                        <ul>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به سبد خرید"
-                                                                                    aria-label="افزودن به سبد خرید"><i
-                                                                                        class="ri-shopping-cart-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="مشاهده سریع"
-                                                                                    aria-label="مشاهده سریع"
-                                                                                    data-remodal-target="quick-view-modal"><i
-                                                                                        class="ri-search-line"></i></a>
-                                                                            </li>
-                                                                            <li><a href="#" data-bs-toggle="tooltip"
-                                                                                    data-bs-placement="top" title=""
-                                                                                    data-bs-original-title="افزودن به علاقمندی"
-                                                                                    aria-label="افزودن به علاقمندی"><i
-                                                                                        class="ri-heart-3-line"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="product-rating fa-num">
-                                                                        <i class="ri-star-fill star"></i>
-                                                                        <strong>۴.۴</strong>
-                                                                        <span>(۴۳۶)</span>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -5517,6 +4856,48 @@
 
 @section('extraJS')
     @parent
+<script>
+$(".parent input").on('click',function(){
+  var _parent=$(this);
+  var nextli=$(this).parent().next().children().children();
+  
+  if(_parent.prop('checked')){
+     console.log('parent checked');
+     nextli.each(function(){
+       $(this).children().prop('checked',true);
+     });
+    
+  }
+  else{
+    console.log('parent un checked');
+     nextli.each(function(){
+       $(this).children().prop('checked',false);
+     });
+  
+  }
+});
+
+$(".child input").on('click',function(){
+  
+  var ths=$(this);
+  var parentinput=ths.closest('div').prev().children();
+  var sibblingsli=ths.closest('ul').find('li');
+  
+  if(ths.prop('checked')){
+    console.log('child checked');
+    parentinput.prop('checked',true);
+  }
+  else{
+    console.log('child unchecked');
+       var status=true;
+     sibblingsli.each(function(){
+       console.log('sibb');
+       if($(this).children().prop('checked')) status=false;
+     });
+       if(status) parentinput.prop('checked',false);
+  }
+});
+</script>
     <script src="{{ asset('theme-assets/js/theme.js') }}"></script>
     <script src="{{ asset('theme-assets/js/custom.js') }}"></script>
 @stop
