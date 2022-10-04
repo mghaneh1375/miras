@@ -317,7 +317,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -353,7 +353,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -389,7 +389,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -425,7 +425,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -461,7 +461,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
