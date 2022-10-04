@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-5 responsive-sidebar">
                         <div class="ui-sticky ui-sticky-top">
-                            <div class="ui-box sidebar-widgets">
+                            <div class="ui-box sidebar-widgets customFilter ">
                                 <!-- start of breadcrumb -->
                                 <nav class="mb-2 mt-3" aria-label="breadcrumb">
                                     <ol class="breadcrumb">
@@ -20,7 +20,7 @@
                                 <div class="widget mb-3">
                                     <div class="spaceBetween">
                                         <div class="widget-title m-0 b-0">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
-                                        <div class="colorRed fontSize8 align-self-center">حذف نتایج</div>
+                                        <div class="colorRed fontSize12 align-self-center">حذف نتایج</div>
                                     </div>
                                     <div class="colorBlue fontSize8 align-self-center">300 کالا</div>
                                     <div class="widget-content widget--category-results">
@@ -41,7 +41,7 @@
                                 </div>
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
-                                    <div class="widget-title">مرتب سازی بر اساس :</div>
+                                    <div class="widget-title b-0" > نحوه نمایش :</div>
                                         <form action="#">
                                             <div class="form-element-row">
                                                 <select class="form-select b-0 p-2" aria-label="Default select example">
@@ -58,7 +58,7 @@
                                 <!-- end of widget --> 
                                 <!-- start of widget -->
                                 <div class="widget mb-3">
-                                    <div class="widget-title">جستجو در نتایج:</div>
+                                    <div class="widget-title b-0">جستجو :</div>
                                     <div class="widget-content widget--search">
                                         <form action="#">
                                             <div class="form-element-row">
@@ -78,45 +78,37 @@
                                     <div class="widget-content widget--search collapse" id="collapseGrouping">
                                         <form action="#" class="pt-2">
                                             <div class="filter-options do-simplebar pt-2 mt-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption1">
-                                                    <label class="form-check-label d-block" for="brandOption1">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>دسته اول</span>
-                                                            <span class="text-muted en_text fs-7">Pack1</span>
-                                                        </span>
-                                                    </label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="brandOption1">
-                                                        <label class="form-check-label d-block" for="brandOption1">
-                                                            <span class="d-flex align-items-center justify-content-between">
-                                                                <span>دسته دوم</span>
-                                                                <span class="text-muted en_text fs-7">Pack2</span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
+                                                <div class="parent form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""/>والد دسته اول
                                                 </div>
-                                                <div class="form-check mt-4">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="brandOption1">
-                                                    <label class="form-check-label d-block" for="brandOption1">
-                                                        <span class="d-flex align-items-center justify-content-between">
-                                                            <span>دسته اول</span>
-                                                            <span class="text-muted en_text fs-7">Pack1</span>
-                                                        </span>
-                                                    </label>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="brandOption1">
-                                                        <label class="form-check-label d-block" for="brandOption1">
-                                                            <span class="d-flex align-items-center justify-content-between">
-                                                                <span>دسته دوم</span>
-                                                                <span class="text-muted en_text fs-7">Pack2</span>
-                                                            </span>
-                                                        </label>
-                                                    </div>
+                                                <div>
+                                                    <ul class="child form-check">
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته اول
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته دوم
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته سوم
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="parent form-check mt-3">
+                                                    <input class="form-check-input" type="checkbox" value=""/>والد دسته دوم
+                                                </div>
+                                                <div>
+                                                    <ul class="child form-check">
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته اول
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته دوم
+                                                        </li>
+                                                        <li class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" />دسته سوم
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </form>
@@ -218,7 +210,7 @@
                                 </div>
                                 <!-- end of widget -->
                                                                 <!-- start of widget -->
-                                <div class="widget py-1 mb-3">
+                                <div class="widget py-1 mt-3 mb-3">
                                     <div class="widget-content widget--filter-switcher">
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" id="has_selling_stock">
@@ -289,7 +281,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
+                                                                <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                                             </div>
                                                         </div>
                                                         <!-- end of product-card -->
@@ -4864,6 +4856,48 @@
 
 @section('extraJS')
     @parent
+<script>
+$(".parent input").on('click',function(){
+  var _parent=$(this);
+  var nextli=$(this).parent().next().children().children();
+  
+  if(_parent.prop('checked')){
+     console.log('parent checked');
+     nextli.each(function(){
+       $(this).children().prop('checked',true);
+     });
+    
+  }
+  else{
+    console.log('parent un checked');
+     nextli.each(function(){
+       $(this).children().prop('checked',false);
+     });
+  
+  }
+});
+
+$(".child input").on('click',function(){
+  
+  var ths=$(this);
+  var parentinput=ths.closest('div').prev().children();
+  var sibblingsli=ths.closest('ul').find('li');
+  
+  if(ths.prop('checked')){
+    console.log('child checked');
+    parentinput.prop('checked',true);
+  }
+  else{
+    console.log('child unchecked');
+       var status=true;
+     sibblingsli.each(function(){
+       console.log('sibb');
+       if($(this).children().prop('checked')) status=false;
+     });
+       if(status) parentinput.prop('checked',false);
+  }
+});
+</script>
     <script src="{{ asset('theme-assets/js/theme.js') }}"></script>
     <script src="{{ asset('theme-assets/js/custom.js') }}"></script>
 @stop

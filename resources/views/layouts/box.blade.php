@@ -31,7 +31,7 @@
                                             </div>
                                             <div class="colorCircle"></div>
                                             <div class="spaceBetween mt-3 mb-3">
-                                                <span class="fontSize11 colorRed">موجودی تنها دو عدد</span>
+                                                <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
                                                 <span><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
                                             </div>
                                             <div class="product-price fa-num">
@@ -45,7 +45,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-footer mb-2">
-                                            <div class="textColor bold">از تهران دستی</div>
+                                            <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                         </div>
                                     </div>
                                     <!-- end of product-card -->
@@ -83,7 +83,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-footer mb-2">
-                                            <div class="textColor bold">از تهران دستی</div>
+                                            <div class="textColor"><span class="bold">از</span> تهران دستی</div>
                                         </div>
                                     </div>
                                     <!-- end of product-card -->
