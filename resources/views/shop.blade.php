@@ -1,7 +1,7 @@
 
 @extends('layouts.structure')
 @section('content')
-        <main class="page-content">
+        <main class="page-content TopParentBannerMoveOnTop">
             <div class="container mt-2">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-5 responsive-sidebar">
@@ -44,13 +44,13 @@
                                     <div class="widget-title">مرتب سازی بر اساس :</div>
                                         <form action="#">
                                             <div class="form-element-row">
-                                                <select class="b-0 p-2" name="" id="">
-                                                  <option class="b-0 p-2" value="expensive">گران ترین</option>
-                                                  <option class="b-0 p-2" value="cheap">ارزان ترین</option>
-                                                  <option class="b-0 p-2" value="new">جدید ترین</option>
-                                                  <option class="b-0 p-2" value="popular">محبوب ترین</option>
-                                                  <option class="b-0 p-2" value="best">پرفروش ترین</option>
-                                                  <option class="b-0 p-2" value="popular">پربازدید ترین</option>
+                                                <select class="form-select b-0 p-2" aria-label="Default select example">
+                                                  <option selected value="expensive">گران ترین</option>
+                                                  <option value="cheap">ارزان ترین</option>
+                                                  <option value="new">جدید ترین</option>
+                                                  <option value="popular">محبوب ترین</option>
+                                                  <option value="best">پرفروش ترین</option>
+                                                  <option value="popular">پربازدید ترین</option>
                                                 </select>
                                             </div>
                                         </form>
@@ -275,10 +275,44 @@
                                                                 </div>
                                                                 <div class="colorCircle"></div>
                                                                 <div class="spaceBetween mt-3 mb-3">
+                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
+                                                                    <span><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
+                                                                </div>
+                                                                <div class="product-price fa-num">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
+                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
+                                                                    </div>
+                                                                    <div class="fontSize20">29999,249,000 <span
+                                                                            class="fontSize20 colorYellow">ت</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-card-footer mb-2">
+                                                                <div class="textColor bold">از تهران دستی</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end of product-card -->
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
+                                                        <!-- start of product-card -->
+                                                        <div class="product-card customBorderBoxShadow">
+                                                            <div class="product-thumbnail">
+                                                                <a href="#" target="_blank">
+                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-card-body">
+                                                                <h2 class="product-title">
+                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
+                                                                </h2>
+                                                                <div class="product-variant">
+                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
+                                                                </div>
+                                                                <div class="colorCircle"></div>
                                                                     <div class="spaceBetween mt-3 mb-3">
                                                                     <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
                                                                     <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
-                                                                </div>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
@@ -312,49 +346,9 @@
                                                                     <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
                                                                 </div>
                                                                 <div class="colorCircle"></div>
-                                                                <div class="spaceBetween mt-3 mb-3">
                                                                     <div class="spaceBetween mt-3 mb-3">
                                                                     <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
                                                                     <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
-                                                                </div>
-                                                                </div>
-                                                                <div class="product-price fa-num">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <span class="fontSize15 pl-10 position-relative"><img src="{{ asset('theme-assets/images/svg/off.svg') }}" alt=""><span class="position-absolute fontSize10 colorWhite r-0 customOff">20%</span></span>
-                                                                        <del class="customlineText textColor fontSize15">26,900,000</del>
-                                                                    </div>
-                                                                    <div class="fontSize20">26,249,000 <span
-                                                                            class="fontSize20 colorYellow">ت</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-card-footer mb-2">
-                                                                <div class="textColor bold">از تهران دستی</div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end of product-card -->
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
-                                                        <!-- start of product-card -->
-                                                        <div class="product-card customBorderBoxShadow">
-                                                            <div class="product-thumbnail">
-                                                                <a href="#" target="_blank">
-                                                                    <img src="{{ asset('theme-assets/images/box/pic1.png') }}" alt="product title">
-                                                                </a>
-                                                            </div>
-                                                            <div class="product-card-body">
-                                                                <h2 class="product-title">
-                                                                    <a class="textColor fontSize12" href="#">سبد خرید با در چهار رنگ متفاوت سبد حصیری فامیلیران مدل تولک درب‌دار</a>
-                                                                </h2>
-                                                                <div class="product-variant">
-                                                                    <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
-                                                                </div>
-                                                                <div class="colorCircle"></div>
-                                                                <div class="spaceBetween mt-3 mb-3">
-                                                                    <div class="spaceBetween mt-3 mb-3">
-                                                                    <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
-                                                                    <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
-                                                                </div>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
@@ -388,11 +382,9 @@
                                                                     <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
                                                                 </div>
                                                                 <div class="colorCircle"></div>
-                                                                <div class="spaceBetween mt-3 mb-3">
                                                                     <div class="spaceBetween mt-3 mb-3">
                                                                     <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
                                                                     <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
-                                                                </div>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">
@@ -426,11 +418,9 @@
                                                                     <span class="colorWhite customBoxLabel fontSize11">خاتم کاری</span>
                                                                 </div>
                                                                 <div class="colorCircle"></div>
-                                                                <div class="spaceBetween mt-3 mb-3">
                                                                     <div class="spaceBetween mt-3 mb-3">
                                                                     <span class="fontSize11 colorRed whiteSpaceNoWrap">موجودی تنها دو عدد</span>
                                                                     <span class="whiteSpaceNoWrap"><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-staroutline"></i><i class="icon-visit-star"></i><i class="icon-visit-star"></i></span>
-                                                                </div>
                                                                 </div>
                                                                 <div class="product-price fa-num">
                                                                     <div class="d-flex align-items-center">

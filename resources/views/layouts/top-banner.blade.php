@@ -8,6 +8,7 @@
                 $(document).ready(function() {
                     $('#close').on('click', function() {
                         $('#SliderParent').addClass('marginTopMediaQuaryForSlider');
+                        $('.TopParentBannerMoveOnTop').addClass('marginTopMediaQuaryForSlider');
                     })
                 });
             </script>
