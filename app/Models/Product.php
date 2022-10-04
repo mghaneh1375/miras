@@ -37,8 +37,12 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
     
-    public function subCategory() {
-        return $this->belongsTo(SubCategory::class);
+    public function seller() {
+        return $this->belongsTo(Seller::class);
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 
     public function galleries() {

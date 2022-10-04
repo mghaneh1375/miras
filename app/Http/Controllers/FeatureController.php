@@ -20,7 +20,8 @@ class FeatureController extends Controller
     {
         return view('admin.category.features.list', [
             'items' => FeatureResource::collection($category->features)->toArray($request),
-            'categoryId' => $category->id
+            'categoryId' => $category->id,
+            'categoryName' => $category->name
         ]);
     }
 
@@ -33,6 +34,7 @@ class FeatureController extends Controller
     {
         return view('admin.category.features.create', [
             'categoryId' => $category->id,
+            'categoryName' => $category->name,
             'err' => $err
         ]);
     }
@@ -70,19 +72,9 @@ class FeatureController extends Controller
         if($request['answer_type'] != 'multi_choice' && $request->has('choices'))
             return $this->create($category, 'پارامترهای ورودی معتبر نمی باشند.');
 
+        $request['category_id'] = $category->id;
         Feature::create($request->toArray());
         return Redirect::route('category.features.index', ['category' => $category->id]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Feature  $feature
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Feature $feature)
-    {
-        //
     }
 
     /**
@@ -91,9 +83,15 @@ class FeatureController extends Controller
      * @param  \App\Models\Feature  $feature
      * @return \Illuminate\Http\Response
      */
-    public function edit(Feature $feature)
+    public function edit(Feature $feature, Request $request, $err = null)
     {
-        //
+        $cat = $feature->category;
+        return view('admin.category.features.create', [
+            'item' => FeatureResource::make($feature)->toArray($request),
+            'categoryId' => $cat->id,
+            'categoryName' => $cat->name,
+            'err' => $err
+        ]);
     }
 
     /**
@@ -105,7 +103,44 @@ class FeatureController extends Controller
      */
     public function update(Request $request, Feature $feature)
     {
-        //
+        $cat = $feature->category;
+
+        if($cat->sub()->count() > 0)
+            return $this->edit($feature, $request, 'دسته انتخاب شده دارای زیردسته است.');
+
+        $validator = [
+            'name' => 'nullable|string|min:2',
+            'unit' => 'nullable|string|min:2',
+            'show_in_top' => 'nullable|boolean',
+            'effect_on_price' => 'nullable|boolean',
+            'effect_on_available_count' => 'nullable|boolean',
+            'answer_type' => ['nullable', Rule::in(['number', 'text', 'longtext', 'multi_choice'])],
+            'choices' => 'nullable|string|min:3',
+            'priority' => 'nullable|integer|min:1'
+        ];
+
+        if(self::hasAnyExcept(array_keys($validator), $request->keys()))
+            abort(401);
+
+        $request->validate($validator);
+
+        if($request->has('answer_type') && $request['answer_type'] == 'multi_choice' && !$request->has('choices'))
+            return $this->edit($feature, $request, 'لطفا گزینه های پاسخ را مشخص نمایید.');
+            
+        if($request->has('answer_type') && $request['answer_type'] != 'multi_choice' && $request->has('choices'))
+            return $this->edit($feature, $request, 'پارامترهای ورودی معتبر نمی باشند.');
+
+        
+        foreach($request->keys() as $key) {
+            
+            if($key == '_token')
+                continue;
+
+            $feature[$key] = $request[$key];
+        }
+        $feature->save();
+
+        return Redirect::route('category.features.index', ['category' => $cat->id]);
     }
 
     /**

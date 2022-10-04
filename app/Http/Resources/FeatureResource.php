@@ -20,7 +20,7 @@ class FeatureResource extends JsonResource
             'show_in_top' => $this->show_in_top,
             'effect_on_price' => $this->effect_on_price,
             'effect_on_available_count' => $this->effect_on_available_count,
-            'unit' => $this->answer_type,
+            'unit' => $this->unit,
             'answer_type' => $this->answer_type,
             'priority' => $this->priority,
             'choices' => $this->answer_type == 'multi_choice' ? $this->choices : null
