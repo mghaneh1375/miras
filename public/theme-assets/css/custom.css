@@ -588,6 +588,8 @@ select:focus-visible {
 }
 figure .ck-widget {
     text-align: center;
+}
+figure .image-style-align-left {
     float: left;
 }
 @media (min-width: 768px) {
