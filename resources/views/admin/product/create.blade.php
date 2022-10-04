@@ -30,6 +30,21 @@
             </div>
 
             <div>
+                <label for="digest">متن خلاصه</label>
+                <textarea name="digest" id="digest">{{ isset($item) ? $item['digest'] : '' }}</textarea>
+            </div>
+
+            <div>
+                <label for="keywords">واژه های کلیدی</label>
+                <textarea name="keywords" id="keywords">{{ isset($item) ? $item['keywords'] : '' }}</textarea>
+            </div>
+
+            <div>
+                <label for="tags">تگ ها</label>
+                <textarea name="tags" id="tags">{{ isset($item) ? $item['tags'] : '' }}</textarea>
+            </div>
+
+            <div>
                 <label for="alt">تگ alt</label>
                 <input value="{{ isset($item) ? $item['alt'] : '' }}" type="text" placeholder="این فیلد اختیاری است" name="alt" id="alt" />
             </div>
@@ -39,7 +54,7 @@
                 <input required {{ isset($item) ? '' : 'required' }} value="{{ isset($item) ? $item['price'] : '' }}" type="number" name="price" id="price" />
             </div>
             
-            <div>
+            {{-- <div>
                 <label for="available_count">تعداد موجودی</label>
                 <input required value="{{ isset($item) ? $item['available_count'] : '' }}" type="number" name="available_count" id="available_count" />
             </div>
@@ -47,13 +62,13 @@
             <div>
                 <label for="off">تخفیف</label>
                 <input value="{{ isset($item) ? $item['off'] : '' }}" type="number" name="off" id="off" />
-            </div>
+            </div> --}}
 
             <div>
-                <label for="sub_category_id">دسته موردنظر</label>
-                <select name="sub_category_id" id="sub_category_id">
-                    @foreach($subCategories as $subCategory)
-                        <option {{ isset($item) && $item['sub_category_id'] == $subCategory['id'] ? 'selected' : '' }} value="{{$subCategory['id']}}">{{$subCategory['name']}}</option>
+                <label for="category_id">دسته موردنظر</label>
+                <select name="category_id" id="category_id">
+                    @foreach($categories as $category)
+                        <option {{ isset($item) && $item['category_id'] == $category['id'] ? 'selected' : '' }} value="{{$category['id']}}">{{$category['name']}}</option>
                     @endforeach
                 </select>
             </div>
@@ -67,6 +82,17 @@
                 </select>
             </div>
             
+
+            <div>
+                <label for="seller_id">فروشنده</label>
+                <select name="seller_id" id="seller_id">
+                    <option value="-1">نامشخص</option>
+                    @foreach($sellers as $seller)
+                        <option {{ isset($item) && $item['seller_id'] == $seller['id'] ? 'selected' : '' }} value="{{$seller['id']}}">{{$seller['name']}}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <div>
                 <label for="priority">اولویت</label>
                 <input value="{{ isset($item) ? $item['priority'] : '' }}" type="number" required name="priority" id="priority" />

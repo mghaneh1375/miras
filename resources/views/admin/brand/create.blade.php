@@ -10,7 +10,7 @@
         <div style="display: flex; flex-direction: row; gap: 20px; margin-right: 40px; margin-left: 40px;">
             <div>
                 <p>تصویر فعلی</p>
-                <img src="{{$item['img']}}" alt="{{ $item['alt'] }}" style="width:150px;">
+                <img src="{{$item['logo']}}" alt="{{ $item['alt'] }}" style="width:150px;">
             </div>
         </div>
     @endif

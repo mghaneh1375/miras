@@ -1,7 +1,7 @@
 @extends('admin.layouts.create')
 
 @section('title')
-{{ isset($item) ? 'ویرایش ویژگی' : 'افزودن ویژگی' }}
+{{ isset($item) ? 'ویرایش ویژگی' . ' > ' . $categoryName : 'افزودن ویژگی' . ' > ' . $categoryName}}
 @stop
 
 @section('form')

@@ -9,8 +9,9 @@ use App\Http\Controllers\FAQController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SellerController;
 use App\Http\Controllers\SliderController;
-use App\Http\Resources\FeatureResource;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -31,11 +32,17 @@ Route::middleware(['auth'])->group(function() {
 
 });
 
-Route::middleware(['auth', 'editorLevel'])->group(function() {
+Route::middleware(['auth', 'editorLevel'])->prefix('admin')->group(function() {
 
     Route::resource('brand', BrandController::class)->except(['show', 'update']);
 
     Route::post('brand/{brand}', [BrandController::class, 'update'])->name('brand.update');
+
+    
+    Route::resource('seller', SellerController::class)->except(['show', 'update']);
+
+    Route::post('seller/{seller}', [SellerController::class, 'update'])->name('seller.update');
+
 
 
     Route::resource('infobox', InfoBoxController::class)->except(['show', 'update']);
@@ -80,6 +87,11 @@ Route::middleware(['auth', 'editorLevel'])->group(function() {
     Route::resource('config', ConfigController::class)->only(['index']);
 
     Route::post('config', [ConfigController::class, 'update'])->name('config.update');
+
+    
+    Route::resource('product', ProductController::class)->except(['show', 'update']);
+
+    Route::post('product/{product}', [ProductController::class, 'update'])->name('product.update');
 
 
     Route::resource('product.productGallery', GalleryController::class)->except('show', 'update', 'edit')->shallow();
