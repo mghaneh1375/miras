@@ -489,8 +489,12 @@ a {
     -moz-text-decoration-color: red;
 }
 .customArrowLeftIcon {
-    margin-top: -45px;
-    margin-right: 30px;
+    bottom: 20px;
+    left: 23px;
+}
+.customArrowRightIcon {
+    bottom: 20px;
+    right: 23px;
 }
 .customBoxNews {
     max-width: 350px !important;
@@ -615,8 +619,6 @@ figure .ck-widget {
     margin-left: 1.5rem;
 }
 
-element.style {
-}
 .pagination .page-item.active .page-link {
     color: #fff;
     cursor: default;

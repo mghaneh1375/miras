@@ -20,7 +20,7 @@
                                 <div class="widget mb-3">
                                     <div class="spaceBetween">
                                         <div class="widget-title m-0 b-0">فیلتر <span class="fontSize8 colorBlue">3 فیلتر</span></div>
-                                        <div class="colorRed fontSize12 align-self-center">حذف نتایج</div>
+                                        <a href="#" class="colorRed fontSize12 align-self-center">حذف نتایج</a>
                                     </div>
                                     <div class="colorBlue fontSize8 align-self-center">300 کالا</div>
                                     <div class="widget-content widget--category-results">
