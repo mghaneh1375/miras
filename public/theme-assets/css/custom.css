@@ -587,10 +587,10 @@ select:focus-visible {
     color: #0089b7 !important;
 }
 figure .ck-widget {
-    text-align: center;
+    text-align: center !important;
 }
-figure .image-style-align-left {
-    float: left;
+.image-style-align-left {
+    float: left !important;
 }
 @media (min-width: 768px) {
     .mt-md-110 {
