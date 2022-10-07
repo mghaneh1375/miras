@@ -19,7 +19,8 @@ class GalleryController extends Controller
     {
         return view('admin.product.galleries.list', [
             'items' => GalleryResource::collection($product->galleries)->toArray($request),
-            'productId' => $product->id
+            'productId' => $product->id,
+            'productName' => $product->name
         ]);
     }
 
@@ -31,7 +32,8 @@ class GalleryController extends Controller
     public function create(Product $product)
     {
         return view('admin.product.galleries.create', [
-            'productId' => $product->id
+            'productId' => $product->id,
+            'productName' => $product->name
         ]);
     }
 
@@ -45,7 +47,8 @@ class GalleryController extends Controller
     {
         $validator = [
             'img_file' => 'required|image',
-            'alt' => 'nullable|string|min:2'
+            'alt' => 'nullable|string|min:2',
+            'priority' => 'required|integer|min:1'
         ];
 
         if(self::hasAnyExcept(array_keys($validator), $request->keys()))
@@ -66,7 +69,7 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ProductGallery  $productGalleries
+     * @param  \App\Models\ProductGallery  $productGallery
      * @return \Illuminate\Http\Response
      */
     public function destroy(ProductGallery $productGallery)

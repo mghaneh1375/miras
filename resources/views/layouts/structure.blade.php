@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="{{ asset('theme-assets/css/custom.css') }}">
     
     <script src="{{ asset('theme-assets/js/dependencies/jquery-3.6.0.min.js') }}"></script>
+
+    @section('header')
+    @show
 </head>
 
 <body>
@@ -347,7 +350,7 @@
             </div>
         </header>
         <!-- start of page-content -->
-       <div class="mt-md-110">
+       <div id="mainPageContent" class="mt-md-110">
             @yield('content')
         </div>
         <!-- end of page-content -->

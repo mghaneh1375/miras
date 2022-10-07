@@ -198,6 +198,14 @@
             flex-direction: column;
         }
 
+        .margin20 {
+            margin: 20px;
+        }
+
+        .width-auto {
+            width: auto;
+        }
+
         .center {
             align-self: center;
             justify-content: center;
@@ -206,6 +214,10 @@
 
         .gap10 {
             gap: 10px;
+        }
+        
+        .gap30 {
+            gap: 30px;
         }
 
         .container {
@@ -401,6 +413,7 @@
                                 <a href="{{route('faq.index')}}" class="dropdown-item">مدیریت سوالات متداول</a>
                                 <a href="{{route('slider.index')}}" class="dropdown-item">مدیریت اسلایدر</a>
                                 <a href="{{route('brand.index')}}" class="dropdown-item">مدیریت برند ها</a>
+                                <a href="{{route('blog.index')}}" class="dropdown-item">مدیریت بلاگ ها</a>
                                 <a href="{{route('banner.index')}}" class="dropdown-item">مدیریت بنر های تبلیغاتی</a>
                                 <a href="{{route('config.index')}}" class="dropdown-item">پیکربندی</a>
                             </div>
@@ -408,10 +421,12 @@
 
                         <li class="nav-item"><a data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i></i> <span class="mini-dn">کاربران</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="{{route('seller.index')}}" class="dropdown-item">فروشنده ها</a>
+                                <a href="{{route('seller.index')}}" class="dropdown-item">فروشندگان</a>
+                                <a href="{{route('mail.users')}}" class="dropdown-item">خبرنامه</a>
                             </div>
                         </li>
 
+                        <li class="nav-item"><a href="{{ route('off.index') }}" role="button" class="nav-link"><i></i> <span class="mini-dn">تخفیفات</span></a></li>
                         <li class="nav-item"><a href="{{ route('product.index') }}" role="button" class="nav-link"><i></i> <span class="mini-dn">مدیریت محصولات</span></a></li>
 
                     </ul>

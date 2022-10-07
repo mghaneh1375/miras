@@ -330,3 +330,8 @@ select {
     padding: 4px;
     display: inline-block !important;
 }
+
+#pro_search select,
+#pro_search input {
+    width: 150px;
+}

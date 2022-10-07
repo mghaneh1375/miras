@@ -9,12 +9,13 @@ class ProductGallery extends Model
 {
     use HasFactory;
     
-    protected $table = 'product_gallery';
+    protected $table = 'product_galleries';
 
     protected $fillable = [
         'id',
         'img',
-        'product_id'
+        'product_id',
+        'priority'
     ];
 
     public $timestamps = false;

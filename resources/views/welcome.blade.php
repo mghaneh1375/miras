@@ -1,12 +1,16 @@
 @extends('layouts.structure')
+
 @section('content')
 
 @include('layouts.slider')    
                 @include('layouts.tiles')
-                @include('layouts.box')
+                @include('sections.top_categories_products')
+                @include('sections.latest_products')
+                @include('sections.most_seen_products')
+                @include('sections.most_like_products')
                 @include('layouts.banner')
-                @include('layouts.box')
                 @include('layouts.news')
+
                 <!-- end of box => categories-slider -->
                 {{-- @include('layouts.banner-light') --}}
             <!-- start of quick-view-modal -->
@@ -217,6 +221,6 @@
     @parent
     <script src="{{ asset('theme-assets/js/theme.js') }}"></script>
     <script src="{{ asset('theme-assets/js/custom.js') }}"></script>
-
+    <script src="{{ asset('theme-assets/js/home.js') }}"></script>
 
 @stop

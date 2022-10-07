@@ -22,13 +22,11 @@
                 <div class="widget widget-footer">
                     <div class="widget-title">از جدیدترین تخفیف ها باخبر شوید</div>
                     <div class="widget-content widget-newsletter">
-                        <form action="#">
-                            <div class="form-element-row with-btn align-Items-end">
-                                <input type="text" class="form-control"
-                                    placeholder="آدرس ایمیل خود را وارد کنید">
-                                <button class="btn btn-primary backgroundGray alignSelfEnd customBtnAddress">ثبت</button>
-                            </div>
-                        </form>
+                        <div class="form-element-row with-btn align-Items-end">
+                            <input id="mail" type="text" class="form-control"
+                                placeholder="آدرس ایمیل خود را وارد کنید">
+                            <button id="submitMailBtn" class="btn btn-primary backgroundGray alignSelfEnd customBtnAddress">ثبت</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,19 +82,40 @@
     </div>
 </footer>
 <script>
-     
-    $.ajax({
-        type: 'get',
-        url: '{{ route('api.getDesc') }}',
-        headers: {
-            'accept': 'application/json'
-        },
-        success: function(res) {
-            if(res.status === "ok") {
-                $("#footerDesc").append(res.data);
-                
+
+    $(document).ready(function() {
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.getDesc') }}',
+            headers: {
+                'accept': 'application/json'
+            },
+            success: function(res) {
+                if(res.status === "ok") {
+                    $("#footerDesc").append(res.data);
+                    
+                }
             }
-        }
+        });
+
+        $("#submitMailBtn").on('click', function() {
+            $.ajax({
+                type: 'post',
+                url: '{{ route('api.submitMail') }}',
+                data: {
+                    'mail': $("#mail").val()
+                },
+                headers: {
+                    'accept': 'application/json'
+                },
+                success: function(res) {
+                    if(res.status === "ok") {
+                        alert('عملیات موردنظر با موفقیت انجام شد.');
+                    }
+                }
+            });
+        });
+        
     });
         
 </script>

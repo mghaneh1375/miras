@@ -1,7 +1,7 @@
 @extends('admin.layouts.create')
 
 @section('title')
-{{ isset($item) ? 'ویرایش محصول' : 'افزودن محصول' }}
+{{ isset($item) ? 'ویرایش محصول' . ' > ' . $item['name'] : 'افزودن محصول' }}
 @stop
 
 @section('form')
@@ -53,16 +53,6 @@
                 <label for="price">قیمت</label>
                 <input required {{ isset($item) ? '' : 'required' }} value="{{ isset($item) ? $item['price'] : '' }}" type="number" name="price" id="price" />
             </div>
-            
-            {{-- <div>
-                <label for="available_count">تعداد موجودی</label>
-                <input required value="{{ isset($item) ? $item['available_count'] : '' }}" type="number" name="available_count" id="available_count" />
-            </div>
-            
-            <div>
-                <label for="off">تخفیف</label>
-                <input value="{{ isset($item) ? $item['off'] : '' }}" type="number" name="off" id="off" />
-            </div> --}}
 
             <div>
                 <label for="category_id">دسته موردنظر</label>

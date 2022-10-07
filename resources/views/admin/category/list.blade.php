@@ -51,9 +51,10 @@
                                             <button class="btn btn-primary" onclick="document.location.href = '{{ route('category.edit', ['category' => $category['id']]) }}'">مشاهده اطلاعات</button>
                                             <button class="btn btn-danger" onclick="removeModal('item', {{$category['id']}}, '{{ route('category.destroy', ['category' => $category['id']]) }}')">حذف</button>
                                             @if($category['has_sub'])
-                                                <button style="width: 100%" onclick="document.location.href = '{{ route('category.sub', ['category' => $category['id']]) }}'" class="btn btn-info" onclick="">مشاهده زیر دسته ها</button>
+                                                <button style="width: 100%" onclick="document.location.href = '{{ route('category.sub', ['category' => $category['id']]) }}'" class="btn btn-info">مشاهده زیر دسته ها</button>
                                             @else
-                                                <button style="width: 100%" onclick="document.location.href = '{{ route('category.features.index', ['category' => $category['id']]) }}'" class="btn btn-info" onclick="">مدیریت ویژگی ها</button>
+                                                <button onclick="document.location.href = '{{ route('category.features.index', ['category' => $category['id']]) }}'" class="btn btn-info">ویژگی ها</button>
+                                                <button onclick="document.location.href = '{{ route('product.index', ['category' => $category['id']]) }}'" class="btn btn-warning">محصولات</button>
                                             @endif
                                         </div>
                                         

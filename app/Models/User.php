@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function scopeActive($query) {
         return $query->where('status', '=', User::$ACTIVE);
     }
+
+    public function offs() {
+        return $this->hasMany(Off::class);
+    }
 }

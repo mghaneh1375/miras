@@ -2,14 +2,20 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoBoxController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\OffController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductFeatureController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\App;
@@ -79,10 +85,22 @@ Route::middleware(['auth', 'editorLevel'])->prefix('admin')->group(function() {
     Route::post('feature/{feature}', [FeatureController::class, 'update'])->name('feature.update');
 
 
+    Route::resource('blog', BlogController::class)->except(['show', 'update']);
+
+    Route::post('blog/addBatch', [BlogController::class, 'addBatch'])->name('blog.addBatch');
+
+    Route::post('blog/{blog}', [BlogController::class, 'update'])->name('blog.update');
+
+
     Route::resource('faq', FAQController::class)->except(['show', 'update']);
 
     Route::post('faq/{faq}', [FAQController::class, 'update'])->name('faq.update');
     
+
+    Route::resource('off', OffController::class)->except(['show', 'update']);
+
+    Route::post('off/{off}', [OffController::class, 'update'])->name('off.update');
+
 
     Route::resource('config', ConfigController::class)->only(['index']);
 
@@ -91,8 +109,30 @@ Route::middleware(['auth', 'editorLevel'])->prefix('admin')->group(function() {
     
     Route::resource('product', ProductController::class)->except(['show', 'update']);
 
-    Route::post('product/{product}', [ProductController::class, 'update'])->name('product.update');
+    Route::prefix('product')->group(function () {
+        
+        Route::post('/addBatch', [ProductController::class, 'addBatchProducts'])->name('product.addBatch');
 
+        Route::get('/excel', [ProductController::class, 'excel'])->name('product.excel');
+
+        Route::post('/{product}', [ProductController::class, 'update'])->name('product.update');
+        
+        Route::get('/off/{product}', [ProductController::class, 'editOff'])->name('product.off');
+        
+        Route::post('/removeOff/{product}', [ProductController::class, 'removeOff'])->name('product.removeOff');
+
+        Route::post('/changeVisibility/{product?}', [ProductController::class, 'changeVisibility'])->name('product.changeVisibility');
+
+        Route::post('/updateAvailableCount/{product?}', [ProductController::class, 'updateAvailableCount'])->name('product.updateAvailableCount');
+
+    });
+
+    Route::resource('mail', MailController::class)->except('show', 'update', 'edit');
+    
+    Route::get('mail_users', [MailController::class, 'users'])->name('mail.users');
+
+
+    Route::resource('product.comment', CommentController::class)->except('show', 'update', 'edit')->shallow();
 
     Route::resource('product.productGallery', GalleryController::class)->except('show', 'update', 'edit')->shallow();
     
@@ -106,18 +146,6 @@ Route::middleware(['auth', 'editorLevel'])->prefix('admin')->group(function() {
     })->name('panel');
 
 });
-
-// Route::get('category/list', [CategoryController::class, 'list'])->name('category.list');
-
-// Route::view('addCategory', 'admin.category.create')->name('category.add');
-
-// Route::get('updateCategory/{category}', [CategoryController::class, 'update'])->name('category.update');
-
-// Route::post('updateCategory/{category}', [CategoryController::class, 'doUpdate'])->name('category.doUpdate');
-
-// Route::post('storeCategory', [CategoryController::class, 'store'])->name('category.store');
-
-// Route::delete('removeCategory/{category}', [CategoryController::class, 'remove'])->name('category.remove');
 
 Route::post('login', [AuthController::class, 'login'])->name('login');
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\CategoryDigest;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\CategoryVeryDigest;
+use App\Http\Resources\ProductDigestUser;
 use App\Imports\CategoryImport;
 use App\Models\Category;
 use App\Models\User;
@@ -15,6 +16,26 @@ use Maatwebsite\Excel\Validators\ValidationException;
 
 class CategoryController extends Controller
 {
+
+    public function get_top_categories_products(Request $request)
+    {
+        $categories = Category::topProducts()->get();
+        $arr = [];
+
+        foreach($categories as $category) {
+            $items = ProductDigestUser::collection($category->products)->toArray($request);
+            array_push($arr, [
+                'id' => $category->id,
+                'name' => $category->name,
+                'products' => $items
+            ]);
+        }
+
+        return response()->json([
+            'status' => 'ok',
+            'data' => $arr
+        ]);
+    }
 
     public function uploadCategories(Request $request)
     {
@@ -100,6 +121,7 @@ class CategoryController extends Controller
         return view('admin.category.list', [
                 'categories' => CategoryDigest::collection($category->sub()->get())->toArray($request),
                 'name' => $category->name,
+                'hasProduct' => $category->products()->count() > 0,
                 'isHead' => $category->parent_id == null,
                 'parent_id' => $category->parent_id == null ? -1 : $category->parent_id,
             ]

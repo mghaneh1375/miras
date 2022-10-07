@@ -1,7 +1,7 @@
 @extends('admin.layouts.create')
 
 @section('title')
-{{  'افزودن تصویر' }}
+افزودن تصویر > {{  $productName }}
 @stop
 
 @section('form')
@@ -16,6 +16,11 @@
             <div>
                 <label for="alt">تگ alt</label>
                 <input value="{{ isset($item) ? $item['alt'] : '' }}" type="text" placeholder="این فیلد اختیاری است" name="alt" id="alt" />
+            </div>
+            
+            <div>
+                <label for="priority">اولویت</label>
+                <input required value="{{ isset($item) ? $item['priority'] : '' }}" type="number" name="priority" id="priority" />
             </div>
 
         </div>

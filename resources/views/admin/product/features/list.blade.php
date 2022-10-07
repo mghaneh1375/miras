@@ -1,7 +1,11 @@
 @extends('admin.layouts.list')
 
 @section('title')
-مدیریت ویژگی های محصول
+مدیریت ویژگی های محصول > {{ $productName }}
+@stop
+
+@section('backBtn')
+<button onclick="document.location.href = '{{ route('product.index') }}'" class="btn btn-danger">بازگشت</button>
 @stop
 
 @section('items')
@@ -40,13 +44,13 @@
                 save($(this).attr('data-id'));
             });
 
-            function save(subCategoryFeatureId) {
+            function save(categoryFeatureId) {
                 $.ajax({
                     type: 'post',
                     url: '{{ route('product.productFeature.store', ['product' => $productId]) }}',
                     data: {
-                        'sub_category_feature_id': subCategoryFeatureId,
-                        'value': $("#feature_" + subCategoryFeatureId).val()
+                        'category_feature_id': categoryFeatureId,
+                        'value': $("#feature_" + categoryFeatureId).val()
                     },
                     success: function(res) {
 

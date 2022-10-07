@@ -21,6 +21,9 @@ class CreateTableBlogs extends Migration
             $table->longText('description');
             $table->string('keywords')->nullable();
             $table->string('article_tags')->nullable();
+            $table->string('header');
+            $table->boolean('visibility')->default(true);
+            $table->unsignedInteger('priority');
             $table->string('tags')->nullable();
             $table->timestamps();
         });

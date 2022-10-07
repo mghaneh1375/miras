@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
@@ -46,7 +48,7 @@ class Product extends Model
     }
 
     public function galleries() {
-        return $this->hasMany('galleries');
+        return $this->hasMany(ProductGallery::class);
     }
 
     public function scopeVisible($query) {
@@ -58,9 +60,35 @@ class Product extends Model
     }
 
     public function features() {
-        return $this->hasMany(ProductFeatures::class)
-            ->join('sub_category_feature', 'sub_category_feature.id', '=', 'product_feature.sub_category_feature_id')
-            ->select('sub_category_feature.name', 'product_feature.value')
-            ->get();
+        $features = DB::select(
+            'select category_features.id, category_features.name, product_features.value from category_features left join product_features on ' . 
+                'category_features.id = product_features.category_feature_id and '.
+                'product_features.product_id = ' . $this->id .
+                ' where category_features.category_id = ' . $this->category_id
+        );
+        return $features;
+    }
+
+    public function featuresWithValue() {
+        $features = DB::select(
+            'select category_features.id, category_features.name, product_features.value from category_features join product_features on ' . 
+                'category_features.id = product_features.category_feature_id and '.
+                'product_features.product_id = ' . $this->id .
+                ' where category_features.category_id = ' . $this->category_id
+        );
+        return $features;
+    }
+
+    public function activeOff() {
+
+        if($this->off != null) {
+            $today = (int)Controller::getToday()['date'];
+            if((int)Controller::convertDateToString($this->off_expiration) >= $today)
+                return [
+                    'type' => $this->off_type,
+                    'value' => $this->off
+                ];
+        }
+
     }
 }

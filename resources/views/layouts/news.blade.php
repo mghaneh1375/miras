@@ -9,25 +9,26 @@
                         <!-- Slider main container -->
                         <div class="swiper product-swiper-slider">
                             <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
+                            <div id="topNewsSlider" class="swiper-wrapper hidden">
+
                                 <!-- Slides -->
-                                <div class="swiper-slide customCardNews">
+                                <div id="customCardNewsSample" class="swiper-slide customCardNews">
                                     <!-- start of product-card -->
                                     <div class="product-card customBoxNews">
                                         <div class="product-thumbnail">
-                                            <a href="#">
-                                                <img class="customImgNews" src="{{ asset('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80') }}" alt="product title">
+                                            <a id="newsHref" href="#">
+                                                <img id="newsImg" class="customImgNews">
                                             </a>
                                         </div>
                                         <div class="product-card-body">
                                             <h2 class="product-title">
-                                                <a class="textColor fontSize18 bold" href="#">ایران سرزمین ناهمواری ها</a>
+                                                <a id="newsHeader" class="textColor fontSize18 bold" href="#"></a>
                                             </h2>
                                             <div class="product-variant">
-                                                <span class="colorWhite customBoxLabel">صنایع دستی فاخر</span>
+                                                <span id="newsTag" class="colorWhite customBoxLabel"></span>
                                             </div>
                                             <div class="mt-3 mb-3">
-                                                <span class="fontSize12 textColor">ایران همونطور که سرزمین چهار فصله همونطور هم ، همه نوع جاذبه های گردشگری رو در خودش داره. توی این مطلب میخوام ناهمواری ها و رشته کوه های ایران رو بهتون معرفی کنم تا بخونیم و لذت ببریم و به ایرانمون افتخار کنیم</span>
+                                                <span id="newsDigest" class="fontSize12 textColor"></span>
                                             </div>
                                         </div>
                                         <div class="product-card-footer d-flex justify-content-end">
@@ -38,34 +39,7 @@
                                     </div>
                                     <!-- end of product-card -->
                                 </div>
-                                <!-- Slides -->
-                                <div class="swiper-slide customCardNews">
-                                    <!-- start of product-card -->
-                                    <div class="product-card customBoxNews">
-                                        <div class="product-thumbnail">
-                                            <a href="#">
-                                                <img class="customImgNews" src="{{ asset('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80') }}" alt="product title">
-                                            </a>
-                                        </div>
-                                        <div class="product-card-body">
-                                            <h2 class="product-title">
-                                                <a class="textColor fontSize18 bold" href="#">ایران سرزمین ناهمواری ها</a>
-                                            </h2>
-                                            <div class="product-variant">
-                                                <span class="colorWhite customBoxLabel">صنایع دستی فاخر</span>
-                                            </div>
-                                            <div class="mt-3 mb-3">
-                                                <span class="fontSize12 textColor">ایران همونطور که سرزمین چهار فصله همونطور هم ، همه نوع جاذبه های گردشگری رو در خودش داره. توی این مطلب میخوام ناهمواری ها و رشته کوه های ایران رو بهتون معرفی کنم تا بخونیم و لذت ببریم و به ایرانمون افتخار کنیم</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-card-footer d-flex justify-content-end">
-                                                <div class="cursorPointer arrowLeftIcon positionAbsolute customArrowLeftIcon backGray customIconBottom12">
-                                                <img src="{{ asset('theme-assets/images/svg/ionic-ios-arrow-round-back.svg') }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end of product-card -->
-                                </div>
+
                             </div>
                             <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>
@@ -78,3 +52,36 @@
                     </div>
                 </div>
                 <!-- end of box -->
+
+<script>
+
+    $(document).ready(function() {
+
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.blog.list') }}',
+            success: function(res) {
+                let data = res.data;
+                let html = '';
+                data.forEach(elem => {
+                    $("#newsHref").attr('href', '{{ route('api.blog.show') }}' + '/' + elem.id);
+                    $("#newsImg").attr('src', elem.img).attr('alt', elem.alt);
+                    $("#newsHeader").text(elem.header);
+                    $("#newsDigest").text(elem.digest);
+                    $("#newsTag").text(elem.tags);
+                    let id = elem.id;
+                    var newElem = $("#customCardNewsSample").html();
+                    newElem.replace("newsHref", "newsHref_" + id);
+                    newElem.replace("newsImg", "newsImg_" + id);
+                    newElem.replace("newsHeader", "newsHeader_" + id);
+                    newElem.replace("newsTag", "newsTag_" + id);
+                    newElem.replace("newsDigest", "newsDigest_" + id);
+                    html += newElem;
+                });
+                
+                $("#topNewsSlider").empty().append(html).removeClass('hidden');
+            }
+        });
+    });
+
+</script>
