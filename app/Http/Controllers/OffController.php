@@ -11,6 +11,8 @@ use App\Models\Category;
 use App\Models\Off;
 use App\Models\Seller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\Rule;
 
 class OffController extends Controller
 {
@@ -25,6 +27,7 @@ class OffController extends Controller
         
         $expired = $request->query('expired', null);
         $general = $request->query('general', null);
+        $type = $request->query('type', null);
         $brand_id = $request->query('brand', null);
         $category_id = $request->query('category', null);
         $seller_id = $request->query('seller', null);
@@ -34,12 +37,15 @@ class OffController extends Controller
         $order_by = $request->query('order_by', null);
         $order_by_type = $request->query('order_by_type', null);
 
-        $today = (int)self::getToday();
+        $today = (int)self::getToday()['date'];
 
         if($expired == null || !$expired)
             $filter->where('off_expiration', '>=', $today);
         else
             $filter->where('off_expiration', '<', $today);
+
+        if($type != null)
+            $filter->where('off_type', $type);
 
         if($from_expiration != null) {
             $from_expiration = (int)self::convertDateToString($from_expiration);
@@ -99,9 +105,14 @@ class OffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $err=null)
     {
-        //
+        return view('admin.off.create', [
+            'categories' => CategoryDigest::collection(Category::all())->toArray($request),
+            'brands' => Brand::all(),
+            'sellers' => Seller::all(),
+            'err' => $err
+        ]);
     }
 
     /**
@@ -112,18 +123,45 @@ class OffController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        
+        if($request->has('seller_id') && $request['seller_id'] == -1)
+            $request['seller_id'] = null;
+            
+        if($request->has('category_id') && $request['category_id'] == -1)
+            $request['category_id'] = null;
+            
+        if($request->has('brand_id') && $request['brand_id'] == -1)
+            $request['brand_id'] = null;
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Off  $off
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Off $off)
-    {
-        //
+        $validator = [
+            'amount' => 'required|integer|min:0',
+            'off_type' => ['required', Rule::in(['value', 'percent'])],
+            'off_expiration' => 'required|date',
+            'username' => 'nullable|exists:users,username',
+            'category_id' => 'nullable|exists:categories,id',
+            'brand_id' => 'nullable|exists:brands,id',
+            'seller_id' => 'nullable|exists:sellers,id',
+            'code' => 'nullable|string|min:3'
+        ];
+        
+        if(self::hasAnyExcept(array_keys($validator), $request->keys()))
+            return abort(401);
+
+        $request->validate($validator);
+
+        if($request['off_type'] == 'percent' && ($request['amount'] > 100  || $request['amount'] < 1))
+            return $this->create($request, 'میزان تخفیف باید بین 1 تا 100 باشد.');
+
+        $today = (int)self::getToday()['date'];
+        $expiration = (int)self::convertDateToString($request['off_expiration']);
+
+        if($today >= $expiration)
+            return $this->create($request, 'زمان انقضا باید از امروز بزرگ تر باشد');
+
+        $request['off_expiration'] = $expiration;
+
+        Off::create($request->toArray());
+        return Redirect::route('off.index');
     }
 
     /**
@@ -132,9 +170,15 @@ class OffController extends Controller
      * @param  \App\Models\Off  $off
      * @return \Illuminate\Http\Response
      */
-    public function edit(Off $off)
+    public function edit(Off $off, Request $request, $err=null)
     {
-        //
+        return view('admin.off.create', [
+            'categories' => CategoryDigest::collection(Category::all())->toArray($request),
+            'brands' => Brand::all(),
+            'sellers' => Seller::all(),
+            'item' => OffResource::make($off)->toArray($request),
+            'err' => $err
+        ]);
     }
 
     /**

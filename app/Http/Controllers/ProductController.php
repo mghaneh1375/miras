@@ -360,7 +360,7 @@ class ProductController extends Controller
             
             $product->off_type = $request->has('off_type') ? $request['off_type'] : $product->off_type;
             if($product->off_type == 'percent' && ($request['off'] > 100  || $request['off'] < 1))
-                return $this->editOff($product, 'میزان تخفیف باید بین 1 تا 100 باید');
+                return $this->editOff($product, 'میزان تخفیف باید بین 1 تا 100 باشد.');
         }
         
         if($request->has('img_file')) {

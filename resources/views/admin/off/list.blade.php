@@ -180,28 +180,12 @@
                         </td>
                         <td>{{ $item['amount'] }}</td>
                         <td>{{ $item['off_type'] }}</td>
+                        <td>{{ $item['off_expiration'] }}</td>
                         <td>{{ $item['created_at'] }}</td>
-                        
-                        <td>
-                            <div class="flex gap10">
-                                <input style="width: 40px" type="number" value="{{ $item['available_count'] }}" id="available_count_{{ $item['id'] }}" />
-                                <button data-id={{ $item['id'] }} class="saveBtn btn btn-primary">ثبت تغییر</button>
-                            </div>
-                        </td>
-                        <td>{{ $item['is_in_top_list'] ? "بله" : "خیر" }}</td>
-                        <td>
-                            <p id="visibility_text_{{ $item['id'] }}">{{ $item['visibility'] ? "نمایش" : "عدم نمایش"}}</p>
-                            @if($item['visibility'])
-                                <button class="btn btn-danger changeVisibilityBtn" data-value='0' data-id='{{ $item['id'] }}' id="visibility_invisible_{{ $item['id'] }}">تغییر وضعیت به عدم نمایش</button>
-                                <button class="hidden btn btn-primary changeVisibilityBtn" data-value='1' data-id='{{ $item['id'] }}' id="visibility_visible_{{ $item['id'] }}">تغییر وضعیت به نمایش</button>    
-                            @else
-                                <button class="hidden btn btn-danger changeVisibilityBtn" data-value='0' data-id='{{ $item['id'] }}' id="visibility_invisible_{{ $item['id'] }}">تغییر وضعیت به عدم نمایش</button>
-                                <button class="btn btn-primary changeVisibilityBtn" data-value='1' data-id='{{ $item['id'] }}' id="visibility_visible_{{ $item['id'] }}">تغییر وضعیت به نمایش</button>    
-                            @endif
-                        </td>
-                        <td>{{ $item['priority'] }}</td>
-                        <td>{{ $item['brand'] }}</td>
+                        <td>{{ $item['user'] }}</td>
                         <td>{{ $item['category'] }}</td>
+                        <td>{{ $item['brand'] }}</td>
+                        <td>{{ $item['seller'] }}</td>
                     </tr>
                 @endforeach
             </tbody>
@@ -222,30 +206,30 @@
             let brand = $("#brandFilter").val();
             let category = $("#categoryFilter").val();
             let seller = $("#sellerFilter").val();
-            let max = $("#maxFilter").val();
-            let min = $("#minFilter").val();
             let orderBy = $("#orderBy").val();
             let orderByType = $("#orderByType").val();
+            let offTypeFilter = $("#offTypeFilter").val();
+            let expiredFilter = $("#expiredFilter").val();
                 
+            if(offTypeFilter !== 'all')
+                query.append('type', offTypeFilter);
+                
+            if(expiredFilter !== 'all')
+                query.append('expired', expiredFilter);
+
             if(generalFilter !== 'all')
                 query.append('general', generalFilter);
                 
             if(brand !== 'all')
                 query.append('brand', brand);
 
-            if(brand !== 'all')
-                query.append('brand', brand);
-                
-            if(max !== '')
-                query.append('max', max);
-                
-            if(min !== '')
-                query.append('min', min);
+            if(category !== 'all')
+                query.append('category', category);
 
             query.append('orderBy', orderBy);
             query.append('orderByType', orderByType);
 
-            document.location.href = '{{ route('product.index') }}' + '?' + query.toString();
+            document.location.href = '{{ route('off.index') }}' + '?' + query.toString();
         }
 
     </script>

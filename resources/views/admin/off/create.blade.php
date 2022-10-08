@@ -1,266 +1,117 @@
-@extends('admin.layouts.list')
+@extends('admin.layouts.create')
+
+@section('header')
+@parent
+    <script src = {{asset("admin-panel/js/calendar.js") }}></script>
+    <script src = {{asset("admin-panel/js/calendar-setup.js") }}></script>
+    <script src = {{asset("admin-panel/js/calendar-fa.js") }}></script>
+    <script src = {{asset("admin-panel/js/jalali.js") }}></script>
+    <link rel="stylesheet" href = {{asset("admin-panel/css/calendar-green.css") }}>
+    
+    <style>
+        .calendar table td, .calendar table th {
+            min-width: unset !important;
+        }
+    </style>
+@stop
 
 @section('title')
-مدیریت تخفیف ها
+{{ isset($item) ? 'ویرایش تخفیف' : 'افزودن تخفیف' }}
 @stop
 
-@section('createNew')
-'{{ route('off.create') }}'
-@stop
+@section('form')
 
-@section('items')
+    <form id="myForm" action="{{ isset($item) ? route('off.update', ['off' => $item['id']]) : route('off.store')}}" method="post">
+        {{ csrf_field() }}
 
-<center style="margin-top: 20px">
-    
-    @if(isset($errors) && $errors != null && count($errors) > 0)
-        @foreach ($errors as $error)
-            <div>{{$error}}</div>
-        @endforeach
-    @else
+        <div class="flex flex-col center gap10" style="margin: 10px">
 
-        <h3>جست و جو پیشرفته</h3>
-        <div id="pro_search" class="flex gap30 margin20 flex-wrap">
-            <div class="flex gap10 center">
-                <label class="width-auto" for="visibilityFilter">وضعیت نمایش</label>
-                <select id="visibilityFilter">
-                    <option value="all">همه</option>
-                    <option {{ isset($visibilityFilter) && $visibilityFilter ? 'selected' : '' }} value="1">نمایش</option>
-                    <option {{ isset($visibilityFilter) && !$visibilityFilter ? 'selected' : '' }} value="0">غیر نمایش</option>
-                </select>
-            </div>
-
-            <div class="flex gap10 center">
-                <label class="width-auto" for="categoryFilter">دسته</label>
-                <select id="categoryFilter">
-                    <option value="all">همه</option>
-                    @foreach ($categories as $category)
-                        <option {{ isset($categoryFilter) && $categoryFilter == $category['id'] ? 'selected' : '' }} value="1">{{ $category['name'] }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="flex gap10 center">
-                <label class="width-auto" for="sellerFilter">فروشنده</label>
-                <select id="sellerFilter">
-                    <option value="all">همه</option>
-                    @foreach ($sellers as $seller)
-                        <option {{ isset($sellerFilter) && $sellerFilter == $seller['id'] ? 'selected' : '' }} value="{{ $seller['id'] }}">{{ $seller['name'] }}</option>
-                    @endforeach
+            <div>
+                <label for="off_type">نوع تخفیف</label>
+                <select name="off_type" required id="off_type">
+                    <option {{ isset($item) && $item['off_type'] == 'percent' ? 'selected' : '' }} value="percent">درصدی</option>
+                    <option {{ isset($item) && $item['off_type'] == 'value' ? 'selected' : '' }} value="value">مقداری</option>
                 </select>
             </div>
             
-            <div class="flex gap10 center">
-                <label class="width-auto" for="brandFilter">برند</label>
-                <select id="brandFilter">
-                    <option value="all">همه</option>
-                    @foreach ($brands as $brand)
-                        <option {{ isset($brandFilter) && $brandFilter == $brand['id'] ? 'selected' : '' }} value="{{ $brand['id'] }}">{{ $brand['name'] }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="flex gap10 center">
-                <label class="width-auto" for="isInTopListFilter">محصولات برتر</label>
-                <select id="isInTopListFilter">
-                    <option value="all">همه</option>
-                    <option {{ isset($isInTopListFilter) && $isInTopListFilter ? 'selected' : '' }} value="1">بله</option>
-                    <option {{ isset($isInTopListFilter) && !$isInTopListFilter ? 'selected' : '' }} value="0">خیر</option>
-                </select>
+            <div>
+                <label for="amount">مقدار</label>
+                <input required value="{{ isset($item) ? $item['amount'] : '' }}" type="number" name="amount" id="amount" />
             </div>
             
-            <div class="flex gap10 center">
-                <label class="width-auto" for="minFilter">حداقل تعداد موجودی</label>
-                <input type="number" value="{{ isset($minFilter) ? $minFilter : '' }}" id="minFilter" />
-            </div>
-            
-            <div class="flex gap10 center">
-                <label class="width-auto" for="maxFilter">حداکثر تعداد موجودی</label>
-                <input type="number" value="{{ isset($maxFilter) ? $maxFilter : '' }}" id="maxFilter" />
-            </div>
-            
-            <div class="flex gap10 center">
-                <label class="width-auto" for="orderBy">مرتب سازی بر اساس</label>
-                <select id="orderBy">
-                    <option {{ isset($orderBy) && $orderBy == 'createdAt' ? 'selected' : '' }} value="createdAt">زمان ایجاد</option>
-                    <option {{ isset($orderBy) && $orderBy == 'rate' ? 'selected' : '' }} value="rate">محبوبیت</option>
-                    <option {{ isset($orderBy) && $orderBy == 'seen' ? 'selected' : '' }} value="seen">بازدید</option>
-                </select>
-            </div>
-            
-            <div class="flex gap10 center">
-                <label class="width-auto" for="orderByType">نوع مرتب سازی</label>
-                <select id="orderByType">
-                    <option {{ isset($orderByType) && $orderByType == 'asc' ? 'selected' : '' }} value="asc">صعودی</option>
-                    <option {{ isset($orderByType) && $orderByType == 'desc' ? 'selected' : '' }} value="desc">نزولی</option>
-                </select>
+            <div>
+                <label>
+                    تاریخ انقضا
+                    <input type="button" style="border: none; width: 30px; height: 30px; background: url({{ asset('admin-panel/img/calendar-flat.png') }}) repeat 0 0; background-size: 100% 100%;" id="date_btn">
+                    
+                </label>
+                <input value="{{ isset($item) ? $item['off_expiration'] : '' }}" name="off_expiration" onchange="getEvents(this.value)" type="text" id="date_input" readonly>
+                <script>
+                    Calendar.setup({
+                        inputField: "date_input",
+                        button: "date_btn",
+                        ifFormat: "%Y/%m/%d",
+                        dateType: "jalali"
+                    });
+                </script>
             </div>
 
             <div>
-                <button onclick="filter()" class="btn btn-success">اعمال فیلتر</button>
+                <label for="code">کد (اختیاری)</label>
+                <input value="{{ isset($item) ? $item['code'] : '' }}" type="text" name="code" id="code" />
+            </div>
+
+            <div>
+                <label for="is_general">آیا کد تخفیف عمومی است؟</label>
+                <select onchange="if($(this).val() === 'yes') $('#userInfoSection').addClass('hidden'); else $('#userInfoSection').removeClass('hidden');" id="is_general">
+                    <option value="yes">بله</option>
+                    <option value="no">خیر</option>
+                </select>
+            </div>
+
+            <div id="userInfoSection" class="hidden">
+                <label for="username">شماره همراه کاربر مدنظر(اختیاری)</label>
+                <input value="{{ isset($item) ? $item['username'] : '' }}" type="text" name="username" id="username" />
+            </div>
+
+            <div>
+                <label for="category_id">دسته موردنظر</label>
+                <select name="category_id" id="category_id">
+                    <option value="-1">نامشخص</option>
+                    @foreach($categories as $category)
+                        <option {{ isset($item) && $item['category_id'] == $category['id'] ? 'selected' : '' }} value="{{$category['id']}}">{{$category['name']}}</option>
+                    @endforeach
+                </select>
             </div>
             
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ردیف</th>
-                    <th>عملیات</th>
-                    <th>مقدار</th>
-                    <th>نوع</th>
-                    <th>تاریخ انقضا</th>
-                    <th>تاریخ ایجاد</th>
-                    <th>کاربر</th>
-                    <th>دسته</th>
-                    <th>برند</th>
-                    <th>فروشنده</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $i = 1; ?>
-                @foreach($items as $item)
-                    <tr id="item_{{ $item['id'] }}">
-                        <td>{{ $i++ }}</td>
-                        <td>
-                            <div class="flex flex-col gap10">
-                                <div class="flex gap10">
-                                    <button data-toggle='tooltip' title="ویرایش" onclick="document.location.href = '{{ route('product.edit', ['product' => $item['id']]) }}'" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></button>
-                                    <button data-toggle='tooltip' title="استفاده کنندگان" onclick="document.location.href = '{{ route('product.productGallery.index', ['product' => $item['id']]) }}'" class="btn btn-success"><span class="glyphicon glyphicon-user"></span></button>
-                                    <button data-toggle='tooltip' title="حذف" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-                                </div>
-                            </div>
-                            
-                        </td>
-                        <td>{{ $item['amount'] }}</td>
-                        <td>{{ $item['off_type'] }}</td>
-                        <td>{{ $item['created_at'] }}</td>
-                        
-                        <td>
-                            <div class="flex gap10">
-                                <input style="width: 40px" type="number" value="{{ $item['available_count'] }}" id="available_count_{{ $item['id'] }}" />
-                                <button data-id={{ $item['id'] }} class="saveBtn btn btn-primary">ثبت تغییر</button>
-                            </div>
-                        </td>
-                        <td>{{ $item['is_in_top_list'] ? "بله" : "خیر" }}</td>
-                        <td>
-                            <p id="visibility_text_{{ $item['id'] }}">{{ $item['visibility'] ? "نمایش" : "عدم نمایش"}}</p>
-                            @if($item['visibility'])
-                                <button class="btn btn-danger changeVisibilityBtn" data-value='0' data-id='{{ $item['id'] }}' id="visibility_invisible_{{ $item['id'] }}">تغییر وضعیت به عدم نمایش</button>
-                                <button class="hidden btn btn-primary changeVisibilityBtn" data-value='1' data-id='{{ $item['id'] }}' id="visibility_visible_{{ $item['id'] }}">تغییر وضعیت به نمایش</button>    
-                            @else
-                                <button class="hidden btn btn-danger changeVisibilityBtn" data-value='0' data-id='{{ $item['id'] }}' id="visibility_invisible_{{ $item['id'] }}">تغییر وضعیت به عدم نمایش</button>
-                                <button class="btn btn-primary changeVisibilityBtn" data-value='1' data-id='{{ $item['id'] }}' id="visibility_visible_{{ $item['id'] }}">تغییر وضعیت به نمایش</button>    
-                            @endif
-                        </td>
-                        <td>{{ $item['priority'] }}</td>
-                        <td>{{ $item['brand'] }}</td>
-                        <td>{{ $item['category'] }}</td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-        {!! $links !!}
-    @endif
-    
-</center>
-
-    <script>
-        
-        $(document).ready(function() {
-
-            $(".saveBtn").on('click', function() {
-                save($(this).attr('data-id'));
-            });
-
-            $('.changeVisibilityBtn').on('click', function() {
-                changeVisibility($(this).attr('data-id'), $(this).attr('data-value'));
-            });
-
-            function save(productId) {
-                $.ajax({
-                    type: 'post',
-                    url: '{{ route('product.updateAvailableCount') }}' + '/' + productId,
-                    data: {
-                        'available_count': $("#available_count_" + productId).val()
-                    },
-                    success: function(res) {
-
-                        if(res.status === "ok") {
-                            alert("عملیات موردنظر با موفقیت انجام شد.");
-                        }
-                        else {
-                            alert(res.msg);
-                        }
-                    }
-                });
-            }
-
-            function changeVisibility(productId, newStatus) {
-                $.ajax({
-                    type: 'post',
-                    url: '{{ route('product.changeVisibility') }}' + '/' + productId,
-                    data: {
-                        'visibility': newStatus
-                    },
-                    success: function(res) {
-
-                        if(res.status === "ok") {
-                            if(newStatus == 1) {
-                                $("#visibility_invisible_" + productId).removeClass('hidden');
-                                $("#visibility_visible_" + productId).addClass('hidden');
-                                $("#visibility_text_" + productId).text('نمایش');
-                            }
-                            else {
-                                $("#visibility_invisible_" + productId).addClass('hidden');
-                                $("#visibility_visible_" + productId).removeClass('hidden');
-                                $("#visibility_text_" + productId).text('عدم نمایش');
-                            }
-                            alert("عملیات موردنظر با موفقیت انجام شد.");
-                        }
-                        else {
-                            alert(res.msg);
-                        }
-                    }
-                });
-            }
-        });
-
-    </script>
-
-    <script>
-
-        function filter() {
-
-            let query = new URLSearchParams();
+            <div>
+                <label for="brand_id">برند موردنظر</label>
+                <select name="brand_id" id="brand_id">
+                    <option value="-1">نامشخص</option>
+                    @foreach($brands as $brand)
+                        <option {{ isset($item) && $item['brand_id'] == $brand['id'] ? 'selected' : '' }} value="{{$brand['id']}}">{{$brand['name']}}</option>
+                    @endforeach
+                </select>
+            </div>
             
-            let visibility = $("#visibilityFilter").val();
-            let isInTopList = $("#isInTopListFilter").val();
-            let brand = $("#brandFilter").val();
-            let max = $("#maxFilter").val();
-            let min = $("#minFilter").val();
-            let orderBy = $("#orderBy").val();
-            let orderByType = $("#orderByType").val();
 
-            if(visibility !== 'all')
-                query.append('visibility', visibility);
-                
-            if(isInTopList !== 'all')
-                query.append('isInTopList', isInTopList);
-                
-            if(brand !== 'all')
-                query.append('brand', brand);
-                
-            if(max !== '')
-                query.append('max', max);
-                
-            if(min !== '')
-                query.append('min', min);
+            <div>
+                <label for="seller_id">فروشنده</label>
+                <select name="seller_id" id="seller_id">
+                    <option value="-1">نامشخص</option>
+                    @foreach($sellers as $seller)
+                        <option {{ isset($item) && $item['seller_id'] == $seller['id'] ? 'selected' : '' }} value="{{$seller['id']}}">{{$seller['name']}}</option>
+                    @endforeach
+                </select>
+            </div>
 
-            query.append('orderBy', orderBy);
-            query.append('orderByType', orderByType);
+        </div>
 
-            document.location.href = '{{ route('product.index') }}' + '?' + query.toString();
-        }
 
-    </script>
+        <div class="flex center gap10">
+            <span onclick="document.location.href = '{{ route('off.index') }}'" class="btn btn-danger">بازگشت</span>
+            <input value="ذخیره" type="submit" class="btn green" id="saveBtn" />
+        </div>
 
+    </form>
 @stop

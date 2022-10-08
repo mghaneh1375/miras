@@ -27,7 +27,7 @@ class Off extends Model
     }
 
     public function scopeActive($query) {
-        $today = (int)Controller::getToday();
+        $today = (int)Controller::getToday()['date'];
         return $query->where('off_expiration', '>=', $today);
     }
 

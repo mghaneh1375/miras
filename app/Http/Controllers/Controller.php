@@ -42,7 +42,7 @@ class Controller extends BaseController
         include_once 'jdate.php';
         $date = explode(' ', $date);
         $d = explode('-', $date[0]);
-        return gregorian_to_jalali($d[0],$d[1],$d[2],'-');
+        return gregorian_to_jalali($d[0],$d[1],$d[2],'/');
     }
     
     public static function ShamsiToMilady($date){
