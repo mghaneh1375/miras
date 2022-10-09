@@ -25,7 +25,6 @@
     </div>
 </div>
     <script>
-     
         $.ajax({
             type: 'get',
             url: '{{ route('api.banner', ['section', 'home']) }}',
@@ -39,5 +38,4 @@
                 }
             }
         });
-
     </script>

@@ -435,6 +435,7 @@ a {
     border-radius: 15px;
     box-shadow: 0 3px 6px 0px #00000029;
     max-width: 270px !important;
+    height: 348.6px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
@@ -652,7 +653,29 @@ figure .ck-widget {
     background-color: #00b2bc;
     border-color: #00b2bc;
 }
-
+.boxLoadingEmptyContent {
+    content: "";
+    opacity: 0.3;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    background-color: #00000034;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+}
+.backgroundColorNone {
+    background: none !important;
+}
+.boxDescription {
+    height: 42px;
+}
+.m-neg-10 {
+    margin-top: -10px;
+}
+.visibilityHidden {
+    visibility: hidden;
+}
 @media (min-width: 768px) {
     .mt-md-110 {
         margin-top: 110px;

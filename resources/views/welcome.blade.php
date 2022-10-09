@@ -3,17 +3,14 @@
 @section('content')
 
 @include('layouts.slider')    
-<script>
-    const productPrefixRoute = '{{ route('product') }}';
-</script>
                 @include('layouts.tiles')
                 @include('sections.top_categories_products')
+                @include('layouts.box')
                 @include('sections.latest_products')
                 @include('sections.most_seen_products')
                 @include('sections.most_like_products')
                 @include('layouts.banner')
                 @include('layouts.news')
-
                 <!-- end of box => categories-slider -->
                 {{-- @include('layouts.banner-light') --}}
             <!-- start of quick-view-modal -->
