@@ -667,6 +667,10 @@ figure .ck-widget {
 .backgroundColorNone {
     background: none !important;
 }
+.product-thumbnail a img {
+    width: 150px;
+    height: 150px;
+}
 .product-title {
     height: 40px;
     overflow: hidden;
