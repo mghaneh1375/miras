@@ -668,6 +668,9 @@ figure .ck-widget {
     background: none !important;
 }
 .product-thumbnail a img {
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
     width: 150px;
     height: 150px;
 }
