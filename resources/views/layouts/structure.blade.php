@@ -185,7 +185,7 @@
                     <div class="d-flex align-items-center">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link colorWhite" href="index-1.html"><img class="iconSvg" src="./theme-assets/images/svg/home.svg" alt="">صفحه اصلی</a>
+                                <a class="nav-link colorWhite" href="{{ route('home') }}"><img class="iconSvg" src="./theme-assets/images/svg/home.svg" alt="">صفحه اصلی</a>
                             </li>
                             <li class="nav-item align-self-center">
                             <div class="vertical-menu minWidthUnset">

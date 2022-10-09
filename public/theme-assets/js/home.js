@@ -54,8 +54,19 @@ function renderProductSlider(data, prefix) {
             .replace(prefix + "Rate", prefix + "Rate_" + id)
             .replace(prefix + "MultiColor", prefix + "MultiColor_" + id);
 
-        html += '<div class="cursorPointer">' + newElem + "</div>";
+        html +=
+            "<div onclick=\"redirect('" +
+            id +
+            "', '" +
+            elem.name +
+            '\')" class="cursorPointer">' +
+            newElem +
+            "</div>";
     });
 
     return html;
+}
+
+function redirect(id, name) {
+    window.open(productPrefixRoute + "/" + id + "/" + name, "_blank");
 }

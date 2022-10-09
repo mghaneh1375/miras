@@ -47,11 +47,10 @@
                         </div>
                         <div class="col-xl-5 col-lg-4 col-md-7 mb-lg-0 mb-4">
                             <!-- start of product-detail -->
-                            <h2 class="product-title">گوشی موبایل اپل مدل iPhone 13 A2634 دو سیم کارت ظرفیت 128
-                                گیگابایت و رم 4 گیگابایت</h2>
-                            <div class="product-en mb-3">
+                            <h2 id="productTitle" class="product-title"></h2>
+                            {{-- <div class="product-en mb-3">
                                 <span>Apple iPhone 13 A2634 Dual SIM 128GB And 4GB RAM Mobile Phone</span>
-                            </div>
+                            </div> --}}
                             <div class="product-user-suggestion mb-2">
                                 <i class="ri-thumb-up-fill text-success me-1"></i>
                                 <span class="fs-7 me-2">۷۹٪ (۱۷۰ نفر) از خریداران، این کالا را پیشنهاد کرده
@@ -2168,6 +2167,27 @@
             <!-- end of quick-view-modal -->
         </main>
 </div>
+
+
+<script>
+
+    $(document).ready(function() {
+
+        let productId = location.pathname.split('/product/')[1].split('/')[0];
+        $.ajax({
+            type: 'get',
+            url: '{{ route('api.product.show') }}' + '/' + productId,
+            headers: {
+                'accept': 'application/json'
+            },
+            success: function(res) {
+                $("#productTitle").text(res.data.name);
+            }
+        });
+
+    });
+
+</script>
 @stop
 
 @section('footer')

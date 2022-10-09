@@ -401,7 +401,7 @@ class ProductController extends Controller
 
         return response()->json([
             'status' => 'ok', 
-            'data' => ProductResource::make($product)->toJson()
+            'data' => ProductResource::make($product)->toArray($request)
         ]);
     }
 
