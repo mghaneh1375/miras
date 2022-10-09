@@ -140,7 +140,7 @@
                                 <div class="flex gap10">
                                     <button data-toggle='tooltip' title="مدیریت تخفیف" onclick="document.location.href = '{{ route('product.off', ['product' => $item['id']]) }}'" class="btn btn-default"><span class="glyphicon glyphicon-usd"></span></button>
                                     <button data-toggle='tooltip' title="خریداران" onclick="document.location.href = '{{ route('product.productGallery.index', ['product' => $item['id']]) }}'" class="btn btn-success"><span class="glyphicon glyphicon-user"></span></button>
-                                    <button data-toggle='tooltip' title="حذف" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                                    <button onclick="removeModal('item', {{$item['id']}}, '{{ route('product.destroy', ['product' => $item['id']]) }}')" data-toggle='tooltip' title="حذف" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                                 </div>
                                 <div class="flex gap10">
                                     <button data-toggle='tooltip' title="مدیریت نظرات" onclick="document.location.href = '{{ route('product.comment.index', ['product' => $item['id']]) }}'" class="btn btn-purple"><span class="glyphicon glyphicon-comment"></span></button>
