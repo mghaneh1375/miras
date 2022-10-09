@@ -4624,7 +4624,7 @@
                                 <!-- end of tab-content -->
                                 <div class="row">
                                     <div class="col-12">
-                                        <nav class="border-top py-4">
+                                        <nav class="py-4">
                                             <!-- start of pagination -->
                                             <ul class="pagination justify-content-center fa-num">
                                                 <li class="page-item">
