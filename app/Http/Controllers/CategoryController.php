@@ -23,7 +23,12 @@ class CategoryController extends Controller
         $arr = [];
 
         foreach($categories as $category) {
-            $items = ProductDigestUser::collection($category->products)->toArray($request);
+            
+            $products = $category->products;
+            if(count($products) == 0)
+                continue;
+
+            $items = ProductDigestUser::collection($products)->toArray($request);
             array_push($arr, [
                 'id' => $category->id,
                 'name' => $category->name,
