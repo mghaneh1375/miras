@@ -654,7 +654,7 @@ figure .ck-widget {
     border-color: #00b2bc;
 }
 .boxLoadingEmptyContent {
-    content: "";
+    content: " ";
     opacity: 0.3;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
@@ -666,6 +666,10 @@ figure .ck-widget {
 }
 .backgroundColorNone {
     background: none !important;
+}
+.product-title {
+    height: 40px;
+    overflow: hidden;
 }
 .boxDescription {
     height: 42px;
