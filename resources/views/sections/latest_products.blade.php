@@ -14,7 +14,7 @@
                             <div id="latestProductsSlider" class="swiper-wrapper">
 
                                 <!-- Slides -->
-                                <div id="latestProductsSample" class="cursorPointer">
+                                <div id="latestProductsSample" class="cursorPointer hidden">
                                     <div class="swiper-slide customBox customWidthBox">
                                         <!-- start of product-card -->
                                         <div class="product-card customBorderBoxShadow">
