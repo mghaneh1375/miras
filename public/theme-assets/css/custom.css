@@ -435,7 +435,7 @@ a {
     border-radius: 15px;
     box-shadow: 0 3px 6px 0px #00000029;
     max-width: 270px !important;
-    height: 348.6px;
+    height: 400px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
@@ -654,7 +654,7 @@ figure .ck-widget {
     border-color: #00b2bc;
 }
 .boxLoadingEmptyContent {
-    content: "";
+    content: " ";
     opacity: 0.3;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
@@ -666,6 +666,18 @@ figure .ck-widget {
 }
 .backgroundColorNone {
     background: none !important;
+}
+.product-thumbnail a img {
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
+    width: 200px;
+    height: 200px;
+    max-width: 200px !important;
+}
+.product-title {
+    height: 40px;
+    overflow: hidden;
 }
 .boxDescription {
     height: 42px;
