@@ -286,7 +286,7 @@ class ProductController extends Controller
         return view('admin.product.off', [
             'item' => [
                 'off' => $product->off,
-                'off_expiration' => $product->off_expiration,
+                'off_expiration' => $product->off_expiration == null ? '' : self::convertStringToDate($product->off_expiration),
                 'off_type' => $product->off_type,
                 'name' => $product->name,
                 'id' => $product->id,
@@ -327,6 +327,10 @@ class ProductController extends Controller
         $validator = [
             'name' => 'nullable|string|min:2',
             'category_id' => 'nullable|exists:categories,id',
+            'seller_id' => 'nullable|exists:sellers,id',
+            'digest' => 'nullable|string|min:2',
+            'keywords' => 'nullable|string|min:2',
+            'tags' => 'nullable|string|min:2',
             'brand_id' => 'nullable|exists:brands,id',
             'description' => 'nullable|string|min:2',
             'price' => 'nullable|integer|min:0',
@@ -340,7 +344,7 @@ class ProductController extends Controller
             'img_file' => 'nullable|image',
             'alt' => 'nullable|string|min:2',
         ];
-        
+
         if(self::hasAnyExcept(array_keys($validator), $request->keys()))
             return abort(401);
 
@@ -351,6 +355,8 @@ class ProductController extends Controller
             $expiration = self::convertDateToString($request['off_expiration']);
             if((int)$today >= (int)$expiration)
                 return $this->editOff($product, 'تاریخ انقضا باید از امروز بزرگتر باشد.');
+
+            $request['off_expiration'] = $expiration;
         }
 
         if($request->has('off')) {

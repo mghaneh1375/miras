@@ -24,6 +24,7 @@ class ProductDigest extends JsonResource
             'is_in_top_list' => $this->is_in_top_list,
             'visibility' => $this->visibility,
             'priority' => $this->priority,
+            'seen' => $this->seen,
             'price' => $this->price
         ];
     }

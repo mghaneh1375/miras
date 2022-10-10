@@ -25,6 +25,10 @@ class AuthController extends Controller
             return view('admin.login', ['err' => 'حساب کاربری شما غیرفعال است.']);
 
         Auth::login($user);
+
+        if($user->level != User::$USER_LEVEL)
+            return Redirect::route('panel');
+
         return Redirect::route('home');
     }
 

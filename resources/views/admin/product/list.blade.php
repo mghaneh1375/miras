@@ -121,6 +121,7 @@
                     <th>آیا جز محصولات برتر است؟</th>
                     <th>وضعیت نمایش</th>
                     <th>اولویت</th>
+                    <th>تعداد بازدید</th>
                     <th>برند</th>
                     <th>دسته مربوطه</th>
                 </tr>
@@ -169,6 +170,7 @@
                             @endif
                         </td>
                         <td>{{ $item['priority'] }}</td>
+                        <td>{{ $item['seen'] }}</td>
                         <td>{{ $item['brand'] }}</td>
                         <td>{{ $item['category'] }}</td>
                     </tr>
